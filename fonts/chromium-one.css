@@ -1,0 +1,8 @@
+/* Chromium One */
+@font-face {
+    font-family: 'Chromium-One';
+    src: url('ChromiumOneLetPlain.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}

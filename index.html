@@ -1,0 +1,437 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NOESIS 2K26 - Annual Technical Symposium</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&family=Orbitron:wght@400;500;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Google Fonts and Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    
+    <!-- All Styles Combined -->
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="css/mobile-menu.css">
+    <style>
+        /* Technical overlay pattern */
+        .tech-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: transparent;
+            pointer-events: none;
+            z-index: 1;
+            opacity: 0.3;
+        }
+
+/* Tech elements */
+        .tech-circle {
+            position: absolute;
+            border: 1px solid var(--accent);
+            border-radius: 50%;
+            opacity: 0.1;
+            z-index: 0;
+        }
+
+        .tech-circle:nth-child(1) {
+            width: 300px;
+            height: 300px;
+            top: -150px;
+            right: -150px;
+        }
+
+        .tech-circle:nth-child(2) {
+            width: 500px;
+            height: 500px;
+            bottom: -250px;
+            left: -250px;
+            opacity: 0.05;
+        }
+
+        /* Terminal effect */
+        .terminal {
+            font-family: 'Share Tech Mono', monospace;
+            color: var(--accent);
+            text-shadow: 0 0 5px rgba(212, 175, 55, 0.5);
+            position: relative;
+            padding-left: 1.5rem;
+            margin: 1rem 0;
+        }
+
+        .terminal::before {
+            content: '>';
+            position: absolute;
+            left: 0;
+            color: var(--accent);
+            animation: blink 1s step-end infinite;
+        }
+
+        @keyframes blink {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0; }
+        }
+    </style>
+</head>
+<body>    
+    <!-- Responsive Navbar -->
+    <nav class="navbar">
+        <div class="container nav-container">
+            <a href="#" class="logo">NOESIS<span class="year">2K26</span></a>
+            
+            <div class="menu-icon" id="menu-icon">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            
+            <ul class="nav-menu" id="nav-menu">
+                <li><a href="#home" class="nav-link active"><i class="fas fa-home"></i> Home</a></li>
+                <li><a href="#events" class="nav-link"><i class="fas fa-calendar-alt"></i> Events</a></li>
+                <li><a href="#about" class="nav-link"><i class="fas fa-info-circle"></i> About</a></li>
+                <li><a href="#schedule" class="nav-link"><i class="fas fa-clock"></i> Schedule</a></li>
+                <li><a href="#sponsors" class="nav-link"><i class="fas fa-handshake"></i> Sponsors</a></li>
+                <li><a href="#contact" class="nav-link"><i class="fas fa-envelope"></i> Contact</a></li>
+                <li><a href="#register" class="nav-btn"><i class="fas fa-user-plus"></i> Register Now</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Technical Background Elements -->
+    <div class="tech-overlay"></div>
+    <div class="tech-circle"></div>
+    <div class="tech-circle"></div>
+
+
+    <main id="main-content">
+        <section id="home" class="hero">
+            <div class="container">
+                <div class="hero-content">
+                    <div class="hero-text">
+                        <div class="terminal">INITIALIZING NOESIS 2K26...</div>
+                        <h1>
+                            <div class="glitch-container">
+                                <span class="title-line">TECHNICAL</span>
+                                <span class="title-line">SYMPOSIUM</span>
+                            </div>
+                            <span class="title-year">2K26</span>
+                        </h1>
+                        <p class="subtitle">
+                            <span class="subtitle-line">// Pushing the boundaries of technology</span>
+                            <span class="subtitle-line">// January 24-25, 2026</span>
+                        </p>
+                        <div class="cta-buttons">
+                            <a href="events.html" class="btn btn-primary">
+                                <i class="fas fa-rocket"></i> Explore Events
+                            </a>
+                            <a href="schedule.html" class="btn btn-secondary">
+                                <i class="far fa-calendar-alt"></i> View Schedule
+                            </a>
+                        </div>
+                    </div>
+                    <div class="hero-visual">
+                        <div class="tech-cube-container" style="touch-action: none;">
+                            <div class="tech-cube">
+                                <div class="face front" style="background-image: url('https://images.unsplash.com/photo-1535378917042-10a22c95931a?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80');">
+                                    <span class="event-name">WEBWIZARD</span>
+                                </div>
+                                <div class="face back" style="background-image: url('https://images.unsplash.com/photo-1547658719-da2b51169166?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80');">
+                                    <span class="event-name">CODE CRUSADER</span>
+                                </div>
+                                <div class="face right" style="background-image: url('https://images.unsplash.com/photo-1593508512255-86ab42a8e620?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80');">
+                                    <span class="event-name">MEDIA CRAFTER</span>
+                                </div>
+                                <div class="face left" style="background-image: url('https://images.unsplash.com/photo-1518770660439-4636190af475?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80');">
+                                    <span class="event-name">INNOQUEST</span>
+                                </div>
+                                <div class="face top" style="background-image: url('https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80');">
+                                    <span class="event-name">SWING OF FORTUNE</span>
+                                </div>
+                                <div class="face bottom" style="background-image: url('https://images.unsplash.com/photo-1550751827-4bd374c3f58b?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80');">
+                                    <span class="event-name">GAMERS GROOVE</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Stats Counter -->
+                <div class="stats-counter">
+                    <div class="stat">
+                        <div class="stat-number" data-count="2">2</div>
+                        <div class="stat-label">Days</div>
+                    </div>
+                    <div class="stat">
+                        <div class="stat-number" data-count="6">6</div>
+                        <div class="stat-label">Events</div>
+                    </div>
+                    <div class="stat">
+                        <div class="stat-number" data-count="7">7</div>
+                        <div class="stat-label">Prizes</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Featured Events -->
+        <section id="events" class="featured-events">
+            <div class="container">
+                <div class="section-header">
+                    <h2><i class="fas fa-star"></i> FEATURED EVENTS</h2>
+                    <div class="section-divider">
+                        <span class="line"></span>
+                        <span class="icon"><i class="fas fa-robot"></i></span>
+                        <span class="line"></span>
+                    </div>
+                </div>
+                
+                <div class="events-container">
+                    <div class="events-grid">
+                        <div class="event-card">
+                            <div class="event-image">
+                                <img src="https://images.unsplash.com/photo-1551434678-e076c223a692?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Web Wizard">
+                            </div>
+                            <h3>Web Wizard</h3>
+                            <p>Master the art of web development in this comprehensive competition. Design and develop responsive, user-friendly websites that stand out.</p>
+                            <div class="event-meta">
+                                <span><i class="far fa-calendar"></i> Jan 24, 2026</span>
+                                <span><i class="fas fa-users"></i> Individual</span>
+                            </div>
+                            <a href="#event-details" class="btn btn-sm btn-outline">View Details</a>
+                        </div>
+
+                        <div class="event-card">
+                            <div class="event-image">
+                                <img src="https://images.unsplash.com/photo-1620712943543-bcc4688e7485?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Media Crafter">
+                            </div>
+                            <h3>Media Crafter</h3>
+                            <p>Showcase your creativity in digital media production. From graphics to video, demonstrate your skills in visual storytelling.</p>
+                            <div class="event-meta">
+                                <span><i class="far fa-calendar"></i> Jan 25, 2026</span>
+                                <span><i class="fas fa-users"></i> Team of 2-3</span>
+                            </div>
+                            <a href="#event-details" class="btn btn-sm btn-outline">View Details</a>
+                        </div>
+
+                        <div class="event-card">
+                            <div class="event-image">
+                                <img src="https://images.unsplash.com/photo-1635070041078-e363dbe005cb?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Swing of Fortune">
+                            </div>
+                            <h3>Swing of Fortune</h3>
+                            <p>A unique blend of coding and strategy. Test your problem-solving skills in this exciting challenge where every decision counts.</p>
+                            <div class="event-meta">
+                                <span><i class="far fa-calendar"></i> Jan 26, 2026</span>
+                                <span><i class="fas fa-user"></i> Individual</span>
+                            </div>
+                            <a href="#event-details" class="btn btn-sm btn-outline">View Details</a>
+                        </div>
+
+                        <div class="event-card">
+                            <div class="event-image">
+                                <img src="https://images.unsplash.com/photo-1555066931-4365d14bab8c?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Code Crusader">
+                            </div>
+                            <h3>Code Crusader</h3>
+                            <p>Battle it out in this intense coding competition. Solve algorithmic challenges and optimize your solutions to rise to the top of the leaderboard.</p>
+                            <div class="event-meta">
+                                <span><i class="far fa-calendar"></i> Jan 27, 2026</span>
+                                <span><i class="fas fa-user"></i> Individual</span>
+                            </div>
+                            <a href="#event-details" class="btn btn-sm btn-outline">View Details</a>
+                        </div>
+
+                        <div class="event-card">
+                            <div class="event-image">
+                                <img src="https://images.unsplash.com/photo-1518770660439-4636190af475?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80&auto=format&fit=crop&w=800&q=80&fit=crop" alt="Innoquest">
+                            </div>
+                            <h3>Innoquest</h3>
+                            <p>Push the boundaries of innovation in this open-ended challenge. Develop groundbreaking solutions to real-world problems using any technology.</p>
+                            <div class="event-meta">
+                                <span><i class="far fa-calendar"></i> Jan 28, 2026</span>
+                                <span><i class="fas fa-users"></i> Team of 3-4</span>
+                            </div>
+                            <a href="#event-details" class="btn btn-sm btn-outline">View Details</a>
+                        </div>
+
+                        <div class="event-card">
+                            <div class="event-image">
+                                <img src="https://images.unsplash.com/photo-1552820728-8b83bb6b773f?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Gamers Groove">
+                            </div>
+                            <h3>Gamers Groove</h3>
+                            <p>Combine coding and gaming in this unique event. Develop games or compete in gaming challenges with a technical twist.</p>
+                            <div class="event-meta">
+                                <span><i class="far fa-calendar"></i> Jan 29, 2026</span>
+                                <span><i class="fas fa-users"></i> Team of 2-3</span>
+                            </div>
+                            <a href="#event-details" class="btn btn-sm btn-outline">View Details</a>
+                        </div>
+                    </div>
+                </div>
+        </section>
+
+        <!-- About Section with Tech Grid -->
+        <section id="about" class="about">
+            <div class="container">
+                <div class="section-header">
+                    <h2><i class="fas fa-info-circle"></i> ABOUT NOESIS</h2>
+                    <div class="section-divider">
+                        <span class="line"></span>
+                        <span class="icon"><i class="fas fa-microchip"></i></span>
+                        <span class="line"></span>
+                    </div>
+                </div>
+                
+                <div class="tech-grid">
+                    <div class="tech-card">
+                        <div class="tech-icon">
+                            <i class="fas fa-bolt"></i>
+                        </div>
+                        <h3>Innovation</h3>
+                        <p>Pushing the boundaries of technology with cutting-edge competitions and workshops.</p>
+                    </div>
+                    <div class="tech-card">
+                        <div class="tech-icon">
+                            <i class="fas fa-users"></i>
+                        </div>
+                        <h3>Community</h3>
+                        <p>Connect with like-minded tech enthusiasts and industry experts.</p>
+                    </div>
+                    <div class="tech-card">
+                        <div class="tech-icon">
+                            <i class="fas fa-trophy"></i>
+                        </div>
+                        <h3>Excellence</h3>
+                        <p>Showcase your skills and compete for exciting prizes and recognition.</p>
+                    </div>
+                </div>
+                
+                <div class="about-content glass-card">
+                    <div class="about-text">
+                        <h3>Welcome to NOESIS 2K26</h3>
+                        <p>NOESIS is the premier technical symposium that brings together the brightest minds in technology. This year, we're taking innovation to new heights with a series of challenging competitions, interactive workshops, and inspiring talks from industry leaders.</p>
+                        <p>Whether you're a coding wizard, a design guru, or a tech enthusiast, NOESIS 2K26 has something for everyone. Join us for an unforgettable experience of learning, competing, and networking.</p>
+                        <a href="about.html" class="btn btn-outline">
+                            <i class="fas fa-arrow-right"></i> Learn More
+                        </a>
+                    </div>
+                    <div class="about-visual">
+                        <div class="tech-sphere"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Countdown Timer -->
+        <section class="countdown-section">
+            <div class="container">
+                <h2>EVENT STARTS IN</h2>
+                <div class="countdown-timer">
+                    <div class="countdown-item">
+                        <div class="countdown-number" id="days">00</div>
+                        <div class="countdown-label">DAYS</div>
+                    </div>
+                    <div class="countdown-separator">:</div>
+                    <div class="countdown-item">
+                        <div class="countdown-number" id="hours">00</div>
+                        <div class="countdown-label">HOURS</div>
+                    </div>
+                    <div class="countdown-separator">:</div>
+                    <div class="countdown-item">
+                        <div class="countdown-number" id="minutes">00</div>
+                        <div class="countdown-label">MINUTES</div>
+                    </div>
+                    <div class="countdown-separator">:</div>
+                    <div class="countdown-item">
+                        <div class="countdown-number" id="seconds">00</div>
+                        <div class="countdown-label">SECONDS</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="tech-footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-about">
+                    <div class="footer-logo">
+                        <span>NOESIS</span>
+                        <span>2K26</span>
+                    </div>
+                    <p>Pushing the boundaries of technology and innovation through competition and collaboration.</p>
+                    <div class="footer-social">
+                        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                        <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                        <a href="#" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                    </div>
+                </div>
+                
+                <div class="footer-links">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="events.html"><i class="fas fa-chevron-right"></i> Events</a></li>
+                        <li><a href="schedule.html"><i class="fas fa-chevron-right"></i> Schedule</a></li>
+                        <li><a href="sponsors.html"><i class="fas fa-chevron-right"></i> Sponsors</a></li>
+                        <li><a href="rules.html"><i class="fas fa-chevron-right"></i> Rules</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-contact">
+                    <h4>Contact Us</h4>
+                    <ul>
+                        <li><i class="fas fa-map-marker-alt"></i> Your College Name, City</li>
+                        <li><i class="fas fa-envelope"></i> contact@noesis2k26.com</li>
+                        <li><i class="fas fa-phone"></i> +91 12345 67890</li>
+                    </ul>
+                </div>
+                
+                <div class="footer-newsletter">
+                    <h4>Stay Updated</h4>
+                    <p>Subscribe to our newsletter for the latest updates.</p>
+                    <form class="newsletter-form">
+                        <input type="email" placeholder="Your email" required>
+                        <button type="submit"><i class="fas fa-paper-plane"></i></button>
+                    </form>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2026 NOESIS. All rights reserved. | Designed with <i class="fas fa-heart"></i> by NOESIS Team</p>
+                <div class="footer-tech">
+                    <span>#NOESIS2K26</span>
+                    <span>#TechRevolution</span>
+                    <span>#CodeTheFuture</span>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Animated circuit lines -->
+        <div class="circuit-line"></div>
+        <div class="circuit-line"></div>
+        <div class="circuit-line"></div>
+    </footer>
+
+    <!-- Technical Elements -->
+    <div class="tech-corner tl"></div>
+    <div class="tech-corner tr"></div>
+    <div class="tech-corner bl"></div>
+    <div class="tech-corner br"></div>
+    
+    <div class="tech-overlay">
+        <div class="tech-circle"></div>
+        <div class="tech-circle"></div>
+        <div class="tech-circle"></div>
+        <div class="tech-circle"></div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="js/main.js"></script>
+    <script src="js/cube-rotate.js"></script>
+    <script src="js/events.js"></script>
+    <script src="js/mobile-menu.js"></script>
+</body>
+</html>
