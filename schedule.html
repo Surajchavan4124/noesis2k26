@@ -1,0 +1,986 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Schedule - NOESIS 2K26</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&family=Orbitron:wght@400;500;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="css/mobile-menu.css">
+    <style>
+        /* Schedule specific styles */
+        .schedule-container {
+            padding: 60px 0;
+            background: var(--bg-color);
+            min-height: 100vh;
+        }
+
+        .view-controls {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 30px;
+            gap: 15px;
+        }
+
+        .view-btn {
+            padding: 10px 20px;
+            background: var(--accent);
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-family: 'Orbitron', sans-serif;
+            text-transform: uppercase;
+            font-size: 0.9rem;
+        }
+
+        .view-btn.active {
+            background: var(--accent-hover);
+            transform: translateY(-2px);
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        .date-tabs {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 30px;
+            gap: 15px;
+        }
+
+        .date-tab {
+            padding: 10px 25px;
+            background: var(--card-bg);
+            border: 1px solid var(--border-color);
+            border-radius: 4px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-family: 'Orbitron', sans-serif;
+            font-size: 0.9rem;
+        }
+
+        .date-tab.active {
+            background: var(--accent);
+            color: white;
+            border-color: var(--accent);
+        }
+
+        /* Timeline View */
+        .timeline-view {
+            display: block;
+            max-width: 1200px;
+            margin: 0 auto;
+            position: relative;
+            padding: 40px 0;
+        }
+
+        .timeline-view::after {
+            content: '';
+            position: absolute;
+            width: 6px;
+            background-color: var(--accent);
+            top: 0;
+            bottom: 0;
+            left: 50%;
+            margin-left: -3px;
+            border-radius: 3px;
+        }
+
+        .timeline-card {
+            padding: 10px 40px;
+            position: relative;
+            width: 50%;
+            box-sizing: border-box;
+            margin-bottom: 30px;
+        }
+
+        .timeline-card.left {
+            left: 0;
+        }
+
+        .timeline-card.right {
+            left: 50%;
+        }
+
+        .timeline-card::after {
+            content: '';
+            position: absolute;
+            width: 25px;
+            height: 25px;
+            right: -10px;
+            background-color: var(--accent);
+            border: 4px solid var(--accent-hover);
+            top: 15px;
+            border-radius: 50%;
+            z-index: 1;
+        }
+
+        .right::after {
+            left: -16px;
+        }
+
+        .timeline-content {
+            padding: 20px 30px;
+            background-color: var(--card-bg);
+            position: relative;
+            border-radius: 6px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .timeline-content:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+        }
+
+        .timeline-time {
+            font-weight: bold;
+            color: var(--accent);
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .timeline-time i {
+            font-size: 1.1em;
+        }
+
+        .sub-events {
+            margin-top: 15px;
+            padding-left: 20px;
+            border-left: 2px solid var(--accent);
+        }
+
+        .sub-event {
+            margin: 10px 0;
+            padding: 10px;
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 4px;
+            transition: all 0.3s ease;
+        }
+
+        .sub-event:hover {
+            background: rgba(255, 255, 255, 0.1);
+            transform: translateX(5px);
+        }
+
+        /* Table View */
+        .table-view {
+            display: none;
+            width: 100%;
+            overflow-x: auto;
+        }
+
+        .schedule-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 0 auto;
+            background: var(--card-bg);
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        .schedule-table th, 
+        .schedule-table td {
+            padding: 15px;
+            text-align: left;
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        .schedule-table th {
+            background-color: var(--accent);
+            color: white;
+            font-family: 'Orbitron', sans-serif;
+            text-transform: uppercase;
+            font-size: 0.8rem;
+            letter-spacing: 1px;
+        }
+
+        .main-event-row {
+            background-color: rgba(255, 255, 255, 0.03);
+            font-weight: bold;
+        }
+
+        .sub-event-row {
+            background-color: rgba(255, 255, 255, 0.01);
+        }
+
+        .sub-event-row td:first-child {
+            padding-left: 40px;
+        }
+
+        /* Gantt Chart View */
+        .gantt-view {
+            display: none;
+            overflow-x: auto;
+            padding: 20px 0;
+        }
+
+        .gantt-container {
+            min-width: 1000px;
+            margin: 0 auto;
+        }
+
+        .gantt-header {
+            display: flex;
+            border-bottom: 2px solid var(--accent);
+            margin-bottom: 10px;
+        }
+
+        .gantt-time-slot {
+            flex: 1;
+            text-align: center;
+            padding: 10px 5px;
+            font-size: 0.8rem;
+            color: var(--text-secondary);
+            border-right: 1px solid var(--border-color);
+        }
+
+        .gantt-row {
+            display: flex;
+            align-items: center;
+            margin: 5px 0;
+            min-height: 40px;
+        }
+
+        .gantt-row-label {
+            width: 200px;
+            padding-right: 15px;
+            font-weight: 500;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+
+        .gantt-row-bars {
+            flex: 1;
+            display: flex;
+            height: 30px;
+            position: relative;
+        }
+
+        .gantt-bar {
+            position: absolute;
+            height: 20px;
+            background-color: var(--accent);
+            border-radius: 4px;
+            top: 5px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 0.7rem;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            padding: 0 5px;
+            box-sizing: border-box;
+            transition: all 0.3s ease;
+        }
+
+        .gantt-bar:hover {
+            height: 24px;
+            top: 3px;
+            z-index: 2;
+            box-shadow: 0 0 10px rgba(0,0,0,0.2);
+        }
+
+        /* Responsive Design */
+        @media screen and (max-width: 768px) {
+            .timeline-view::after {
+                left: 31px;
+            }
+
+            .timeline-card {
+                width: 100%;
+                padding-left: 70px;
+                padding-right: 25px;
+            }
+
+            .timeline-card::after {
+                left: 20px !important;
+            }
+
+            .timeline-card.right {
+                left: 0;
+            }
+
+            .view-controls {
+                flex-wrap: wrap;
+            }
+
+            .view-btn {
+                flex: 1 1 30%;
+                min-width: 100px;
+                margin: 5px;
+                padding: 8px 10px;
+                font-size: 0.8rem;
+            }
+
+            .date-tabs {
+                flex-wrap: wrap;
+            }
+
+            .date-tab {
+                flex: 1 1 40%;
+                text-align: center;
+                margin: 5px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Responsive Navbar -->
+    <nav class="navbar">
+        <div class="container nav-container">
+            <a href="#" class="logo">NOESIS<span class="year">2K26</span></a>
+            
+            <div class="menu-icon" id="menu-icon">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            
+            <ul class="nav-menu" id="nav-menu">
+                <li><a href="#home" class="nav-link active"><i class="fas fa-home"></i> Home</a></li>
+                <li><a href="#events" class="nav-link"><i class="fas fa-calendar-alt"></i> Events</a></li>
+                <li><a href="#about" class="nav-link"><i class="fas fa-info-circle"></i> About</a></li>
+                <li><a href="schedule.html" class="nav-link"><i class="fas fa-clock"></i> Schedule</a></li>
+                <li><a href="#sponsors" class="nav-link"><i class="fas fa-handshake"></i> Sponsors</a></li>
+                <li><a href="#contact" class="nav-link"><i class="fas fa-envelope"></i> Contact</a></li>
+                <li><a href="#register" class="nav-btn"><i class="fas fa-user-plus"></i> Register Now</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main class="schedule-container">
+        <div class="container">
+            <h1 class="section-title">Event Schedule</h1>
+            
+            <!-- View Controls -->
+            <div class="view-controls">
+                <button class="view-btn active" data-view="timeline">
+                    <i class="fas fa-stream"></i> Timeline
+                </button>
+                <button class="view-btn" data-view="table">
+                    <i class="fas fa-table"></i> Table
+                </button>
+                <button class="view-btn" data-view="gantt">
+                    <i class="fas fa-chart-gantt"></i> Gantt Chart
+                </button>
+            </div>
+
+            <!-- Date Tabs -->
+            <div class="date-tabs">
+                <button class="date-tab active" data-date="jan14">January 14, 2025</button>
+                <button class="date-tab" data-date="jan15">January 15, 2025</button>
+            </div>
+
+            <!-- Timeline View -->
+            <div id="timeline-view" class="timeline-view">
+                <!-- Timeline content will be generated by JavaScript -->
+            </div>
+
+            <!-- Table View -->
+            <div id="table-view" class="table-view">
+                <table class="schedule-table">
+                    <thead>
+                        <tr>
+                            <th>Time</th>
+                            <th>Event</th>
+                            <th>Description</th>
+                            <th>Venue</th>
+                        </tr>
+                    </thead>
+                    <tbody id="table-view-body">
+                        <!-- Table content will be generated by JavaScript -->
+                    </tbody>
+                </table>
+            </div>
+
+            <!-- Gantt Chart View -->
+            <div id="gantt-view" class="gantt-view">
+                <div class="gantt-container">
+                    <div class="gantt-header" id="gantt-header">
+                        <!-- Time slots will be generated by JavaScript -->
+                    </div>
+                    <div id="gantt-rows">
+                        <!-- Rows will be generated by JavaScript -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+ <footer class="tech-footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-about">
+                    <a href="#" class="logo">NOESIS<span class="logo-year year">2K26</span></a>
+                    <p>Pushing the boundaries of technology and innovation through competition and collaboration.</p>
+                    <div class="footer-social">
+                        <a href="https://www.instagram.com/your_instagram_handle" target="_blank" aria-label="Instagram">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="https://www.rosarycollege.ac.in" target="_blank" class="website-link" aria-label="Rosary College Website">
+                            <i class="fas fa-globe"></i>
+                            <span>www.rosarycollege.ac.in</span>
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="footer-links">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="events.html"><i class="fas fa-chevron-right"></i> Events</a></li>
+                        <li><a href="schedule.html"><i class="fas fa-chevron-right"></i> Schedule</a></li>
+                        <li><a href="sponsors.html"><i class="fas fa-chevron-right"></i> Sponsors</a></li>
+                        <li><a href="rules.html"><i class="fas fa-chevron-right"></i> Rules</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-contact">
+                    <h4>Contact Us</h4>
+                    <ul>
+                        <li><i class="fas fa-map-marker-alt"></i> Rosary College of Commerce & Arts, Navelim, Goa - 403707</li>
+                        <li><i class="fas fa-envelope"></i> noesis2k26@gmail.com</li>
+                        <li><i class="fas fa-phone"></i> +91 12345 67890</li>
+                    </ul>
+                </div>
+                
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2026 NOESIS. All rights reserved. | Designed with <i class="fas fa-heart"></i> by NOESIS Team</p>
+                <div class="footer-tech">
+                    <span>#NOESIS2K26</span>
+                    <span>#TechRevolution</span>
+                    <span>#CodeTheFuture</span>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Animated circuit lines -->
+        <div class="circuit-line"></div>
+        <div class="circuit-line"></div>
+        <div class="circuit-line"></div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="js/app.js"></script>
+    <script src="js/cube-rotate.js"></script>
+    <script src="js/custom.js"></script>
+    <script src="js/events.js"></script>
+    <script>
+        // Mobile menu toggle
+        document.querySelector('.mobile-menu-btn').addEventListener('click', function() {
+            document.querySelector('.nav-links').classList.toggle('active');
+            this.classList.toggle('active');
+        });
+        
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                
+                const targetId = this.getAttribute('href');
+                if (targetId === '#') return;
+                
+                const targetElement = document.querySelector(targetId);
+                if (targetElement) {
+                    // Close mobile menu if open
+                    document.querySelector('.nav-links').classList.remove('active');
+                    document.querySelector('.mobile-menu-btn').classList.remove('active');
+                    
+                    // Scroll to target
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 80,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+        
+        // Back to top button
+        const backToTop = document.querySelector('.back-to-top');
+        
+        window.addEventListener('scroll', () => {
+            if (window.pageYOffset > 300) {
+                backToTop.classList.add('show');
+            } else {
+                backToTop.classList.remove('show');
+            }
+        });
+        
+        // Schedule page specific scripts
+        document.addEventListener('DOMContentLoaded', function() {
+            // Sample schedule data (in a real app, this would come from events.js)
+            const scheduleData = {
+                jan14: [
+                    {
+                        id: 'opening',
+                        time: '09:00 AM - 10:00 AM',
+                        title: 'Registration & Breakfast',
+                        description: 'Check-in and enjoy some light breakfast',
+                        venue: 'Main Lobby',
+                        type: 'event',
+                        subEvents: []
+                    },
+                    {
+                        id: 'keynote',
+                        time: '10:00 AM - 11:00 AM',
+                        title: 'Opening Ceremony',
+                        description: 'Welcome address and keynote speech',
+                        venue: 'Main Auditorium',
+                        type: 'event',
+                        subEvents: []
+                    },
+                    {
+                        id: 'webwizard',
+                        time: '11:30 AM - 01:00 PM',
+                        title: 'WEBWIZARD',
+                        description: 'Web development competition',
+                        venue: 'Computer Lab 1',
+                        type: 'main-event',
+                        subEvents: [
+                            { 
+                                id: 'w3bdesixn',
+                                title: 'W3BDESIXN',
+                                description: 'Website Design Competition',
+                                time: '11:30 AM - 01:00 PM',
+                                venue: 'Computer Lab 1',
+                                color: '#16A085'
+                            },
+                            { 
+                                id: 'regex',
+                                title: 'RegEx Challenge',
+                                description: 'Form Validation Challenge',
+                                time: '11:30 AM - 01:00 PM',
+                                venue: 'Computer Lab 2',
+                                color: '#1ABC9C'
+                            }
+                        ]
+                    },
+                    {
+                        id: 'lunch',
+                        time: '01:00 PM - 01:30 PM',
+                        title: 'Lunch Break',
+                        description: 'Enjoy your lunch',
+                        venue: 'Cafeteria',
+                        type: 'break',
+                        subEvents: []
+                    },
+                    {
+                        id: 'codecrusader',
+                        time: '01:30 PM - 03:30 PM',
+                        title: 'CODE CRUSADER',
+                        description: 'Coding competition',
+                        venue: 'Computer Lab 1 & 2',
+                        type: 'main-event',
+                        subEvents: [
+                            { 
+                                id: 'codegolf',
+                                title: 'Code Golf',
+                                description: 'Solve problems with minimal code',
+                                time: '01:30 PM - 03:30 PM',
+                                venue: 'Computer Lab 1',
+                                color: '#E74C3C'
+                            },
+                            { 
+                                id: 'debugging',
+                                title: 'Debugging Challenge',
+                                description: 'Find and fix bugs in code',
+                                time: '01:30 PM - 03:30 PM',
+                                venue: 'Computer Lab 2',
+                                color: '#E67E22'
+                            }
+                        ]
+                    },
+                    {
+                        id: 'mediacrafter',
+                        time: '04:00 PM - 05:30 PM',
+                        title: 'MEDIA CRAFTER',
+                        description: 'Digital media competition',
+                        venue: 'Media Lab',
+                        type: 'main-event',
+                        subEvents: [
+                            { 
+                                id: 'photoshop',
+                                title: 'Photoshop Battle',
+                                description: 'Creative image editing challenge',
+                                time: '04:00 PM - 05:30 PM',
+                                venue: 'Media Lab 1',
+                                color: '#9B59B6'
+                            },
+                            { 
+                                id: 'videoedit',
+                                title: 'Video Editing',
+                                description: 'Short film editing challenge',
+                                time: '04:00 PM - 05:30 PM',
+                                venue: 'Media Lab 2',
+                                color: '#8E44AD'
+                            }
+                        ]
+                    }
+                ],
+                jan15: [
+                    {
+                        id: 'registration-day2',
+                        time: '09:00 AM - 10:00 AM',
+                        title: 'Registration',
+                        description: 'Check-in for day 2',
+                        venue: 'Main Lobby',
+                        type: 'event',
+                        subEvents: []
+                    },
+                    {
+                        id: 'innoquest',
+                        time: '10:00 AM - 12:30 PM',
+                        title: 'INNOQUEST',
+                        description: 'Innovation and entrepreneurship competition',
+                        venue: 'Auditorium A',
+                        type: 'main-event',
+                        subEvents: [
+                            { 
+                                id: 'pitch',
+                                title: 'Startup Pitch',
+                                description: 'Pitch your innovative ideas',
+                                time: '10:00 AM - 11:15 AM',
+                                venue: 'Auditorium A',
+                                color: '#3498DB'
+                            },
+                            { 
+                                id: 'prototype',
+                                title: 'Prototype Showcase',
+                                description: 'Show your working prototypes',
+                                time: '11:30 AM - 12:30 PM',
+                                venue: 'Exhibition Hall',
+                                color: '#2980B9'
+                            }
+                        ]
+                    },
+                    {
+                        id: 'lunch-day2',
+                        time: '01:00 PM - 01:30 PM',
+                        title: 'Lunch Break',
+                        description: 'Enjoy your lunch',
+                        venue: 'Cafeteria',
+                        type: 'break',
+                        subEvents: []
+                    },
+                    {
+                        id: 'swingoffortune',
+                        time: '02:00 PM - 04:00 PM',
+                        title: 'SWING OF FORTUNE',
+                        description: 'Fun games and activities',
+                        venue: 'Open Ground',
+                        type: 'main-event',
+                        subEvents: [
+                            { 
+                                id: 'minigames',
+                                title: 'Mini Games',
+                                description: 'Various fun mini-games',
+                                time: '02:00 PM - 03:00 PM',
+                                venue: 'Open Ground',
+                                color: '#E67E22'
+                            },
+                            { 
+                                id: 'treasurehunt',
+                                title: 'Treasure Hunt',
+                                description: 'Solve clues to find the treasure',
+                                time: '03:00 PM - 04:00 PM',
+                                venue: 'Campus Wide',
+                                color: '#D35400'
+                            }
+                        ]
+                    },
+                    {
+                        id: 'closing',
+                        time: '04:30 PM - 06:00 PM',
+                        title: 'Closing Ceremony & Prize Distribution',
+                        description: 'Award ceremony and closing remarks',
+                        venue: 'Main Auditorium',
+                        type: 'event',
+                        subEvents: []
+                    }
+                ]
+            };
+
+            // View management
+            const views = {
+                timeline: document.getElementById('timeline-view'),
+                table: document.getElementById('table-view'),
+                gantt: document.getElementById('gantt-view')
+            };
+
+            // Date tabs
+            const dateTabs = document.querySelectorAll('.date-tab');
+            let currentDate = 'jan14';
+            let currentView = 'timeline';
+
+            // Initialize the page
+            function init() {
+                // Set up view buttons
+                document.querySelectorAll('.view-btn').forEach(btn => {
+                    btn.addEventListener('click', function() {
+                        // Update active button
+                        document.querySelectorAll('.view-btn').forEach(b => b.classList.remove('active'));
+                        this.classList.add('active');
+                        
+                        // Update current view
+                        currentView = this.getAttribute('data-view');
+                        
+                        // Show the selected view
+                        Object.values(views).forEach(view => view.style.display = 'none');
+                        views[currentView].style.display = 'block';
+                        
+                        // Render the current view
+                        renderView();
+                    });
+                });
+
+                // Set up date tabs
+                dateTabs.forEach(tab => {
+                    tab.addEventListener('click', function() {
+                        // Update active tab
+                        dateTabs.forEach(t => t.classList.remove('active'));
+                        this.classList.add('active');
+                        
+                        // Update current date
+                        currentDate = this.getAttribute('data-date');
+                        
+                        // Render the current view with the new date
+                        renderView();
+                    });
+                });
+
+                // Set default view to timeline
+                document.querySelector('[data-view="timeline"]').click();
+            }
+
+            // Render the current view
+            function renderView() {
+                const events = scheduleData[currentDate];
+                
+                switch(currentView) {
+                    case 'timeline':
+                        renderTimelineView(events);
+                        break;
+                    case 'table':
+                        renderTableView(events);
+                        break;
+                    case 'gantt':
+                        renderGanttView(events);
+                        break;
+                }
+            }
+
+            // Render timeline view
+            function renderTimelineView(events) {
+                const container = document.getElementById('timeline-view');
+                container.innerHTML = '';
+                
+                let isLeft = true;
+                
+                events.forEach((event, index) => {
+                    const eventEl = document.createElement('div');
+                    eventEl.className = `timeline-card ${isLeft ? 'left' : 'right'}`;
+                    
+                    let subEventsHTML = '';
+                    if (event.subEvents && event.subEvents.length > 0) {
+                        subEventsHTML = `
+                            <div class="sub-events">
+                                ${event.subEvents.map(subEvent => `
+                                    <div class="sub-event">
+                                        <div class="sub-event-title">${subEvent.title}</div>
+                                        <div class="sub-event-time">${subEvent.time}</div>
+                                        <div class="sub-event-venue">${subEvent.venue}</div>
+                                    </div>
+                                `).join('')}
+                            </div>
+                        `;
+                    }
+                    
+                    eventEl.innerHTML = `
+                        <div class="timeline-content">
+                            <div class="timeline-time">
+                                <i class="far fa-clock"></i> ${event.time}
+                            </div>
+                            <h3>${event.title}</h3>
+                            <p>${event.description}</p>
+                            <div class="event-venue"><i class="fas fa-map-marker-alt"></i> ${event.venue}</div>
+                            ${subEventsHTML}
+                        </div>
+                    `;
+                    
+                    container.appendChild(eventEl);
+                    isLeft = !isLeft; // Alternate sides
+                });
+            }
+
+            // Render table view
+            function renderTableView(events) {
+                const tbody = document.getElementById('table-view-body');
+                tbody.innerHTML = '';
+                
+                // Group events by date
+                const eventsByDate = {
+                    'January 14, 2025': scheduleData.jan14,
+                    'January 15, 2025': scheduleData.jan15
+                };
+                
+                // For each date
+                for (const [date, dateEvents] of Object.entries(eventsByDate)) {
+                    // Add date header
+                    const dateRow = document.createElement('tr');
+                    dateRow.className = 'date-header';
+                    dateRow.innerHTML = `
+                        <td colspan="4" class="date-header-cell">
+                            <h3>${date}</h3>
+                        </td>
+                    `;
+                    tbody.appendChild(dateRow);
+                    
+                    // Add events for this date
+                    dateEvents.forEach(event => {
+                        // Main event row
+                        const mainRow = document.createElement('tr');
+                        mainRow.className = 'main-event-row';
+                        mainRow.innerHTML = `
+                            <td>${event.time}</td>
+                            <td><strong>${event.title}</strong></td>
+                            <td>${event.description}</td>
+                            <td>${event.venue}</td>
+                        `;
+                        tbody.appendChild(mainRow);
+                        
+                        // Sub-events rows
+                        if (event.subEvents && event.subEvents.length > 0) {
+                            event.subEvents.forEach(subEvent => {
+                                const subRow = document.createElement('tr');
+                                subRow.className = 'sub-event-row';
+                                subRow.innerHTML = `
+                                    <td>${subEvent.time}</td>
+                                    <td>${subEvent.title}</td>
+                                    <td>${subEvent.description}</td>
+                                    <td>${subEvent.venue}</td>
+                                `;
+                                tbody.appendChild(subRow);
+                            });
+                        }
+                    });
+                }
+            }
+
+            // Render Gantt chart view
+            function renderGanttView(events) {
+                const header = document.getElementById('gantt-header');
+                const rowsContainer = document.getElementById('gantt-rows');
+                
+                // Clear previous content
+                header.innerHTML = '';
+                rowsContainer.innerHTML = '';
+                
+                // Generate time slots (8:00 AM to 6:00 PM in 30-min intervals)
+                const timeSlots = [];
+                for (let hour = 8; hour <= 18; hour++) {
+                    for (let minute = 0; minute < 60; minute += 30) {
+                        const time = `${hour.toString().padStart(2, '0')}:${minute === 0 ? '00' : minute}`;
+                        const displayTime = `${hour > 12 ? hour - 12 : hour}:${minute === 0 ? '00' : minute} ${hour >= 12 ? 'PM' : 'AM'}`;
+                        timeSlots.push({ time, displayTime });
+                        
+                        // Add to header
+                        const timeSlotEl = document.createElement('div');
+                        timeSlotEl.className = 'gantt-time-slot';
+                        timeSlotEl.textContent = displayTime;
+                        timeSlotEl.style.flex = '1 0 60px';
+                        header.appendChild(timeSlotEl);
+                    }
+                }
+                
+                // Calculate time position (minutes since 8:00 AM)
+                function getTimePosition(timeStr) {
+                    const [time, period] = timeStr.split(' ');
+                    let [hours, minutes] = time.split(':').map(Number);
+                    
+                    // Convert to 24-hour format
+                    if (period === 'PM' && hours !== 12) hours += 12;
+                    if (period === 'AM' && hours === 12) hours = 0;
+                    
+                    // Calculate minutes since 8:00 AM (480 minutes)
+                    return (hours * 60 + minutes) - 480;
+                }
+                
+                // Process events to get all sub-events
+                const allSubEvents = [];
+                events.forEach(event => {
+                    if (event.subEvents && event.subEvents.length > 0) {
+                        allSubEvents.push(...event.subEvents);
+                    }
+                });
+                
+                // Add lunch break
+                allSubEvents.push({
+                    id: 'lunch-break',
+                    title: 'Lunch Break',
+                    description: 'Enjoy your lunch',
+                    time: '01:00 PM - 01:30 PM',
+                    venue: 'Cafeteria',
+                    color: '#7F8C8D',
+                    isBreak: true
+                });
+                
+                // Create a row for each sub-event
+                allSubEvents.forEach((event, index) => {
+                    const [startTime, endTime] = event.time.split(' - ');
+                    const startPos = getTimePosition(startTime);
+                    const endPos = getTimePosition(endTime);
+                    const duration = endPos - startPos;
+                    
+                    // Create row
+                    const row = document.createElement('div');
+                    row.className = 'gantt-row';
+                    
+                    // Add label
+                    const label = document.createElement('div');
+                    label.className = 'gantt-row-label';
+                    label.textContent = event.title;
+                    row.appendChild(label);
+                    
+                    // Add bars container
+                    const bars = document.createElement('div');
+                    bars.className = 'gantt-row-bars';
+                    
+                    // Add event bar
+                    const bar = document.createElement('div');
+                    bar.className = 'gantt-bar';
+                    bar.textContent = event.title;
+                    bar.style.left = `${(startPos / 30) * 2}%`;
+                    bar.style.width = `${(duration / 30) * 2}%`;
+                    bar.style.backgroundColor = event.color || '#3498DB';
+                    
+                    // Style lunch break differently
+                    if (event.isBreak) {
+                        bar.style.backgroundColor = '#95A5A6';
+                        bar.style.color = '#fff';
+                        bar.style.fontStyle = 'italic';
+                    }
+                    
+                    bars.appendChild(bar);
+                    row.appendChild(bars);
+                    rowsContainer.appendChild(row);
+                });
+            }
+
+            // Initialize the page
+            init();
+        });
+    </script>
+</body>
+</html>
