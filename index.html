@@ -83,17 +83,17 @@
         <div class="container nav-container">
             <a href="#" class="logo">NOESIS<span class="year">2K26</span></a>
             
-            <div class="hamburger" id="menu-icon">
-                <span class="bar"></span>
-                <span class="bar"></span>
-                <span class="bar"></span>
+            <div class="menu-icon" id="menu-icon">
+                <span></span>
+                <span></span>
+                <span></span>
             </div>
             
             <ul class="nav-menu" id="nav-menu">
                 <li><a href="#home" class="nav-link active"><i class="fas fa-home"></i> Home</a></li>
                 <li><a href="#events" class="nav-link"><i class="fas fa-calendar-alt"></i> Events</a></li>
                 <li><a href="#about" class="nav-link"><i class="fas fa-info-circle"></i> About</a></li>
-                <li><a href="./schedule.html" class="nav-link"><i class="fas fa-clock"></i> Schedule</a></li>
+                <li><a href="#schedule" class="nav-link"><i class="fas fa-clock"></i> Schedule</a></li>
                 <li><a href="#sponsors" class="nav-link"><i class="fas fa-handshake"></i> Sponsors</a></li>
                 <li><a href="#contact" class="nav-link"><i class="fas fa-envelope"></i> Contact</a></li>
                 <li><a href="#register" class="nav-btn"><i class="fas fa-user-plus"></i> Register Now</a></li>
@@ -125,7 +125,7 @@
                             <span class="subtitle-line">// January 24-25, 2026</span>
                         </p>
                         <div class="cta-buttons">
-                            <a href="events.html" class="btn btn-primary">
+                            <a href="#events" class="btn btn-primary">
                                 <i class="fas fa-rocket"></i> Explore Events
                             </a>
                             <a href="schedule.html" class="btn btn-secondary">
@@ -191,6 +191,7 @@
                 
                 <div class="events-container">
                     <div class="events-grid">
+                        <!-- Card 1: Web Wizard -->
                         <div class="event-card">
                             <div class="event-image">
                                 <img src="https://images.unsplash.com/photo-1551434678-e076c223a692?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Web Wizard">
@@ -201,9 +202,11 @@
                                 <span><i class="far fa-calendar"></i> Jan 24, 2026</span>
                                 <span><i class="fas fa-users"></i> Individual</span>
                             </div>
-                            <a href="#event-details" class="btn btn-sm btn-outline">View Details</a>
+                            <!-- UPDATE: Added class 'view-details-btn' and data-id -->
+                            <a href="#" class="btn btn-sm btn-outline view-details-btn" data-id="main-event-1">View Details</a>
                         </div>
 
+                        <!-- Card 2: Media Crafter -->
                         <div class="event-card">
                             <div class="event-image">
                                 <img src="https://images.unsplash.com/photo-1620712943543-bcc4688e7485?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Media Crafter">
@@ -214,9 +217,11 @@
                                 <span><i class="far fa-calendar"></i> Jan 25, 2026</span>
                                 <span><i class="fas fa-users"></i> Team of 2-3</span>
                             </div>
-                            <a href="#event-details" class="btn btn-sm btn-outline">View Details</a>
+                            <!-- UPDATE: Added class 'view-details-btn' and data-id -->
+                            <a href="#" class="btn btn-sm btn-outline view-details-btn" data-id="main-event-3">View Details</a>
                         </div>
 
+                        <!-- Card 3: Swing of Fortune -->
                         <div class="event-card">
                             <div class="event-image">
                                 <img src="https://images.unsplash.com/photo-1635070041078-e363dbe005cb?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Swing of Fortune">
@@ -227,9 +232,11 @@
                                 <span><i class="far fa-calendar"></i> Jan 26, 2026</span>
                                 <span><i class="fas fa-user"></i> Individual</span>
                             </div>
-                            <a href="#event-details" class="btn btn-sm btn-outline">View Details</a>
+                            <!-- UPDATE: Added class 'view-details-btn' and data-id -->
+                            <a href="#" class="btn btn-sm btn-outline view-details-btn" data-id="main-event-5">View Details</a>
                         </div>
 
+                        <!-- Card 4: Code Crusader -->
                         <div class="event-card">
                             <div class="event-image">
                                 <img src="https://images.unsplash.com/photo-1555066931-4365d14bab8c?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Code Crusader">
@@ -240,9 +247,11 @@
                                 <span><i class="far fa-calendar"></i> Jan 27, 2026</span>
                                 <span><i class="fas fa-user"></i> Individual</span>
                             </div>
-                            <a href="#event-details" class="btn btn-sm btn-outline">View Details</a>
+                            <!-- UPDATE: Added class 'view-details-btn' and data-id -->
+                            <a href="#" class="btn btn-sm btn-outline view-details-btn" data-id="main-event-2">View Details</a>
                         </div>
 
+                        <!-- Card 5: Innoquest -->
                         <div class="event-card">
                             <div class="event-image">
                                 <img src="https://images.unsplash.com/photo-1518770660439-4636190af475?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80&auto=format&fit=crop&w=800&q=80&fit=crop" alt="Innoquest">
@@ -253,9 +262,11 @@
                                 <span><i class="far fa-calendar"></i> Jan 28, 2026</span>
                                 <span><i class="fas fa-users"></i> Team of 3-4</span>
                             </div>
-                            <a href="#event-details" class="btn btn-sm btn-outline">View Details</a>
+                            <!-- UPDATE: Added class 'view-details-btn' and data-id -->
+                            <a href="#" class="btn btn-sm btn-outline view-details-btn" data-id="main-event-4">View Details</a>
                         </div>
 
+                        <!-- Card 6: Gamers Groove -->
                         <div class="event-card">
                             <div class="event-image">
                                 <img src="https://images.unsplash.com/photo-1552820728-8b83bb6b773f?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Gamers Groove">
@@ -266,7 +277,8 @@
                                 <span><i class="far fa-calendar"></i> Jan 29, 2026</span>
                                 <span><i class="fas fa-users"></i> Team of 2-3</span>
                             </div>
-                            <a href="#event-details" class="btn btn-sm btn-outline">View Details</a>
+                            <!-- UPDATE: Added class 'view-details-btn' and data-id -->
+                            <a href="#" class="btn btn-sm btn-outline view-details-btn" data-id="main-event-6">View Details</a>
                         </div>
                     </div>
                 </div>
@@ -420,10 +432,36 @@
         <div class="tech-circle"></div>
     </div>
 
+    <!-- Event Details Modal (New Structure) -->
+    <div class="modal-overlay">
+        <div class="event-modal glass-card">
+            <div class="modal-header">
+                <h2 class="modal-title" id="modal-title">Event Title</h2>
+                <button class="close-modal">&times;</button>
+            </div>
+            <div class="modal-body">
+                <div id="modal-description" class="modal-section">
+                    <!-- Description injected here -->
+                </div>
+                
+                <div class="modal-section">
+                    <h3 class="modal-subtitle" id="modal-rules-title">Rules</h3>
+                    <ul class="rules-list" id="modal-rules-list">
+                        <!-- Rules injected here -->
+                    </ul>
+                </div>
+
+                <div id="sub-events-container">
+                    <!-- Sub events injected here -->
+                </div>
+            </div>
+        </div>
+    </div>
+
     <!-- Scripts -->
     <script src="js/cube-rotate.js"></script>
-    <script src="js/events.js"></script>
-    <script src="js/script.js"></script>
     <script src="countdown.js"></script>
+    <!-- Updated main.js import type -->
+    <script type="module" src="js/main.js"></script>
 </body>
 </html>

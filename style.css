@@ -200,104 +200,6 @@
     color: var(--black) !important;
 }
 
-/* Mobile menu styles */
-.hamburger {
-    display: none;
-    cursor: pointer;
-    z-index: 1001;
-    padding: 10px;
-}
-
-.bar {
-    display: block;
-    width: 25px;
-    height: 3px;
-    margin: 5px auto;
-    transition: all 0.3s ease-in-out;
-    background-color: var(--white);
-}
-
-/* Prevent scrolling when mobile menu is open */
-body.no-scroll {
-    overflow: hidden;
-}
-
-/* Mobile menu styles */
-@media (max-width: 992px) {
-    .hamburger {
-        display: block;
-    }
-
-    .hamburger.active .bar:nth-child(2) {
-        opacity: 0;
-    }
-    
-    .hamburger.active .bar:nth-child(1) {
-        transform: translateY(8px) rotate(45deg);
-    }
-    
-    .hamburger.active .bar:nth-child(3) {
-        transform: translateY(-8px) rotate(-45deg);
-    }
-
-    .nav-menu {
-        position: fixed;
-        right: -100%;
-        top: 70px;
-        display: flex;
-        flex-direction: column;
-        background-color: var(--bg-primary);
-        width: 80%;
-        max-width: 320px;
-        height: calc(100vh - 70px);
-        text-align: left;
-        transition: var(--transition);
-        padding: 2rem 1.5rem;
-        opacity: 0;
-        visibility: hidden;
-        border-left: 1px solid rgba(255, 255, 255, 0.1);
-        box-shadow: -5px 0 30px rgba(0, 0, 0, 0.3);
-    }
-
-    .nav-menu.active {
-        right: 0;
-        opacity: 1;
-        visibility: visible;
-    }
-
-    .nav-item {
-        margin: 1.5rem 0;
-    }
-
-    .nav-link {
-        font-size: 1.2rem;
-        justify-content: center;
-    }
-}
-
-/* Desktop styles */
-@media (min-width: 993px) {
-    .nav-menu {
-        display: flex !important;
-        position: static;
-        width: auto;
-        background: transparent;
-        box-shadow: none;
-        padding: 0;
-    }
-    
-    .nav-item {
-        margin: 0 0 0 1.2rem;
-    }
-}
-
-/* Navbar on scroll */
-.navbar.scrolled {
-    background: rgba(26, 10, 16, 0.98);
-    box-shadow: 0 2px 20px rgba(0, 0, 0, 0.2);
-    padding: 0.5rem 0;
-}
-
 /* Mobile Menu Button */
 .menu-icon {
     display: none;
@@ -327,19 +229,21 @@ body.no-scroll {
     .nav-menu {
         position: fixed;
         top: 0;
-        right: -100%;
-        width: 300px;
+        left: -100%;
+        width: 80%;
+        max-width: 400px;
         height: 100vh;
-        padding: 100px 30px;
         background: var(--bg-primary);
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 2rem;
         transition: var(--transition);
-        z-index: 1000;
-        box-shadow: -5px 0 30px rgba(0, 0, 0, 0.3);
-        border-left: 1px solid rgba(255, 255, 255, 0.1);
+        box-shadow: 5px 0 30px rgba(0, 0, 0, 0.3);
     }
 
     .nav-menu.active {
-        right: 0;
+        left: 0;
     }
 
     .nav-link {
@@ -4139,4 +4043,169 @@ header .container {
         font-size: 0.55rem;
         margin-top: 0.3rem;
     }
+}
+/* Add this to the bottom of your style.css */
+
+/* Modal Overlay */
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.85);
+    backdrop-filter: blur(8px);
+    z-index: 2000;
+    display: none; /* Hidden by default */
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.modal-overlay.active {
+    display: flex;
+    opacity: 1;
+}
+
+/* Modal Content */
+.event-modal {
+    width: 90%;
+    max-width: 900px;
+    max-height: 90vh;
+    overflow-y: auto;
+    background: linear-gradient(135deg, #1a0a10 0%, #2a0f1a 100%);
+    border: 1px solid var(--accent);
+    box-shadow: 0 0 30px rgba(168, 28, 74, 0.4);
+    border-radius: 15px;
+    position: relative;
+    transform: translateY(50px);
+    transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    padding: 0; /* Reset padding */
+}
+
+.modal-overlay.active .event-modal {
+    transform: translateY(0);
+}
+
+/* Scrollbar for modal */
+.event-modal::-webkit-scrollbar {
+    width: 8px;
+}
+.event-modal::-webkit-scrollbar-track {
+    background: #0a0406;
+}
+.event-modal::-webkit-scrollbar-thumb {
+    background: var(--accent);
+    border-radius: 4px;
+}
+
+/* Modal Header */
+.modal-header {
+    background: linear-gradient(90deg, rgba(168, 28, 74, 0.2), transparent);
+    padding: 1.5rem 2rem;
+    border-bottom: 1px solid rgba(212, 175, 55, 0.2);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    backdrop-filter: blur(10px);
+}
+
+.modal-title {
+    font-family: 'Orbitron', sans-serif;
+    color: var(--accent);
+    font-size: 1.5rem;
+    margin: 0;
+}
+
+.close-modal {
+    background: transparent;
+    border: none;
+    color: var(--white);
+    font-size: 2rem;
+    cursor: pointer;
+    transition: var(--transition);
+    line-height: 1;
+}
+
+.close-modal:hover {
+    color: var(--accent);
+    transform: rotate(90deg);
+}
+
+/* Modal Body */
+.modal-body {
+    padding: 2rem;
+}
+
+.modal-section {
+    margin-bottom: 2rem;
+}
+
+.modal-subtitle {
+    color: var(--white);
+    font-family: 'Orbitron', sans-serif;
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+    border-left: 3px solid var(--primary);
+    padding-left: 1rem;
+}
+
+.modal-text {
+    color: rgba(255, 255, 255, 0.8);
+    line-height: 1.6;
+    font-size: 1rem;
+}
+
+/* Rules List */
+.rules-list {
+    list-style: none;
+    padding: 0;
+}
+
+.rules-list li {
+    position: relative;
+    padding-left: 1.5rem;
+    margin-bottom: 0.8rem;
+    color: rgba(255, 255, 255, 0.8);
+}
+
+.rules-list li::before {
+    content: '>';
+    position: absolute;
+    left: 0;
+    color: var(--accent);
+    font-family: monospace;
+}
+
+/* Sub Events Grid in Modal */
+.sub-events-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5rem;
+    margin-top: 1.5rem;
+}
+
+.sub-event-item {
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    padding: 1.5rem;
+    border-radius: 8px;
+}
+
+.sub-event-item h4 {
+    color: var(--accent);
+    font-size: 1.1rem;
+    margin-bottom: 0.5rem;
+}
+
+.sub-event-date {
+    display: inline-block;
+    font-size: 0.8rem;
+    color: var(--primary-light);
+    margin-bottom: 1rem;
+    font-family: 'Share Tech Mono', monospace;
 }
