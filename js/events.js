@@ -1,7 +1,3 @@
-/* events.js
-IMPORTANT: DO NOT MODIFY THE JSON BELOW.
-It must be used exactly as-is for dynamic rendering.
-*/
 const allEventsData = [
   {
     mainEvent: {
@@ -405,7 +401,4 @@ const allEventsData = [
       }
     ]
   }
-];
-
-// Export the events data for use in other modules
-export { allEventsData };
+]
