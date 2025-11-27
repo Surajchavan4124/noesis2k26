@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - NOESIS 2K26</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&family=Orbitron:wght@400;500;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Google Fonts and Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* Main content container */
+        .contact-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 4rem 1rem 3rem; 
+            width: 100%;
+            min-height: calc(100vh - 100px);
+        }
+        
+        /* Ensure sections have proper spacing */
+        .section-title {
+            position: relative;
+            padding-top: 2rem;
+            margin-top: 2rem;
+        }
+
+        .section-header {
+            text-align: center;
+            margin: 0 auto 3rem;
+            max-width: 800px;
+        }
+
+        .section-divider {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 1rem 0;
+        }
+
+        .section-divider .line {
+            width: 50px;
+            height: 2px;
+            background: var(--accent);
+            margin: 0 10px;
+        }
+
+        .coordinators-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin: 2rem auto;
+            max-width: 1200px;
+            justify-content: center;
+            justify-items: center;
+            padding: 0 1rem;
+            width: 100%;
+            box-sizing: border-box;
+        }
+
+        .coordinator-card {
+            background: rgba(255, 255, 255, 0.08);
+            border-radius: 10px;
+            padding: 1.8rem 1.5rem;
+            text-align: center;
+            transition: all 0.5s ease;
+            position: relative;
+            overflow: hidden;
+            backdrop-filter: blur(10px);
+            border: 1px solid transparent;
+            max-width: 300px;
+            width: 100%;
+            margin: 0 auto;
+            z-index: 1;
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+        }
+
+        .coordinator-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            border-radius: 12px;
+            padding: 2px;
+            background: linear-gradient(45deg, var(--primary), var(--accent), var(--primary-light), var(--accent-light));
+            -webkit-mask: 
+                linear-gradient(#fff 0 0) content-box, 
+                linear-gradient(#fff 0 0);
+            -webkit-mask-composite: xor;
+            mask: 
+                linear-gradient(#fff 0 0) content-box, 
+                linear-gradient(#fff 0 0);
+            mask-composite: exclude;
+            background-size: 300% 300%;
+            opacity: 0;
+            z-index: -1;
+            transition: opacity 0.5s ease, background-position 2s ease;
+            animation: rotateBorder 4s linear infinite;
+        }
+
+        @keyframes rotateBorder {
+            0% {
+                background-position: 0% 50%;
+            }
+            50% {
+                background-position: 100% 50%;
+            }
+            100% {
+                background-position: 0% 50%;
+            }
+        }
+
+        .coordinator-card:hover::before {
+            opacity: 1;
+            animation: rotateBorder 2s linear infinite;
+        }
+
+        .coordinator-card:hover {
+            transform: translateY(-5px) scale(1.02);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+            background: rgba(45, 10, 25, 0.8);
+        }
+
+        .coordinator-image {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            margin: 0 auto 1rem;
+            overflow: hidden;
+            border: 3px solid var(--accent);
+        }
+
+        .coordinator-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .coordinator-info h3 {
+            color: #fff;
+            margin: 0.5rem 0;
+            font-family: 'Orbitron', sans-serif;
+            font-size: 1.3rem;
+            font-weight: 600;
+            text-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+        }
+
+        .coordinator-role {
+            color: var(--accent);
+            font-size: 1rem;
+            margin: 0.5rem 0 1.5rem;
+            font-family: 'Share Tech Mono', monospace;
+            font-weight: 500;
+            letter-spacing: 0.5px;
+        }
+
+        .contact-links {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            margin-top: 1rem;
+        }
+
+        .contact-links a {
+            color: #fff;
+            background: rgba(255, 255, 255, 0.1);
+            width: 36px;
+            height: 36px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            position: relative;
+            overflow: hidden;
+        }
+
+        /* Base styles for all contact links */
+        .contact-links a {
+            position: relative;
+            color: #fff;
+            background: rgba(255, 255, 255, 0.1);
+            width: 36px;
+            height: 36px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            overflow: hidden;
+        }
+
+        /* Phone icon styles */
+        .contact-links a[title="Call"] {
+            --icon-color: #34b7f1;
+            --hover-color: rgba(52, 183, 241, 0.15);
+            color: var(--icon-color);
+        }
+
+        /* Email icon styles */
+        .contact-links a[title="Email"] {
+            --icon-color: #ea4335;
+            --hover-color: rgba(234, 67, 53, 0.15);
+            color: var(--icon-color);
+        }
+
+        /* WhatsApp icon styles */
+        .contact-links a[title="WhatsApp"] {
+            --icon-color: #25D366;
+            --hover-color: rgba(37, 211, 102, 0.15);
+            color: var(--icon-color);
+        }
+
+        /* Hover effects */
+        .contact-links a::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: var(--hover-color);
+            opacity: 0;
+            transition: opacity 0.3s ease, transform 0.3s ease;
+            border-radius: 50%;
+            transform: scale(0.8);
+        }
+
+        .contact-links a:hover {
+            transform: translateY(-3px) scale(1.1);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        .contact-links a:hover::before {
+            opacity: 1;
+            transform: scale(1);
+        }
+
+        .section-title {
+            font-size: 1.8rem;
+            color: #fff;
+            margin: 2rem auto 1.5rem;
+            padding: 2rem 0 0;
+            text-align: center;
+            font-family: 'Orbitron', sans-serif;
+            display: block;
+            width: 100%;
+            position: relative;
+        }
+
+        .section-title:after {
+            content: '';
+            position: absolute;
+            width: 50px;
+            height: 3px;
+            background: var(--accent);
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+    </style>
+</head>
+<body>
+    <!-- Responsive Navbar -->
+    <nav class="navbar">
+        <div class="container nav-container">
+            <a href="#" class="logo">NOESIS<span class="year">2K26</span></a>
+            
+            <div class="hamburger" id="menu-icon">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+            
+            <ul class="nav-menu" id="nav-menu">
+                <li><a href="./index.html" class="nav-link"><i class="fas fa-home"></i> Home</a></li>
+                <li><a href="./events.html" class="nav-link"><i class="fas fa-calendar-alt"></i> Events</a></li>
+                <li><a href="./about.html" class="nav-link"><i class="fas fa-info-circle"></i> About</a></li>
+                <li><a href="./schedule.html" class="nav-link"><i class="fas fa-clock"></i> Schedule</a></li>
+                <li><a href="./sponsors.html" class="nav-link"><i class="fas fa-handshake"></i> Sponsors</a></li>
+                <li><a href="./contact.html" class="nav-link active"><i class="fas fa-envelope"></i> Contact</a></li>
+                <li><a href="./register.html" class="nav-btn"><i class="fas fa-user-plus"></i> Register Now</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main class="contact-container">
+        <div class="section-header" style="padding-top: 2rem;">
+            <h2>CONTACT US</h2>
+            <p>Get in touch with our coordinators for any queries or information</p>
+        </div>
+
+        <h3 class="section-title">Noesis 2K26 Faculty Coordinators</h3>
+        <div class="coordinators-grid" id="facultyCoordinators">
+            <!-- Faculty coordinators will be dynamically inserted here -->
+        </div>
+
+        <h3 class="section-title">Noesis 2K26 Student Coordinators</h3>
+        <div class="coordinators-grid" id="noesisCoordinators">
+            <!-- Noesis coordinators will be dynamically inserted here -->
+        </div>
+
+        <h3 class="section-title">Event Coordinators</h3>
+        <div class="coordinators-grid" id="studentCoordinators">
+            <!-- Student coordinators will be dynamically inserted here -->
+        </div>
+    </main>
+
+    <footer class="tech-footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-about">
+                    <a href="#" class="logo">NOESIS<span class="logo-year year">2K26</span></a>
+                    <p>Pushing the boundaries of technology and innovation through competition and collaboration.</p>
+                    <div class="footer-social">
+                        <a href="https://www.instagram.com/your_instagram_handle" target="_blank" aria-label="Instagram">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="https://www.rosarycollege.ac.in" target="_blank" class="website-link" aria-label="Rosary College Website">
+                            <i class="fas fa-globe"></i>
+                            <span>www.rosarycollege.ac.in</span>
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="footer-links">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="events.html"><i class="fas fa-chevron-right"></i> Events</a></li>
+                        <li><a href="schedule.html"><i class="fas fa-chevron-right"></i> Schedule</a></li>
+                        <li><a href="sponsors.html"><i class="fas fa-chevron-right"></i> Sponsors</a></li>
+                        <li><a href="rules.html"><i class="fas fa-chevron-right"></i> Rules</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-contact">
+                    <h4>Contact Us</h4>
+                    <ul>
+                        <li><i class="fas fa-map-marker-alt"></i> Rosary College of Commerce & Arts, Navelim, Goa - 403707</li>
+                        <li><i class="fas fa-envelope"></i> noesis2k26@gmail.com</li>
+                        <li><i class="fas fa-phone"></i> +91 12345 67890</li>
+                    </ul>
+                </div>
+                
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2026 NOESIS. All rights reserved. | Designed with <i class="fas fa-heart"></i> by NOESIS Team</p>
+                <div class="footer-tech">
+                    <span>#NOESIS2K26</span>
+                    <span>#TechRevolution</span>
+                    <span>#CodeTheFuture</span>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Animated circuit lines -->
+        <div class="circuit-line"></div>
+        <div class="circuit-line"></div>
+        <div class="circuit-line"></div>
+    </footer>
+
+    <script src="js/script.js"></script>
+    <script src="js/coordinators.js"></script>
+    <script>
+        // Function to create coordinator card
+        function createCoordinatorCard(coordinator) {
+            return `
+                <div class="coordinator-card">
+                    <div class="coordinator-image">
+                        <img src="${coordinator.imageUrl}" alt="${coordinator.name}">
+                    </div>
+                    <div class="coordinator-info">
+                        <h3>${coordinator.name}</h3>
+                        <p class="coordinator-role">${coordinator.role}</p>
+                        <div class="contact-links">
+                            <a href="tel:${coordinator.phone_no}" title="Call"><i class="fas fa-phone"></i></a>
+                            <a href="mailto:${coordinator.email}" title="Email"><i class="fas fa-envelope"></i></a>
+                            <a href="${coordinator.whatsapp}" target="_blank" title="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+                        </div>
+                    </div>
+                </div>
+            `;
+        }
+
+        // Load coordinators
+        document.addEventListener('DOMContentLoaded', function() {
+            const facultyContainer = document.getElementById('facultyCoordinators');
+            const noesisContainer = document.getElementById('noesisCoordinators');
+            const studentContainer = document.getElementById('studentCoordinators');
+
+            // Add faculty coordinators
+            facultyCoordinators.forEach(coordinator => {
+                facultyContainer.innerHTML += createCoordinatorCard(coordinator);
+            });
+
+            // Add Noesis coordinators
+            noesisCoordinators.forEach(coordinator => {
+                noesisContainer.innerHTML += createCoordinatorCard(coordinator);
+            });
+
+            // Add student coordinators
+            studentCoordinators.forEach(coordinator => {
+                studentContainer.innerHTML += createCoordinatorCard(coordinator);
+            });
+
+            // Mobile menu toggle
+            const menuToggle = document.getElementById('mobile-menu');
+            const navMenu = document.querySelector('.nav-menu');
+            
+            menuToggle.addEventListener('click', function() {
+                navMenu.classList.toggle('active');
+                menuToggle.classList.toggle('active');
+            });
+
+            // Close mobile menu when clicking a link
+            document.querySelectorAll('.nav-link').forEach(link => {
+                link.addEventListener('click', () => {
+                    navMenu.classList.remove('active');
+                    menuToggle.classList.remove('active');
+                });
+            });
+        });
+    </script>
+</body>
+</html>
