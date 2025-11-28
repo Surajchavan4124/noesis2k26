@@ -488,34 +488,37 @@
             border-bottom: none;
         }
 
-        .schedule-table tr:not(thead tr) {
-            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-            position: relative;
-            overflow: hidden;
-        }
-
-        .schedule-table tr:not(thead tr)::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 3px;
-            height: 100%;
-            background: var(--accent);
-            transform: scaleY(0);
-            transform-origin: top;
-            transition: transform 0.3s ease;
-        }
-
         .schedule-table tbody tr:hover {
             background: rgba(30, 15, 20, 0.6);
             transform: translateY(-2px);
             box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
         }
 
-        .schedule-table tbody tr:hover::before {
-            transform: scaleY(1);
+        .schedule-table tr:not(thead tr) {
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
         }
+
+        .schedule-table tr:not(thead tr) td:first-child {
+    position: relative;
+}
+
+.schedule-table tr:not(thead tr) td:first-child::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 3px;
+    height: 100%;
+    background: var(--accent);
+    transform: scaleY(0);
+    transform-origin: top;
+    transition: transform 0.3s ease;
+}
+
+/* 4. Trigger the animation when the ROW is hovered */
+.schedule-table tbody tr:hover td:first-child::before {
+    transform: scaleY(1);
+}
 
         .main-event-row {
             background: rgba(26, 10, 16, 0.3) !important;
@@ -624,13 +627,13 @@
     <nav class="navbar">
         <div class="container nav-container">
             <a href="#" class="logo">NOESIS<span class="year">2K26</span></a>
-            
+
             <div class="hamburger" id="menu-icon">
                 <span class="bar"></span>
                 <span class="bar"></span>
                 <span class="bar"></span>
             </div>
-            
+
             <ul class="nav-menu" id="nav-menu">
                 <li><a href="./index.html" class="nav-link"><i class="fas fa-home"></i> Home</a></li>
                 <li><a href="./events.html" class="nav-link"><i class="fas fa-calendar-alt"></i> Events</a></li>
@@ -655,7 +658,8 @@
 
             <!-- View Toggle Buttons -->
             <div class="view-toggle" style="margin: 0 0 20px 0; text-align: center;">
-                <button id="timelineViewBtn" class="view-btn active"><i class="fas fa-list-timeline"></i> Timeline View</button>
+                <button id="timelineViewBtn" class="view-btn active"><i class="fas fa-list-timeline"></i> Timeline
+                    View</button>
                 <button id="tableViewBtn" class="view-btn"><i class="fas fa-table"></i> Table View</button>
             </div>
 
@@ -808,7 +812,7 @@
                 } else {
                     noEventsMessage.style.display = 'none';
                     timeline.style.display = 'block';
-                    
+
                     // Render both timeline and table views
                     renderTimelineView(filteredEvents, day);
                     renderTableView(filteredEvents, day);
@@ -872,16 +876,16 @@
             // Function to render table view
             function renderTableView(events, day) {
                 scheduleTableBody.innerHTML = ''; // Clear existing rows
-                
+
                 events.forEach(event => {
                     // Add main event row
                     const mainEventRow = document.createElement('tr');
                     mainEventRow.className = 'main-event-row';
-                    
+
                     // Get the first sub-event's time for the main event row
                     const firstSubEvent = event.mainEvent;
                     const eventTime = firstSubEvent ? firstSubEvent.date : 'TBD';
-                    
+
                     mainEventRow.innerHTML = `
                         <td class="event-time">${eventTime}</td>
                         <td>
@@ -889,14 +893,14 @@
                         </td>
                         <td class="event-venue">${event.mainEvent.venue || 'Main Venue'}</td>
                     `;
-                    
+
                     scheduleTableBody.appendChild(mainEventRow);
-                    
+
                     // Add sub-events
                     event.subEvents.forEach(subEvent => {
                         const subEventRow = document.createElement('tr');
                         subEventRow.className = 'sub-event-row';
-                        
+
                         subEventRow.innerHTML = `
                             <td class="event-time">${subEvent.date}</td>
                             <td>
@@ -904,7 +908,7 @@
                             </td>
                             <td class="event-venue">${subEvent.venue || (subEvent.rules ? subEvent.rules[0] : 'TBD')}</td>
                         `;
-                        
+
                         scheduleTableBody.appendChild(subEventRow);
                     });
                 });
@@ -916,7 +920,7 @@
             // Add click event listeners to date buttons
             const dateButtons = document.querySelectorAll('.date-btn');
             dateButtons.forEach(button => {
-                button.addEventListener('click', function() {
+                button.addEventListener('click', function () {
                     // Remove active class from all buttons
                     dateButtons.forEach(btn => btn.classList.remove('active'));
                     // Add active class to clicked button
@@ -928,7 +932,7 @@
             });
 
             // Add click event listeners to view toggle buttons
-            timelineViewBtn.addEventListener('click', function() {
+            timelineViewBtn.addEventListener('click', function () {
                 if (!this.classList.contains('active')) {
                     this.classList.add('active');
                     tableViewBtn.classList.remove('active');
@@ -937,7 +941,7 @@
                 }
             });
 
-            tableViewBtn.addEventListener('click', function() {
+            tableViewBtn.addEventListener('click', function () {
                 if (!this.classList.contains('active')) {
                     this.classList.add('active');
                     timelineViewBtn.classList.remove('active');
