@@ -2125,6 +2125,7 @@ header .container {
 
 .btn-primary:hover {
     background-color: var(--accent-dark);
+    color: var(--black);
     transform: translateY(-2px);
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
 }
@@ -2137,7 +2138,11 @@ header .container {
 
 .btn-secondary:hover {
     background-color: rgba(212, 175, 55, 0.1);
+    color: var(--accent);
+    border-color: var(--accent);
     transform: translateY(-2px);
+    box-shadow: 0 0 15px rgba(212, 175, 55, 0.3);
+    text-shadow: 0 0 10px rgba(212, 175, 55, 0.5);
 }
 
 /* Glass Card */
