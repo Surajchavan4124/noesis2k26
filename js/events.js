@@ -20,9 +20,9 @@ const allEventsData = [
       {
         id: "sub-event-1",
         date: "Jan 24",
-        title: "Ignite Your Web Design Genius",
+        title: "W3BDESIXN",
         venue: "BCA Lab 2",
-        cardTitle: "Ignite Your Web Design Genius",
+        cardTitle: "W3BDESIXN",
         imageUrl: "assets/webdesign.jpg",
         descriptionTitle: "About W3BDESIXN",
         descriptionBody: "Attention Web Developers and Designers: Unleash Your Hidden Talents!\nJoin Our Website Design Competition and Showcase Your Creativity!",
@@ -40,8 +40,8 @@ const allEventsData = [
       {
         id: "sub-event-2",
         date: "Jan 24",
-        title: "Validate and Conquer!",
-        cardTitle: "Validate and Conquer!",
+        title: "RegEx",
+        cardTitle: "RegEx",
         venue: "BCA Lab",
         imageUrl: "assets/regex.webp",
         descriptionTitle: "About RegEx",
@@ -59,8 +59,8 @@ const allEventsData = [
       {
         id: "sub-event-3",
         date: "Jan 24",
-        title: "Unmask the Hidden Bugs",
-        cardTitle: "Unmask the Hidden Bugs",
+        title: "BugIT",
+        cardTitle: "BugIT",
         venue: "BCA Lab",
         imageUrl: "assets/bugit.webp",
         descriptionTitle: "About BugIT",
@@ -96,8 +96,8 @@ const allEventsData = [
       {
         id: "sub-event-4",
         date: "Jan 24",
-        title: "Code Unseen, Conquer the Challenge!",
-        cardTitle: "Code Unseen, Conquer the Challenge!",
+        title: "Blind Coding",
+        cardTitle: "Blind Coding",
         venue: "BCA Lab",
         imageUrl: "assets/blindcoding.webp",
         descriptionTitle: "About Blind Coding",
@@ -114,8 +114,8 @@ const allEventsData = [
       {
         id: "sub-event-5",
         date: "Jan 24",
-        title: "Bug-Busting Showdown!",
-        cardTitle: "Bug-Busting Showdown!",
+        title: "BugSquasher",
+        cardTitle: "BugSquasher",
         venue: "BCA Lab",
         imageUrl: "assets/bugsquahers.png",
         descriptionTitle: "About BugSquasher",
@@ -134,8 +134,8 @@ const allEventsData = [
       {
         id: "sub-event-6",
         date: "Jan 24",
-        title: "Search, Solve and Succeed!",
-        cardTitle: "Search, Solve and Succeed!",
+        title: "CodeHunt",
+        cardTitle: "CodeHunt",
         venue: "BCA Lab",
         imageUrl: "assets/codehunt.png",
         descriptionTitle: "About CodeHunt",
@@ -174,8 +174,8 @@ const allEventsData = [
       {
         id: "sub-event-7",
         date: "Jan 25",
-        title: "Prepare to unleash your creativity",
-        cardTitle: "Prepare to unleash your creativity",
+        title: "Creativity",
+        cardTitle: "Creativity",
         venue: "BCA Lab",
         imageUrl: "assets/creativity.webp",
         descriptionTitle: "About Creativity",
@@ -192,8 +192,8 @@ const allEventsData = [
       {
         id: "sub-event-8",
         date: "Jan 25",
-        title: "Craft the Perfect Fusion",
-        cardTitle: "Craft the Perfect Fusion",
+        title: "Sync It",
+        cardTitle: "Sync It",
         venue: "BCA Lab",
         imageUrl: "assets/sync it.webp",
         descriptionTitle: "About Sync It",
@@ -210,8 +210,8 @@ const allEventsData = [
       {
         id: "sub-event-9",
         date: "Jan 25",
-        title: "Where Imagination and Innovation Takes Shape",
-        cardTitle: "Where Imagination and Innovation Takes Shape",
+        title: "Blendernate",
+        cardTitle: "Blendernate",
         venue: "BCA Lab",
         imageUrl: "assets/blendernate.webp",
         descriptionTitle: "About Blendernate",
@@ -249,8 +249,8 @@ const allEventsData = [
       {
         id: "sub-event-10",
         date: "Jan 25",
-        title: "Step up, unlock the geek within you!",
-        cardTitle: "Step up, unlock the geek within you!",
+        title: "Geek-O-Pedia",
+        cardTitle: "Geek-O-Pedia",
         venue: "BCA Lab",
         imageUrl: "assets/geek-o.webp",
         descriptionTitle: "About Geek-O-Pedia",
@@ -268,8 +268,8 @@ const allEventsData = [
       {
         id: "sub-event-11",
         date: "Jan 25",
-        title: "Innovate. Pitch. Inspire.",
-        cardTitle: "Innovate. Pitch. Inspire.",
+        title: "Pitch Perfect",
+        cardTitle: "Pitch Perfect",
         venue: "BCA Lab",
         imageUrl: "assets/pitch.webp",
         descriptionTitle: "About Pitch Perfect",
@@ -286,8 +286,8 @@ const allEventsData = [
       {
         id: "sub-event-12",
         date: "Jan 25",
-        title: "Defend Your Ideas, Challenge The Rest!",
-        cardTitle: "Defend Your Ideas, Challenge The Rest!",
+        title: "Rebuttal Rebels",
+        cardTitle: "Rebuttal Rebels",
         venue: "BCA Lab",
         imageUrl: "assets/rebels.webp",
         descriptionTitle: "About Rebuttal Rebels",
@@ -325,8 +325,8 @@ const allEventsData = [
       {
         id: "sub-event-13",
         date: "Submission",
-        title: "Get ready to introduce your team in a unique and creative way!",
-        cardTitle: "Get ready to introduce your team in a unique and creative way!",
+        title: "Squad Showcas",
+        cardTitle: "Squad Showcas",
         venue: "BCA Lab",
         imageUrl: "assets/squadshowcase.webp",
         descriptionTitle: "About Squad Showcase",
@@ -341,8 +341,8 @@ const allEventsData = [
       {
         id: "sub-event-14",
         date: "Jan 24",
-        title: "Get ready to showcase your creativity in Reel Rumble!",
-        cardTitle: "Get ready to showcase your creativity in Reel Rumble!",
+        title: "Reel Rumble",
+        cardTitle: "Reel Rumble",
         venue: "BCA Lab",
         imageUrl: "assets/reel rumble.webp",
         descriptionTitle: "About Reel Rumble",
@@ -361,8 +361,8 @@ const allEventsData = [
       {
         id: "sub-event-15",
         date: "Jan 25",
-        title: "Walking the Robot Way",
-        cardTitle: "Walking the Robot Way",
+        title: "MechMania Showcase",
+        cardTitle: "MechMania Showcase",
         venue: "BCA Lab",
         imageUrl: "assets/mech mania.webp",
         descriptionTitle: "About MechMania Showcase",
@@ -396,31 +396,5 @@ const allEventsData = [
         "Decisions of the event coordinators and judges are final."
       ]
     },
-    subEvents: [
-      {
-        id: "sub-event-16",
-        date: "Jan 25",
-        title: "Assemble Your Squad, Claim Victory!",
-        cardTitle: "Assemble Your Squad, Claim Victory!",
-        venue: "BCA Lab",
-        imageUrl: "assets/valorant.png",
-        descriptionTitle: "About Valorant",
-        descriptionBody: "It's time to clutch or kick! Assemble your squad of five and dive into the ultimate test of tactical prowess. Show off your sharp aim, flawless strategies, and unbreakable teamwork to rise through the ranks and be crowned the Valorant champions!",
-        rulesTitle: "Valorant Rules",
-        rules: [
-          "Participants: 5",
-          "Duration: 3 Hours (Tournament)",
-          "This is a 5v5 team-based tournament.",
-          "Game Mode: Standard (Competitive).",
-          "Lobby Settings: Tournament Mode: On, Overtime: Win by Two: On, Cheats: Off.",
-          "Format: Single Elimination knockout. Finals will be Best-of-3.",
-          "Map Pool: Ascent, Bind, Haven, Split, Lotus. Maps for each match will be decided by a veto process.",
-          "Participants must use the PCs and peripherals provided by the college.",
-          "In case of a player disconnect, the round will continue. The player must reconnect as soon as possible.",
-          "All agents are allowed. Exploiting any known game bugs will result in disqualification.",
-          "All participants must demonstrate good sportsmanship. Toxic behavior will not be tolerated."
-        ]
-      }
-    ]
   }
 ]
