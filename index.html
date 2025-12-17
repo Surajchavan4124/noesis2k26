@@ -14,67 +14,7 @@
     
     <!-- All Styles Combined -->
     <link rel="stylesheet" href="style.css">
-    <style>
-        /* Technical overlay pattern */
-        .tech-overlay {
-            position: fixed;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background: transparent;
-            pointer-events: none;
-            z-index: 1;
-            opacity: 0.3;
-        }
-
-/* Tech elements */
-        .tech-circle {
-            position: absolute;
-            border: 1px solid var(--accent);
-            border-radius: 50%;
-            opacity: 0.1;
-            z-index: 0;
-        }
-
-        .tech-circle:nth-child(1) {
-            width: 300px;
-            height: 300px;
-            top: -150px;
-            right: -150px;
-        }
-
-        .tech-circle:nth-child(2) {
-            width: 500px;
-            height: 500px;
-            bottom: -250px;
-            left: -250px;
-            opacity: 0.05;
-        }
-
-        /* Terminal effect */
-        .terminal {
-            font-family: 'Share Tech Mono', monospace;
-            color: var(--accent);
-            text-shadow: 0 0 5px rgba(212, 175, 55, 0.5);
-            position: relative;
-            padding-left: 1.5rem;
-            margin: 1rem 0;
-        }
-
-        .terminal::before {
-            content: '>';
-            position: absolute;
-            left: 0;
-            color: var(--accent);
-            animation: blink 1s step-end infinite;
-        }
-
-        @keyframes blink {
-            0%, 100% { opacity: 1; }
-            50% { opacity: 0; }
-        }
-    </style>
+    <link rel="stylesheet" href="index.css">
 </head>
 <body>    
     <!-- Responsive Navbar -->
@@ -115,7 +55,7 @@
                         </h1>
                         <p class="subtitle">
                             <span class="subtitle-line">// Pushing the boundaries of technology</span>
-                            <span class="subtitle-line">// January 24-25, 2026</span>
+                            <span class="subtitle-line">// January 23-24, 2026</span>
                         </p>
                         <div class="cta-buttons">
                             <a href="events.html" class="btn btn-primary">
@@ -162,46 +102,43 @@
                     <div class="events-grid">
                         <div class="event-card">
                             <div class="event-image">
-                                <img src="https://images.unsplash.com/photo-1551434678-e076c223a692?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Web Wizard">
+                                <img src="./assets/webwizard.png" alt="Web Wizard">
                             </div>
                             <h3>Web Wizard</h3>
                             <p>Master the art of web development in this comprehensive competition. Design and develop responsive, user-friendly websites that stand out.</p>
                             <div class="event-meta">
-                                <span><i class="far fa-calendar"></i> Jan 24, 2026</span>
+                                <span><i class="far fa-calendar"></i> Jan 23, 2026</span>
                                 <span><i class="fas fa-users"></i> Individual</span>
                             </div>
-                            <a href="#event-details" class="btn btn-sm btn-outline">View Details</a>
                         </div>
 
                         <div class="event-card">
                             <div class="event-image">
-                                <img src="https://images.unsplash.com/photo-1620712943543-bcc4688e7485?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Media Crafter">
+                                <img src="./assets/mediacrafters.png" alt="Media Crafter">
                             </div>
                             <h3>Media Crafter</h3>
                             <p>Showcase your creativity in digital media production. From graphics to video, demonstrate your skills in visual storytelling.</p>
                             <div class="event-meta">
-                                <span><i class="far fa-calendar"></i> Jan 25, 2026</span>
+                                <span><i class="far fa-calendar"></i> Jan 23, 2026</span>
                                 <span><i class="fas fa-users"></i> Team of 2-3</span>
                             </div>
-                            <a href="#event-details" class="btn btn-sm btn-outline">View Details</a>
                         </div>
 
                         <div class="event-card">
                             <div class="event-image">
-                                <img src="https://images.unsplash.com/photo-1635070041078-e363dbe005cb?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Swing of Fortune">
+                                <img src="./assets/swing.png" alt="Swing of Fortune">
                             </div>
                             <h3>Swing of Fortune</h3>
                             <p>A unique blend of coding and strategy. Test your problem-solving skills in this exciting challenge where every decision counts.</p>
                             <div class="event-meta">
-                                <span><i class="far fa-calendar"></i> Jan 26, 2026</span>
+                                <span><i class="far fa-calendar"></i> Jan 23, 2026</span>
                                 <span><i class="fas fa-user"></i> Individual</span>
                             </div>
-                            <a href="#event-details" class="btn btn-sm btn-outline">View Details</a>
                         </div>
 
                         <div class="event-card">
                             <div class="event-image">
-                                <img src="https://images.unsplash.com/photo-1555066931-4365d14bab8c?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Code Crusader">
+                                <img src="./assets/codecrusaders.png" alt="Code Crusader">
                             </div>
                             <h3>Code Crusader</h3>
                             <p>Battle it out in this intense coding competition. Solve algorithmic challenges and optimize your solutions to rise to the top of the leaderboard.</p>
@@ -209,12 +146,11 @@
                                 <span><i class="far fa-calendar"></i> Jan 27, 2026</span>
                                 <span><i class="fas fa-user"></i> Individual</span>
                             </div>
-                            <a href="#event-details" class="btn btn-sm btn-outline">View Details</a>
                         </div>
 
                         <div class="event-card">
                             <div class="event-image">
-                                <img src="https://images.unsplash.com/photo-1518770660439-4636190af475?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80&auto=format&fit=crop&w=800&q=80&fit=crop" alt="Innoquest">
+                                <img src="./assets/innoquest.png" alt="Innoquest">
                             </div>
                             <h3>Innoquest</h3>
                             <p>Push the boundaries of innovation in this open-ended challenge. Develop groundbreaking solutions to real-world problems using any technology.</p>
@@ -222,12 +158,11 @@
                                 <span><i class="far fa-calendar"></i> Jan 28, 2026</span>
                                 <span><i class="fas fa-users"></i> Team of 3-4</span>
                             </div>
-                            <a href="#event-details" class="btn btn-sm btn-outline">View Details</a>
                         </div>
 
                         <div class="event-card">
                             <div class="event-image">
-                                <img src="https://images.unsplash.com/photo-1552820728-8b83bb6b773f?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Gamers Groove">
+                                <img src="./assets/gamersgroove.png" alt="Gamers Groove">
                             </div>
                             <h3>Gamers Groove</h3>
                             <p>Combine coding and gaming in this unique event. Develop games or compete in gaming challenges with a technical twist.</p>
@@ -235,8 +170,12 @@
                                 <span><i class="far fa-calendar"></i> Jan 29, 2026</span>
                                 <span><i class="fas fa-users"></i> Team of 2-3</span>
                             </div>
-                            <a href="#event-details" class="btn btn-sm btn-outline">View Details</a>
                         </div>
+                        <div></div>
+                        <div class="view-event-btn">
+                            <a href="./events.html" class="btn btn-sm btn-outline">View all events</a>
+                        </div>
+                        <div></div>
                     </div>
                 </div>
         </section>
@@ -281,9 +220,9 @@
                     <div class="about-text">
                         <h3>Welcome to NOESIS 2K26</h3>
                         <p>NOESIS is the premier technical symposium that brings together the brightest minds in technology. This year, we're taking innovation to new heights with a series of challenging competitions, interactive workshops, and inspiring talks from industry leaders.</p>
-                        <p>Whether you're a coding wizard, a design guru, or a tech enthusiast, NOESIS 2K26 has something for everyone. Join us for an unforgettable experience of learning, competing, and networking.</p>
-                        <a href="about.html" class="btn btn-outline">
-                            <i class="fas fa-arrow-right"></i> Learn More
+                        <p>Whether you're a coding wizard, a design guru, or a tech enthusiast, NOESIS 2K26 has something for everyone. Join us for an unforgettable experience of learning, competing, and networking.</p><br>
+                        <a href="events.html" class="btn btn-sm btn-outline">
+                            <i class="fas fa-arrow-right"></i> View events
                         </a>
                     </div>
                     <div class="about-visual">
@@ -353,7 +292,7 @@
                     <h4>Contact Us</h4>
                     <ul>
                         <li><i class="fas fa-map-marker-alt"></i> Rosary College of Commerce & Arts, Navelim, Goa - 403707</li>
-                        <li><i class="fas fa-envelope"></i> noesis2k26@gmail.com</li>
+                        <li><i class="fas fa-envelope"></i> rccanoesis@gmail.com</li>
                         <li><i class="fas fa-phone"></i> +91 12345 67890</li>
                     </ul>
                 </div>
@@ -369,11 +308,6 @@
                 </div>
             </div>
         </div>
-        
-        <!-- Animated circuit lines -->
-        <div class="circuit-line"></div>
-        <div class="circuit-line"></div>
-        <div class="circuit-line"></div>
     </footer>
 
     <!-- Scripts -->

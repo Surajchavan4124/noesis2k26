@@ -2,7 +2,7 @@ const allEventsData = [
   {
     mainEvent: {
       id: "main-event-1",
-      date: "Jan 24-25, 2026",
+      date: "Jan 23-24, 2026",
       title: "WEBWIZARD",
       venue: "BCA Lab",
       cardTitle: "WEBWIZARD",
@@ -19,7 +19,7 @@ const allEventsData = [
     subEvents: [
       {
         id: "sub-event-1",
-        date: "Jan 24",
+        date: "Jan 23",
         title: "W3BDESIXN",
         venue: "BCA Lab 2",
         cardTitle: "W3BDESIXN",
@@ -39,7 +39,7 @@ const allEventsData = [
       },
       {
         id: "sub-event-2",
-        date: "Jan 24",
+        date: "Jan 23",
         title: "RegEx",
         cardTitle: "RegEx",
         venue: "BCA Lab",
@@ -58,7 +58,7 @@ const allEventsData = [
       },
       {
         id: "sub-event-3",
-        date: "Jan 24",
+        date: "Jan 23",
         title: "BugIT",
         cardTitle: "BugIT",
         venue: "BCA Lab",
@@ -78,7 +78,7 @@ const allEventsData = [
   {
     mainEvent: {
       id: "main-event-2",
-      date: "Jan 24-25, 2026",
+      date: "Jan 23-24, 2026",
       title: "CODE CRUSADER",
       cardTitle: "CODE CRUSADER",
       venue: "BCA Lab",
@@ -95,7 +95,7 @@ const allEventsData = [
     subEvents: [
       {
         id: "sub-event-4",
-        date: "Jan 24",
+        date: "Jan 23",
         title: "Blind Coding",
         cardTitle: "Blind Coding",
         venue: "BCA Lab",
@@ -113,7 +113,7 @@ const allEventsData = [
       },
       {
         id: "sub-event-5",
-        date: "Jan 24",
+        date: "Jan 23",
         title: "BugSquasher",
         cardTitle: "BugSquasher",
         venue: "BCA Lab",
@@ -133,7 +133,7 @@ const allEventsData = [
       },
       {
         id: "sub-event-6",
-        date: "Jan 24",
+        date: "Jan 23",
         title: "CodeHunt",
         cardTitle: "CodeHunt",
         venue: "BCA Lab",
@@ -156,7 +156,7 @@ const allEventsData = [
   {
     mainEvent: {
       id: "main-event-3",
-      date: "Jan 24-25, 2026",
+      date: "Jan 23-24, 2026",
       title: "MEDIA CRAFTER",
       cardTitle: "MEDIA CRAFTER",
       venue: "BCA Lab",
@@ -173,7 +173,7 @@ const allEventsData = [
     subEvents: [
       {
         id: "sub-event-7",
-        date: "Jan 25",
+        date: "Jan 24",
         title: "Creativity",
         cardTitle: "Creativity",
         venue: "BCA Lab",
@@ -191,7 +191,7 @@ const allEventsData = [
       },
       {
         id: "sub-event-8",
-        date: "Jan 25",
+        date: "Jan 24",
         title: "Sync It",
         cardTitle: "Sync It",
         venue: "BCA Lab",
@@ -209,7 +209,7 @@ const allEventsData = [
       },
       {
         id: "sub-event-9",
-        date: "Jan 25",
+        date: "Jan 24",
         title: "Blendernate",
         cardTitle: "Blendernate",
         venue: "BCA Lab",
@@ -231,7 +231,7 @@ const allEventsData = [
   {
     mainEvent: {
       id: "main-event-4",
-      date: "Jan 24-25, 2026",
+      date: "Jan 23-24, 2026",
       title: "INNOQUEST",
       cardTitle: "INNOQUEST",
       venue: "BCA Lab",
@@ -248,7 +248,7 @@ const allEventsData = [
     subEvents: [
       {
         id: "sub-event-10",
-        date: "Jan 25",
+        date: "Jan 24",
         title: "Geek-O-Pedia",
         cardTitle: "Geek-O-Pedia",
         venue: "BCA Lab",
@@ -267,7 +267,7 @@ const allEventsData = [
       },
       {
         id: "sub-event-11",
-        date: "Jan 25",
+        date: "Jan 24",
         title: "Pitch Perfect",
         cardTitle: "Pitch Perfect",
         venue: "BCA Lab",
@@ -285,7 +285,7 @@ const allEventsData = [
       },
       {
         id: "sub-event-12",
-        date: "Jan 25",
+        date: "Jan 24",
         title: "Rebuttal Rebels",
         cardTitle: "Rebuttal Rebels",
         venue: "BCA Lab",
@@ -307,7 +307,7 @@ const allEventsData = [
   {
     mainEvent: {
       id: "main-event-5",
-      date: "Jan 24-25, 2026",
+      date: "Jan 23-24, 2026",
       title: "SWING OF FORTUNE",
       cardTitle: "SWING OF FORTUNE",
       venue: "BCA Lab",
@@ -340,7 +340,7 @@ const allEventsData = [
       },
       {
         id: "sub-event-14",
-        date: "Jan 24",
+        date: "Jan 23",
         title: "Reel Rumble",
         cardTitle: "Reel Rumble",
         venue: "BCA Lab",
@@ -353,14 +353,14 @@ const allEventsData = [
           "Duration: 1½ hour",
           "Each team can submit ONLY ONE reel.",
           "The reel must be based on moments captured during NOESIS and within the campus.",
-          "The reel should be within Instagram's 60-second limit. Post your reel on Instagram using the event hashtag (to be provided) by 11:50 p.m. on 14th January 2025.",
+          "The reel should be within Instagram's 60-second limit. Post your reel on Instagram using the event hashtag (to be provided) by 11:50 p.m. on 14th January 2024.",
           "Ensure that your reel is appropriate, respectful, and aligns with the event's values. Content that is inappropriate or violates guidelines will be disqualified.",
           "Any team failing to participate in this event will lose points that count toward their overall score in the competition."
         ]
       },
       {
         id: "sub-event-15",
-        date: "Jan 25",
+        date: "Jan 24",
         title: "MechMania Showcase",
         cardTitle: "MechMania Showcase",
         venue: "BCA Lab",
@@ -382,7 +382,7 @@ const allEventsData = [
   {
     mainEvent: {
       id: "main-event-6",
-      date: "Jan 24-25, 2026",
+      date: "Jan 23-24, 2026",
       title: "GAMERS GROOVE",
       cardTitle: "GAMERS GROOVE",
       venue: "BCA Lab",

@@ -1,5 +1,5 @@
-// Set the date we're counting down to - January 24, 2026 10:00:00 AM
-const countDownDate = new Date("Jan 24, 2026 10:00:00").getTime();
+// Set the date we're counting down to - January 23, 2026 10:00:00 AM
+const countDownDate = new Date("Jan 23, 2026 10:00:00").getTime();
 
 // Update the countdown every 1 second
 const countdownFunction = setInterval(function () {

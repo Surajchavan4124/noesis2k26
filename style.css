@@ -545,9 +545,14 @@ body {
 
 /* Event Cards */
 .events-container {
-    max-width: 1400px;
+   max-width: 1400px;
     margin: 0 auto;
     padding: 0 2rem;
+}
+.view-event-btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .events-grid {
@@ -1688,7 +1693,6 @@ header .container {
     box-sizing: border-box;
     overflow: hidden;
 }
-
 
 /* Scan Line Animation */
 @keyframes scanline {
