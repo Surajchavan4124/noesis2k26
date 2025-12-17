@@ -626,7 +626,7 @@
     <!-- Responsive Navbar -->
     <nav class="navbar">
         <div class="container nav-container">
-            <a href="./index.html" class="logo">NOESIS<span class="year">2K26</span></a>
+            <a href="#" class="logo">NOESIS<span class="year">2K26</span></a>
 
             <div class="hamburger" id="menu-icon">
                 <span class="bar"></span>
@@ -793,16 +793,23 @@
                 scheduleTableBody.innerHTML = '';
 
                 // Filter events for the selected date
-                allEventsData.forEach(event => {
-                    const eventHasDate = event.subEvents.some(subEvent => subEvent.date.includes(day));
-                    if (eventHasDate) {
-                        const eventWithFilteredSubEvents = {
-                            ...event,
-                            subEvents: event.subEvents.filter(subEvent => subEvent.date.includes(day))
-                        };
-                        filteredEvents.push(eventWithFilteredSubEvents);
-                    }
-                });
+               allEventsData.forEach(event => {
+    if (!event.subEvents || event.subEvents.length === 0) return;
+
+    const eventHasDate = event.subEvents.some(subEvent =>
+        subEvent.date.includes(day)
+    );
+
+    if (eventHasDate) {
+        filteredEvents.push({
+            ...event,
+            subEvents: event.subEvents.filter(subEvent =>
+                subEvent.date.includes(day)
+            )
+        });
+    }
+});
+
 
                 // Show no events message if no events for the selected date
                 if (filteredEvents.length === 0) {
