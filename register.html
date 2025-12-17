@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>NOESIS 2K26 - Coming Soon</title>
-    
+    <title>NOESIS 2K26 - Registration Opening Soon</title>
+
     <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&family=Orbitron:wght@400;500;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     
@@ -14,154 +14,66 @@
     <!-- Your merged CSS -->
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="index.css">
+
+    <style>
+        .coming-soon-page {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 80vh;
+            text-align: center;
+            flex-direction: column;
+            color: var(--accent);
+        }
+
+        .coming-soon-page h1 {
+            font-family: 'Orbitron', sans-serif;
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+
+        .coming-soon-page p {
+            font-family: 'Share Tech Mono', monospace;
+            font-size: 1.2rem;
+            color: var(--white);
+        }
+    </style>
 </head>
 <body>
-     <nav class="navbar">
+    <!-- Navbar -->
+    <nav class="navbar">
         <div class="container nav-container">
             <a href="./index.html" class="logo">NOESIS<span class="year">2K26</span></a>
-            
             <div class="hamburger" id="menu-icon">
                 <span class="bar"></span>
                 <span class="bar"></span>
                 <span class="bar"></span>
             </div>
-            
             <ul class="nav-menu" id="nav-menu">
-                <li><a href="./index.html" class="nav-link active"><i class="fas fa-home"></i> Home</a></li>
+                <li><a href="./index.html" class="nav-link"><i class="fas fa-home"></i> Home</a></li>
                 <li><a href="./events.html" class="nav-link"><i class="fas fa-calendar-alt"></i> Events</a></li>
                 <li><a href="./schedule.html" class="nav-link"><i class="fas fa-clock"></i> Schedule</a></li>
                 <li><a href="./sponsors.html" class="nav-link"><i class="fas fa-handshake"></i> Sponsors</a></li>
                 <li><a href="./esouvenir.html" class="nav-link"><i class="fas fa-gift"></i> E-Souvenir</a></li>
                 <li><a href="./contact.html" class="nav-link"><i class="fas fa-envelope"></i> Contact</a></li>
-                <li><a href="./register.html" class="nav-btn"><i class="fas fa-user-plus"></i> Register Now</a></li>
+                <li><a href="#" class="nav-btn"><i class="fas fa-user-plus"></i> Register</a></li>
             </ul>
         </div>
     </nav>
 
-    <!-- Hero Section -->
-    <section class="hero">
-        <div class="container">
-            <div class="hero-content">
-                <div class="hero-text">
-                    <div class="terminal">INITIALIZING NOESIS 2K26...</div>
-                    <h1>
-                        <div class="glitch-container">
-                            <span class="title-line">COMING SOON</span>
-                        </div>
-                        <span class="title-year">2K26</span>
-                    </h1>
-                    <p class="subtitle">
-                        <span class="subtitle-line">// Prepare for the ultimate coding experience</span>
-                        <span class="subtitle-line">// Stay tuned for exciting events & challenges</span>
-                    </p>
-                    <div class="cta-buttons">
-                        <a href="events.html" class="btn btn-primary">
-                            <i class="fas fa-rocket"></i> View Events
-                        </a>
-                        <a href="register.html" class="btn btn-secondary">
-                            <i class="fas fa-user-plus"></i> Register Now
-                        </a>
-                    </div>
-                </div>
-            </div>
-        </div>
+    <!-- Coming Soon Message -->
+    <section class="coming-soon-page">
+        <h1>Registration Opening Soon</h1>
+        <p>Stay tuned for updates. Registration for NOESIS 2K26 will be live shortly!</p>
     </section>
 
-    <!-- Countdown Section -->
-    <section class="countdown-section">
-        <div class="container">
-            <h2 class="countdown-heading">EVENT STARTS IN</h2>
-            <div class="countdown-timer">
-                <div class="countdown-item">
-                    <div class="countdown-number" id="days">00</div>
-                    <div class="countdown-label">DAYS</div>
-                </div>
-                <div class="countdown-separator">:</div>
-                <div class="countdown-item">
-                    <div class="countdown-number" id="hours">00</div>
-                    <div class="countdown-label">HOURS</div>
-                </div>
-                <div class="countdown-separator">:</div>
-                <div class="countdown-item">
-                    <div class="countdown-number" id="minutes">00</div>
-                    <div class="countdown-label">MINUTES</div>
-                </div>
-                <div class="countdown-separator">:</div>
-                <div class="countdown-item">
-                    <div class="countdown-number" id="seconds">00</div>
-                    <div class="countdown-label">SECONDS</div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-
-    <!-- Footer -->
+    <!-- Footer (reuse your footer) -->
     <footer class="tech-footer">
         <div class="container">
-            <div class="footer-grid">
-                <div class="footer-about">
-                    <a href="#" class="logo">NOESIS<span class="logo-year year">2K26</span></a>
-                    <p>Pushing the boundaries of technology through competitions and innovation.</p>
-                    <div class="footer-social">
-                        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
-                        <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
-                        <a href="#" aria-label="Website"><i class="fas fa-globe"></i><span>www.noesis2k26.com</span></a>
-                    </div>
-                </div>
-                <div class="footer-links">
-                    <h4>Quick Links</h4>
-                    <ul>
-                        <li><a href="events.html"><i class="fas fa-chevron-right"></i> Events</a></li>
-                        <li><a href="schedule.html"><i class="fas fa-chevron-right"></i> Schedule</a></li>
-                        <li><a href="sponsors.html"><i class="fas fa-chevron-right"></i> Sponsors</a></li>
-                        <li><a href="contact.html"><i class="fas fa-chevron-right"></i> Contact</a></li>
-                    </ul>
-                </div>
-                <div class="footer-contact">
-                    <h4>Contact Us</h4>
-                    <ul>
-                        <li><i class="fas fa-map-marker-alt"></i> Rosary College of Commerce & Arts, Goa</li>
-                        <li><i class="fas fa-envelope"></i> rccanoesis@gmail.com</li>
-                        <li><i class="fas fa-phone"></i> +91 12345 67890</li>
-                    </ul>
-                </div>
-            </div>
             <div class="footer-bottom">
-                <p>&copy; 2026 NOESIS. All rights reserved. | Made with <i class="fas fa-heart"></i></p>
+                <p>&copy; 2026 NOESIS. All rights reserved.</p>
             </div>
         </div>
     </footer>
-
-    <!-- Countdown Script -->
-    <script>
-        const launchDate = new Date("2026-01-23T09:00:00").getTime();
-        const daysEl = document.getElementById("days");
-        const hoursEl = document.getElementById("hours");
-        const minutesEl = document.getElementById("minutes");
-        const secondsEl = document.getElementById("seconds");
-
-        function updateCountdown() {
-            const now = new Date().getTime();
-            const distance = launchDate - now;
-
-            const days = Math.floor(distance / (1000*60*60*24));
-            const hours = Math.floor((distance % (1000*60*60*24)) / (1000*60*60));
-            const minutes = Math.floor((distance % (1000*60*60)) / (1000*60));
-            const seconds = Math.floor((distance % (1000*60)) / 1000);
-
-            daysEl.textContent = days.toString().padStart(2,'0');
-            hoursEl.textContent = hours.toString().padStart(2,'0');
-            minutesEl.textContent = minutes.toString().padStart(2,'0');
-            secondsEl.textContent = seconds.toString().padStart(2,'0');
-
-            if(distance < 0){
-                daysEl.textContent = hoursEl.textContent = minutesEl.textContent = secondsEl.textContent = '00';
-            }
-        }
-
-        setInterval(updateCountdown, 1000);
-        updateCountdown();
-    </script>
 </body>
 </html>
