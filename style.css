@@ -76,9 +76,19 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    padding: 1.2rem 5%;
+    margin: 0;
+    width: 100%;
+    max-width: 100% !important;
+    box-sizing: border-box;
+}
+
+/* Override any container styles for the navbar */
+.navbar > .container {
+    max-width: 100% !important;
+    width: 100%;
+    margin: 0;
     padding: 1.2rem 2rem;
-    max-width: 1400px;
-    margin: 0 auto;
 }
 
 .navbar .logo {
@@ -86,7 +96,6 @@
     font-size: 1.8rem;
     font-weight: 700 !important;
     color: var(--white) !important;
-    /* Force white color */
     text-decoration: none;
     letter-spacing: 1px;
     text-transform: uppercase;
