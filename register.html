@@ -3,6 +3,24 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!-- SEO -->
+       <meta name="description" content="Noesis 2K26 is a national level technical fest by Rosary College featuring coding, cybersecurity, UI/UX, workshops, and tech competitions." />
+       <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+       <meta name="keywords" content="Noesis, Noesis 2K26, tech fest, national level tech fest, Rosary College, coding competition, UI UX, cybersecurity events" />
+       <meta name="robots" content="index, follow" />
+       <meta property="og:type" content="website" />
+       <meta property="og:title" content="Noesis 2K26 | National Level Tech Fest" />
+       <meta property="og:description" content="Join Noesis 2K26 – a national level tech fest with competitions, workshops, and innovation challenges." />
+       <meta property="og:url" content="https://rccanoesis.com" />
+       <meta property="og:image" content="https://rccanoesis.com/assets/og-image.jpg" />
+       <meta property="og:site_name" content="Noesis 2K26" />
+       <meta name="twitter:card" content="summary_large_image" />
+       <meta name="twitter:title" content="Noesis 2K26 | National Level Tech Fest" />
+       <meta name="twitter:description" content="Noesis 2K26 – National level tech fest by Rosary College. Compete, learn, innovate." />
+       <meta name="twitter:image" content="https://rccanoesis.com/assets/og-image.jpg" />
+       <link rel="canonical" href="https://rccanoesis.com/" />
+       <link rel="icon" href="/favicon.ico" />
+
     <title>NOESIS 2K26 - Registration Opening Soon</title>
 
     <!-- Google Fonts -->
@@ -14,52 +32,35 @@
     <!-- Your merged CSS -->
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="./css/register.css">
 
-    <style>
-        .coming-soon-page {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 80vh;
-            text-align: center;
-            flex-direction: column;
-            color: var(--accent);
-        }
-
-        .coming-soon-page h1 {
-            font-family: 'Orbitron', sans-serif;
-            font-size: 3rem;
-            margin-bottom: 1rem;
-        }
-
-        .coming-soon-page p {
-            font-family: 'Share Tech Mono', monospace;
-            font-size: 1.2rem;
-            color: var(--white);
-        }
-    </style>
 </head>
 <body>
     <!-- Navbar -->
-    <nav class="navbar">
-        <div class="container nav-container">
-            <a href="./index.html" class="logo">NOESIS<span class="year">2K26</span></a>
-            <div class="hamburger" id="menu-icon">
-                <span class="bar"></span>
-                <span class="bar"></span>
-                <span class="bar"></span>
+    <header class="header">
+        <nav class="navbar">
+            <div class="container nav-container">
+                <a href="./index.html" class="logo">NOESIS<span class="year">2K26</span></a>
+
+                <div class="hamburger" id="menu-icon">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </div>
+
+                <ul class="nav-menu" id="nav-menu">
+                    <li><a href="./index.html" class="nav-link"><i class="fas fa-home"></i> Home</a></li>
+                    <li><a href="./events.html" class="nav-link"><i class="fas fa-calendar-alt"></i> Events</a>
+                    </li>
+                    <li><a href="./schedule.html" class="nav-link"><i class="fas fa-clock"></i> Schedule</a></li>
+                    <li><a href="./sponsors.html" class="nav-link"><i class="fas fa-handshake"></i> Sponsors</a></li>
+                    <li><a href="./esouvenir.html" class="nav-link"><i class="fas fa-gift"></i> E-Souvenir</a></li>
+                    <li><a href="./contact.html" class="nav-link"><i class="fas fa-envelope"></i> Contact</a></li>
+                    <li><a href="./register.html" class="nav-btn active"><i class="fas fa-user-plus"></i> Register Now</a></li>
+                </ul>
             </div>
-            <ul class="nav-menu" id="nav-menu">
-                <li><a href="./index.html" class="nav-link"><i class="fas fa-home"></i> Home</a></li>
-                <li><a href="./events.html" class="nav-link"><i class="fas fa-calendar-alt"></i> Events</a></li>
-                <li><a href="./schedule.html" class="nav-link"><i class="fas fa-clock"></i> Schedule</a></li>
-                <li><a href="./sponsors.html" class="nav-link"><i class="fas fa-handshake"></i> Sponsors</a></li>
-                <li><a href="./esouvenir.html" class="nav-link"><i class="fas fa-gift"></i> E-Souvenir</a></li>
-                <li><a href="./contact.html" class="nav-link"><i class="fas fa-envelope"></i> Contact</a></li>
-                <li><a href="#" class="nav-btn"><i class="fas fa-user-plus"></i> Register</a></li>
-            </ul>
-        </div>
-    </nav>
+        </nav>
+    </header>
 
     <!-- Coming Soon Message -->
     <section class="coming-soon-page">
@@ -70,8 +71,49 @@
     <!-- Footer (reuse your footer) -->
     <footer class="tech-footer">
         <div class="container">
+            <div class="footer-grid">
+                <div class="footer-about">
+                    <a href="#" class="logo">NOESIS<span class="logo-year year">2K26</span></a>
+                    <p>Pushing the boundaries of technology and innovation through competition and collaboration.</p>
+                    <div class="footer-social">
+                        <a href="https://www.instagram.com/your_instagram_handle" target="_blank" aria-label="Instagram">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="https://www.rosarycollege.ac.in" target="_blank" class="website-link" aria-label="Rosary College Website">
+                            <i class="fas fa-globe"></i>
+                            <span>www.rosarycollege.ac.in</span>
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="footer-links">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="events.html"><i class="fas fa-chevron-right"></i> Events</a></li>
+                        <li><a href="schedule.html"><i class="fas fa-chevron-right"></i> Schedule</a></li>
+                        <li><a href="sponsors.html"><i class="fas fa-chevron-right"></i> Sponsors</a></li>
+                        <li><a href="rules.html"><i class="fas fa-chevron-right"></i> Rules</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-contact">
+                    <h4>Contact Us</h4>
+                    <ul>
+                        <li><i class="fas fa-map-marker-alt"></i> Rosary College of Commerce & Arts, Navelim, Goa - 403707</li>
+                        <li><i class="fas fa-envelope"></i> rccanoesis@gmail.com</li>
+                        <li><i class="fas fa-phone"></i> +91 12345 67890</li>
+                    </ul>
+                </div>
+                
+            </div>
+            
             <div class="footer-bottom">
-                <p>&copy; 2026 NOESIS. All rights reserved.</p>
+                <p>&copy; 2026 NOESIS. All rights reserved. | Designed with <i class="fas fa-heart"></i> by NOESIS Team</p>
+                <div class="footer-tech">
+                    <span>#NOESIS2K26</span>
+                    <span>#TechRevolution</span>
+                    <span>#CodeTheFuture</span>
+                </div>
             </div>
         </div>
     </footer>
