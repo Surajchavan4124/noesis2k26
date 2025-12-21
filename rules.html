@@ -14,36 +14,58 @@
     <!-- Main CSS -->
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="index.css">
+
+    <!-- Rules Toggle CSS -->
+    <style>
+        .rules-section.hidden {
+            display: none;
+        }
+
+        .rules-toggle {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            margin: 2.5rem 0;
+            flex-wrap: wrap;
+        }
+
+        .rules-toggle .btn.active {
+            background: var(--accent);
+            color: #000;
+            box-shadow: 0 0 15px rgba(212, 175, 55, 0.6);
+        }
+    </style>
 </head>
 
 <body>
 
-    <nav class="navbar">
-        <div class="container nav-container">
-            <a href="./index.html" class="logo">NOESIS<span class="year">2K26</span></a>
-            
-            <div class="hamburger" id="menu-icon">
-                <span class="bar"></span>
-                <span class="bar"></span>
-                <span class="bar"></span>
-            </div>
-            
-            <ul class="nav-menu" id="nav-menu">
-                <li><a href="./index.html" class="nav-link active"><i class="fas fa-home"></i> Home</a></li>
-                <li><a href="./events.html" class="nav-link"><i class="fas fa-calendar-alt"></i> Events</a></li>
-                <li><a href="./schedule.html" class="nav-link"><i class="fas fa-clock"></i> Schedule</a></li>
-                <li><a href="./sponsors.html" class="nav-link"><i class="fas fa-handshake"></i> Sponsors</a></li>
-                <li><a href="./esouvenir.html" class="nav-link"><i class="fas fa-gift"></i> E-Souvenir</a></li>
-                <li><a href="./contact.html" class="nav-link"><i class="fas fa-envelope"></i> Contact</a></li>
-                <li><a href="./register.html" class="nav-btn"><i class="fas fa-user-plus"></i> Register Now</a></li>
-            </ul>
+<!-- Navbar -->
+<nav class="navbar">
+    <div class="container nav-container">
+        <a href="./index.html" class="logo">NOESIS<span class="year">2K26</span></a>
+
+        <div class="hamburger" id="menu-icon">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
         </div>
-    </nav>
+
+        <ul class="nav-menu" id="nav-menu">
+            <li><a href="./index.html" class="nav-link"><i class="fas fa-home"></i> Home</a></li>
+            <li><a href="./events.html" class="nav-link"><i class="fas fa-calendar-alt"></i> Events</a></li>
+            <li><a href="./schedule.html" class="nav-link"><i class="fas fa-clock"></i> Schedule</a></li>
+            <li><a href="./sponsors.html" class="nav-link"><i class="fas fa-handshake"></i> Sponsors</a></li>
+            <li><a href="./esouvenir.html" class="nav-link"><i class="fas fa-gift"></i> E-Souvenir</a></li>
+            <li><a href="./contact.html" class="nav-link"><i class="fas fa-envelope"></i> Contact</a></li>
+            <li><a href="./register.html" class="nav-btn"><i class="fas fa-user-plus"></i> Register Now</a></li>
+        </ul>
+    </div>
+</nav>
 
 <main>
 
 <!-- Page Header -->
-<section class="section-header" style="margin-top: 6rem;">
+<section class="section-header" style="margin-top:6rem;">
     <h2><i class="fas fa-gavel"></i> RULES & GUIDELINES</h2>
     <div class="section-divider">
         <span class="line"></span>
@@ -52,79 +74,68 @@
     </div>
 </section>
 
+<!-- Toggle Buttons -->
+<div class="rules-toggle">
+    <button class="btn btn-secondary active" onclick="showRules('general')">
+        <i class="fas fa-book"></i> General Rules
+    </button>
+    <button class="btn btn-secondary" onclick="showRules('participation')">
+        <i class="fas fa-users"></i> Participation Guidelines
+    </button>
+</div>
+
+<!-- General Rules -->
+<section class="container rules-section" id="general-rules">
+    <div class="glass-card">
+        <h3 style="font-family:Orbitron; margin-bottom:1.5rem;">
+            <i class="fas fa-exclamation-triangle"></i> General Rules
+        </h3>
+
+        <ul class="rules-list">
+            <li><strong>Code of Conduct:</strong> Participants must maintain professionalism and respectful behaviour. Any misconduct will lead to disqualification.</li>
+            <li><strong>Punctuality:</strong> Teams must strictly adhere to the event schedule.</li>
+            <li><strong>Dress Code:</strong> Participants should wear appropriate formal or casual attire.</li>
+            <li><strong>Personal Belongings:</strong> Participants are responsible for their belongings. Organizers are not liable for loss or damage.</li>
+            <li><strong>Venue Regulations:</strong> Maintain cleanliness and avoid damage to property.</li>
+            <li><strong>Team Identification:</strong> ID badges must be worn at all times.</li>
+            <li><strong>Fair Play:</strong> Any cheating or tampering leads to immediate disqualification.</li>
+            <li><strong>Organizer’s Authority:</strong> Organizers’ decisions are final and binding.</li>
+        </ul>
+    </div>
+</section>
+
 <!-- Participation Guidelines -->
-<section class="container">
-    <div class="glass-card" style="margin-bottom: 3rem;">
-        <h3 style="font-family: Orbitron; margin-bottom: 1.5rem;">
+<section class="container rules-section hidden" id="participation-guidelines">
+    <div class="glass-card">
+        <h3 style="font-family:Orbitron; margin-bottom:1.5rem;">
             <i class="fas fa-users"></i> Participation Guidelines
         </h3>
 
         <ul class="rules-list">
-            <li>NOESIS is open to undergraduate students enrolled in BE, BCA, BSc (Computer Science/IT), B.Voc, and B.Tech programs within and outside the state of Goa.</li>
-
-            <li>Teams from outside the state of Goa must compulsorily be accompanied by a faculty member from their institute.</li>
-
-            <li>Teams must register online and pay a <strong>non-refundable registration fee of ₹2000</strong> through online payment.</li>
-
+            <li>Open to undergraduate students from BE, BCA, BSc (CS/IT), B.Voc, and B.Tech programs.</li>
+            <li>Teams from outside Goa must be accompanied by a faculty member.</li>
+            <li>Mandatory <strong>non-refundable registration fee of ₹2000</strong>.</li>
             <li>
                 <strong>Payment Details:</strong><br>
                 Account Name: M/s ROSARY COLLEGE EVENTS EXTRA CURRICULAR ACTIVITIES<br>
                 Account Number: 520101031900379<br>
                 IFSC Code: UBIN0920835
             </li>
-
-            <li>Each team must submit a letter of authorization signed by the Principal of their respective college.</li>
-
-            <li>All participants must carry their valid college ID cards.</li>
-
-            <li>A team should consist of <strong>10 students</strong>:
-                <ul>
-                    <li>8 participants for main events</li>
-                    <li>2 participants for gaming</li>
-                </ul>
-            </li>
-
-            <li>The competition consists of five event categories. Each category requires two students.</li>
-
-            <li>Participants selecting a category must take part in all sub-events under that category.</li>
-
-            <li>Once a category is chosen, participants cannot switch to another category.</li>
-
-            <li>Events under the <strong>"Swing of Fortune"</strong> category are compulsory and will be included in the grading.</li>
-        </ul>
-    </div>
-</section>
-
-<!-- General Rules -->
-<section class="container">
-    <div class="glass-card">
-        <h3 style="font-family: Orbitron; margin-bottom: 1.5rem;">
-            <i class="fas fa-exclamation-triangle"></i> General Rules
-        </h3>
-
-        <ul class="rules-list">
-            <li><strong>Code of Conduct:</strong> Participants must maintain professionalism and respectful behaviour. Any misconduct will lead to disqualification.</li>
-
-            <li><strong>Punctuality:</strong> Teams must strictly adhere to the event schedule.</li>
-
-            <li><strong>Dress Code:</strong> Participants should wear appropriate formal or casual attire suitable for the event.</li>
-
-            <li><strong>Personal Belongings:</strong> Participants are responsible for their belongings. The organizers are not liable for any loss or damage.</li>
-
-            <li><strong>Venue Regulations:</strong> Maintain cleanliness and avoid damage to property. Any damage caused will be the team’s responsibility.</li>
-
-            <li><strong>Team Identification:</strong> Team ID badges or identification tags must be worn at all times.</li>
-
-            <li><strong>Fair Play:</strong> Cheating, tampering, or rule violations will result in immediate disqualification.</li>
-
-            <li><strong>Organizer’s Authority:</strong> The organizers’ decision will be final and binding in all matters related to the event.</li>
+            <li>Authorization letter signed by the Principal is required.</li>
+            <li>All participants must carry valid college ID cards.</li>
+            <li><strong>Team size:</strong> 10 students (8 main + 2 gaming).</li>
+            <li>Five event categories; two students per category.</li>
+            <li>Participants must attend all sub-events of their chosen category.</li>
+            <li>Category switching is not allowed.</li>
+            <li><strong>"Swing of Fortune"</strong> events are compulsory and graded.</li>
         </ul>
     </div>
 </section>
 
 </main>
 
- <footer class="tech-footer">
+<!-- Footer (unchanged) -->
+   <footer class="tech-footer">
         <div class="container">
             <div class="footer-grid">
                 <div class="footer-about">
@@ -151,14 +162,15 @@
                     </ul>
                 </div>
                 
-               <div class="footer-contact footer-links">
+                <div class="footer-contact footer-links">
                     <h4>Contact Us</h4>
                     <ul>
                         <li><i class="fas fa-map-marker-alt"></i> Rosary College of Commerce & Arts, Navelim, Goa - 403707</li>
                         <li><i class="fas fa-envelope"></i><a href="mailto:rccanoesis@gmail.com"> rccanoesis@gmail.com</a></li>
                         <li><i class="fas fa-phone"></i><a href="tel:+911234567890"> +91 12345 67890</a></li>
                     </ul>
-                </div>                
+                </div>
+                
             </div>
             
             <div class="footer-bottom">
@@ -171,3 +183,27 @@
             </div>
         </div>
     </footer>
+
+<!-- Toggle Script -->
+<script>
+function showRules(type) {
+    const general = document.getElementById("general-rules");
+    const participation = document.getElementById("participation-guidelines");
+    const buttons = document.querySelectorAll(".rules-toggle .btn");
+
+    buttons.forEach(btn => btn.classList.remove("active"));
+
+    if (type === "general") {
+        general.classList.remove("hidden");
+        participation.classList.add("hidden");
+        buttons[0].classList.add("active");
+    } else {
+        participation.classList.remove("hidden");
+        general.classList.add("hidden");
+        buttons[1].classList.add("active");
+    }
+}
+</script>
+
+</body>
+</html>

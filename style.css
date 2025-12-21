@@ -3805,3 +3805,12 @@ header .container {
     left: 0;
     color: var(--accent);
 }
+.rules-section.hidden {
+    display: none;
+}
+
+.rules-toggle .btn.active {
+    background: var(--primary-color);
+    color: #000;
+    box-shadow: 0 0 15px rgba(255, 215, 0, 0.6);
+}
