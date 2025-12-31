@@ -62,77 +62,246 @@
     </div>
 </nav>
 
-<main>
+<main id="main-content">
+    <section class="section">
+        <div class="container rules-grid">
 
-<!-- Page Header -->
-<section class="section-header" style="margin-top:6rem;">
-    <h2><i class="fas fa-gavel"></i> RULES & GUIDELINES</h2>
-    <div class="section-divider">
-        <span class="line"></span>
-        <span class="icon"><i class="fas fa-microchip"></i></span>
-        <span class="line"></span>
+            <!-- Sidebar -->
+            <div class="glass-card rules-sidebar">
+                <ul class="rules-nav">
+                    <li class="active" data-target="general">
+                        <i class="fas fa-scale-balanced"></i> General Rules
+                    </li>
+                    <li data-target="web">
+                        <i class="fas fa-code"></i> Web Wizards
+                    </li>
+                    <li data-target="code">
+                        <i class="fas fa-terminal"></i> Code Crusaders
+                    </li>
+                    <li data-target="inno">
+                        <i class="fas fa-lightbulb"></i> InnoQuest
+                    </li>
+                    <li data-target="media">
+                        <i class="fas fa-photo-video"></i> Media Crafters
+                    </li>
+                </ul>
+            </div>
+
+            <!-- Content -->
+            <div class="glass-card rules-panel active" id="general">
+    <h3><i class="fas fa-scale-balanced rule-icon"></i> General Rules</h3>
+
+    <div class="rules-block">
+        <h4>Eligibility</h4>
+        <ul>
+            <li>Open to BE, BCA, BSc (CS/IT), B.Voc & B.Tech students</li>
+            <li>Participants may be from within or outside Goa</li>
+            <li>Teams outside Goa must be accompanied by a faculty member</li>
+        </ul>
     </div>
-</section>
 
-<!-- Toggle Buttons -->
-<div class="rules-toggle">
-    <button class="btn btn-secondary active" onclick="showRules('general')">
-        <i class="fas fa-book"></i> General Rules
-    </button>
-    <button class="btn btn-secondary" onclick="showRules('participation')">
-        <i class="fas fa-users"></i> Participation Guidelines
-    </button>
+    <div class="rules-block">
+        <h4>Registration & Fees</h4>
+        <ul>
+            <li>Online registration is mandatory</li>
+            <li>₹2000 non-refundable registration fee</li>
+            <li>Payment via online mode only</li>
+        </ul>
+    </div>
+
+    <div class="rules-block">
+        <h4>Team Composition</h4>
+        <ul>
+            <li>Only one team per college</li>
+            <li>10 students per team (8 main + 2 gaming)</li>
+            <li>Authorization letter signed by Principal required</li>
+            <li>Valid college ID mandatory</li>
+        </ul>
+    </div>
+
+    <div class="rules-block">
+        <h4>Code of Conduct</h4>
+        <ul>
+            <li>Professional behavior is mandatory</li>
+            <li>Misconduct may lead to disqualification</li>
+            <li>Organisers’ decision is final and binding</li>
+        </ul>
+    </div>
 </div>
 
-<!-- General Rules -->
-<section class="container rules-section" id="general-rules">
-    <div class="glass-card">
-        <h3 style="font-family:Orbitron; margin-bottom:1.5rem;">
-            <i class="fas fa-exclamation-triangle"></i> General Rules
-        </h3>
 
-        <ul class="rules-list">
-            <li><strong>Code of Conduct:</strong> Participants must maintain professionalism and respectful behaviour. Any misconduct will lead to disqualification.</li>
-            <li><strong>Punctuality:</strong> Teams must strictly adhere to the event schedule.</li>
-            <li><strong>Dress Code:</strong> Participants should wear appropriate formal or casual attire.</li>
-            <li><strong>Personal Belongings:</strong> Participants are responsible for their belongings. Organizers are not liable for loss or damage.</li>
-            <li><strong>Venue Regulations:</strong> Maintain cleanliness and avoid damage to property.</li>
-            <li><strong>Team Identification:</strong> ID badges must be worn at all times.</li>
-            <li><strong>Fair Play:</strong> Any cheating or tampering leads to immediate disqualification.</li>
-            <li><strong>Organizer’s Authority:</strong> Organizers’ decisions are final and binding.</li>
+             <div class="glass-card rules-panel" id="web">
+    <h3><i class="fas fa-code rule-icon"></i> Web Wizards</h3>
+
+    <div class="rules-event">
+        <h4><i class="fas fa-laptop-code rule-icon"></i> Web Design</h4>
+        <p class="rules-meta">👥 Participants: 2 &nbsp; | ⏱ Duration: 1½ Hour</p>
+        <ul>
+            <li>Theme will be provided on the spot</li>
+            <li>HTML, CSS & JavaScript only</li>
+            <li>Backend allowed: PHP & MySQL</li>
+            <li>Use of pre-made templates is prohibited</li>
+            <li>Judged on originality, design & usability</li>
         </ul>
     </div>
-</section>
 
-<!-- Participation Guidelines -->
-<section class="container rules-section hidden" id="participation-guidelines">
-    <div class="glass-card">
-        <h3 style="font-family:Orbitron; margin-bottom:1.5rem;">
-            <i class="fas fa-users"></i> Participation Guidelines
-        </h3>
-
-        <ul class="rules-list">
-            <li>Open to undergraduate students from BE, BCA, BSc (CS/IT), B.Voc, and B.Tech programs.</li>
-            <li>Teams from outside Goa must be accompanied by a faculty member.</li>
-            <li>Mandatory <strong>non-refundable registration fee of ₹2000</strong>.</li>
-            <li>
-                <strong>Payment Details:</strong><br>
-                Account Name: M/s ROSARY COLLEGE EVENTS EXTRA CURRICULAR ACTIVITIES<br>
-                Account Number: 520101031900379<br>
-                IFSC Code: UBIN0920835
-            </li>
-            <li>Authorization letter signed by the Principal is required.</li>
-            <li>All participants must carry valid college ID cards.</li>
-            <li><strong>Team size:</strong> 10 students (8 main + 2 gaming).</li>
-            <li>Five event categories; two students per category.</li>
-            <li>Participants must attend all sub-events of their chosen category.</li>
-            <li>Category switching is not allowed.</li>
-            <li><strong>"Swing of Fortune"</strong> events are compulsory and graded.</li>
+    <div class="rules-event">
+        <h4><i class="fab fa-figma rule-icon"></i> FigMatrix</h4>
+        <p class="rules-meta">👥 Participants: 2 &nbsp; | ⏱ Duration: 1½ Hour</p>
+        <ul>
+            <li>Theme announced at the start of the event</li>
+            <li>Design entirely in Figma</li>
+            <li>Create multiple screens with clickable prototype</li>
+            <li>No pre-made templates allowed</li>
+            <li>Judged on creativity, usability & consistency</li>
         </ul>
     </div>
-</section>
+
+    <div class="rules-event">
+        <h4><i class="fas fa-bug rule-icon"></i> BugIT</h4>
+        <p class="rules-meta">👥 Participants: 2 &nbsp; | ⏱ Duration: 2 Hours</p>
+        <ul>
+            <li>Static website using HTML, CSS & JavaScript</li>
+            <li>Identify, document and fix bugs</li>
+            <li>Optimize website performance</li>
+        </ul>
+    </div>
+</div>
+
+
+             <div class="glass-card rules-panel" id="code">
+    <h3><i class="fas fa-terminal rule-icon"></i> Code Crusaders</h3>
+
+    <div class="rules-event">
+        <h4><i class="fas fa-bolt rule-icon"></i> CodeLite</h4>
+        <p class="rules-meta">👥 Participants: 2 &nbsp; | ⏱ Duration: 1½ Hour</p>
+        <ul>
+            <li>Python programming knowledge required</li>
+            <li>Shortest correct code wins</li>
+            <li>No internet or external resources</li>
+            <li>Plagiarism leads to disqualification</li>
+            <li>Completion time considered in case of tie</li>
+        </ul>
+    </div>
+
+    <div class="rules-event">
+        <h4><i class="fas fa-unlock-alt rule-icon"></i> Code Hunt</h4>
+        <p class="rules-meta">👥 Participants: 2 &nbsp; | ⏱ Duration: 2 Hours</p>
+        <ul>
+            <li>College-provided systems only</li>
+            <li>Caesar Cipher + C Programming</li>
+            <li>Roles: Decryptor & Coder</li>
+            <li>Roles swapped in Round 2</li>
+            <li>Fastest correct team wins</li>
+        </ul>
+    </div>
+
+    <div class="rules-event">
+        <h4><i class="fas fa-bug-slash rule-icon"></i> Bug Squashers</h4>
+        <p class="rules-meta">👥 Participants: 2 &nbsp; | ⏱ Duration: 1½ Hour</p>
+        <ul>
+            <li>Debug C code snippets manually</li>
+            <li>No IDEs or smart devices allowed</li>
+        </ul>
+    </div>
+</div>
+
+<div class="glass-card rules-panel" id="inno">
+    <h3><i class="fas fa-lightbulb rule-icon"></i> InnoQuest</h3>
+
+    <div class="rules-event">
+        <h4><i class="fas fa-brain rule-icon"></i> Geek-O-Pedia</h4>
+        <p class="rules-meta">👥 Participants: 2 &nbsp; | ⏱ Duration: 1½ Hour</p>
+        <ul>
+            <li>Quiz on Technology, GK, Logic, Sports & Movies</li>
+            <li>Top teams qualify for final rounds</li>
+            <li>Quizmaster’s decision is final</li>
+        </ul>
+    </div>
+
+    <div class="rules-event">
+        <h4><i class="fas fa-microphone rule-icon"></i> Pitch Perfect</h4>
+        <p class="rules-meta">👥 Participants: 2 &nbsp; | ⏱ Duration: 1½ Hour</p>
+        <ul>
+            <li>Pitch an innovative tech-based idea</li>
+            <li>Presentation via PPT, demo or model</li>
+            <li>10 minutes per team</li>
+        </ul>
+    </div>
+
+    <div class="rules-event">
+        <h4><i class="fas fa-comments rule-icon"></i> Rebuttal Rebels</h4>
+        <p class="rules-meta">👥 Participants: 2 &nbsp; | ⏱ Duration: 2 Hours</p>
+        <ul>
+            <li>Debate on latest technology topics</li>
+            <li>Topics given on the spot</li>
+            <li>Respectful and structured debate mandatory</li>
+        </ul>
+    </div>
+</div>
+<div class="glass-card rules-panel" id="media">
+    <h3><i class="fas fa-photo-video rule-icon"></i> Media Crafters</h3>
+
+    <div class="rules-event">
+        <h4><i class="fas fa-palette rule-icon"></i> Creativity</h4>
+        <p class="rules-meta">👥 Participants: 2 &nbsp; | ⏱ Duration: 1½ Hour</p>
+        <ul>
+            <li>Create poster using Canva</li>
+            <li>Must start from a blank canvas</li>
+            <li>No pre-made templates allowed</li>
+        </ul>
+    </div>
+
+    <div class="rules-event">
+        <h4><i class="fas fa-film rule-icon"></i> SyncIT</h4>
+        <p class="rules-meta">👥 Participants: 2 &nbsp; | ⏱ Duration: 1½ Hour</p>
+        <ul>
+            <li>Synchronize video with provided audio</li>
+            <li>Use Shotcut or OpenShot</li>
+            <li>Carry wired headphones</li>
+        </ul>
+    </div>
+
+    <div class="rules-event">
+        <h4><i class="fas fa-cube rule-icon"></i> BlenderNate</h4>
+        <p class="rules-meta">👥 Participants: 2 &nbsp; | ⏱ Duration: 2 Hours</p>
+        <ul>
+            <li>Create 3D model based on given theme</li>
+            <li>Use Blender only</li>
+            <li>No laptops or external assets</li>
+        </ul>
+    </div>
+</div>
+
+
+        </div>
+    </section>
 
 </main>
+
+
+<script>
+    const navItems = document.querySelectorAll('.rules-nav li');
+    const panels = document.querySelectorAll('.rules-panel');
+
+    navItems.forEach(item => {
+        item.addEventListener('click', () => {
+
+            // Remove active states
+            navItems.forEach(i => i.classList.remove('active'));
+            panels.forEach(p => p.classList.remove('active'));
+
+            // Activate clicked
+            item.classList.add('active');
+            document.getElementById(item.dataset.target).classList.add('active');
+        });
+    });
+</script>
+
+
+</body>
+</html>
+
 
 <!-- Footer (unchanged) -->
    <footer class="tech-footer">
