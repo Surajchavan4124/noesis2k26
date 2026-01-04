@@ -1,305 +1,329 @@
 const allEventsData = [
   {
     mainEvent: {
-      id: "main-event-1",
-      date: "Jan 23-24, 2026",
-      title: "WEBWIZARD",
+      id: "main-web",
+      date: "Jan 23, 2026",
+      title: "WEB WIZARDS",
+      cardTitle: "WEB WIZARDS",
       venue: "BCA Lab",
-      cardTitle: "WEBWIZARD",
       imageUrl: "assets/webwizard.png",
-      descriptionTitle: "About WebWizard",
-      descriptionBody: "A series of challenges designed to test your mastery of web technologies. From front-end design to back-end logic and bug hunting, prove you're the ultimate web wizard.",
-      rulesTitle: "General Rules for WebWizard",
+      descriptionTitle: "About Web Wizards",
+      descriptionBody:
+        "Take on creative and technical web challenges that test your design sense, frontend skills, UI/UX thinking, and debugging ability. Web Wizards is where ideas meet execution.",
+      rulesTitle: "General Rules",
       rules: [
-        "All participants must be registered students.",
-        "Please check individual sub-events for specific rules and timings.",
-        "Decisions of the event coordinators and judges are final."
+        "Participants must follow event-specific rules.",
+        "Use of unfair means will result in disqualification.",
+        "Judges’ decisions will be final and binding."
       ]
     },
     subEvents: [
       {
-        id: "sub-event-1",
+        id: "web-design",
         date: "Jan 23",
-        title: "W3BDESIXN",
-        venue: "BCA Lab 2",
-        cardTitle: "W3BDESIXN",
-        imageUrl: "assets/webdesign.jpg",
-        descriptionTitle: "About W3BDESIXN",
-        descriptionBody: "Attention Web Developers and Designers: Unleash Your Hidden Talents!\nJoin Our Website Design Competition and Showcase Your Creativity!",
-        rulesTitle: "W3BDESIXN Rules",
-        rules: [
-          "Participants: 2",
-          "Duration: 1½ hour",
-          "The participants will be given a theme based on which they have to design a dynamic website.",
-          "Website should be designed using HTML, CSS, and JavaScript.",
-          "For backend, only PHP and MySQL are allowed.",
-          "Premade templates are not allowed.",
-          "Website will be judged based on originality, design, functionality, and usability."
-        ]
-      },
-      {
-        id: "sub-event-2",
-        date: "Jan 23",
-        title: "RegEx",
-        cardTitle: "RegEx",
+        title: "WEB DESIGN",
+        cardTitle: "Web Design",
         venue: "BCA Lab",
-        imageUrl: "assets/regex.webp",
-        descriptionTitle: "About RegEx",
-        descriptionBody: "Join the RegEx Challenge: Where JavaScript Enthusiasts Perfect the Art of Web Form Validation!",
-        rulesTitle: "RegEx Rules",
+        imageUrl: "assets/webdesign.jpg",
+        descriptionTitle: "Web Design",
+        descriptionBody:
+          "Take on the ultimate web design showdown and stand out from the crowd! Craft original, functional, and stunning websites and prove you’ve got what it takes to dominate the web!",
+        rulesTitle: "Rules",
         rules: [
           "Participants: 2",
           "Duration: 1½ hour",
-          "The participants will be given a screenshot of the form layout.",
-          "The form should be designed using HTML, CSS and JavaScript only.",
-          "Participants have to perform all possible JavaScript validations.",
-          "Use of constraint validation attributes eg. required, min, max will not be allowed."
+          "Theme will be provided on the spot.",
+          "Website must be designed using HTML, CSS, and JavaScript.",
+          "Only PHP and MySQL allowed for backend.",
+          "Pre-made templates are not allowed.",
+          "Judging based on originality, design, functionality, and usability."
         ]
       },
       {
-        id: "sub-event-3",
+        id: "figmatrix",
         date: "Jan 23",
-        title: "BugIT",
+        title: "FIGMATRIX",
+        cardTitle: "FigMatrix",
+        venue: "BCA Lab",
+        imageUrl: "assets/figmatrix.webp",
+        descriptionTitle: "FigMatrix",
+        descriptionBody:
+          "Step into the Figma Design Arena: Conceptualise, craft, and prototype stunning web app interfaces.",
+        rulesTitle: "Rules",
+        rules: [
+          "Participants: 2",
+          "Duration: 1½ hours",
+          "Theme will be announced at the start of the event.",
+          "Entire design must be done in Figma.",
+          "Multiple screens with clickable prototype required.",
+          "No pre-made templates allowed.",
+          "Judging based on creativity, usability, consistency, and visual appeal."
+        ]
+      },
+      {
+        id: "bugit",
+        date: "Jan 23",
+        title: "BUGIT",
         cardTitle: "BugIT",
         venue: "BCA Lab",
         imageUrl: "assets/bugit.webp",
-        descriptionTitle: "About BugIT",
-        descriptionBody: "Join the BugIT Competition: Put Your Web Investigation Skills to Work on Static Sites—Identify, Fix, and Optimize!",
-        rulesTitle: "BugIT Rules",
+        descriptionTitle: "BugIT",
+        descriptionBody:
+          "Not all bugs hide well — find them, fix them, and optimize like a true web detective.",
+        rulesTitle: "Rules",
         rules: [
           "Participants: 2",
-          "Duration: 2 hour",
-          "The participants will be provided with a static website created with HTML, CSS and JavaScript. The website does not have server side programming and database connection.",
-          "The participants have to identify the errors, document the errors in the template provided, fix the errors and optimize the website for performance."
+          "Duration: 2 hours",
+          "Static website provided using HTML, CSS, and JavaScript.",
+          "No server-side programming or database.",
+          "Participants must identify, document, fix bugs, and optimize performance."
         ]
       }
     ]
   },
+
+  /* ===================== CODE CRUSADERS ===================== */
   {
     mainEvent: {
-      id: "main-event-2",
-      date: "Jan 23-24, 2026",
-      title: "CODE CRUSADER",
-      cardTitle: "CODE CRUSADER",
+      id: "main-code",
+      date: "Jan 23, 2026",
+      title: "CODE CRUSADERS",
+      cardTitle: "CODE CRUSADERS",
       venue: "BCA Lab",
       imageUrl: "assets/codecrusaders.png",
-      descriptionTitle: "About Code Crusader",
-      descriptionBody: "Dive deep into the fundamentals of programming. These events will test your logic, problem-solving speed, and debugging skills under pressure. Only the sharpest coders will prevail.",
-      rulesTitle: "General Rules for Code Crusader",
+      descriptionTitle: "About Code Crusaders",
+      descriptionBody:
+        "A battleground for coders where efficiency, logic, speed, and debugging skills define victory.",
+      rulesTitle: "General Rules",
       rules: [
-        "All participants must be registered students.",
-        "Please check individual sub-events for specific rules and timings.",
-        "Decisions of the event coordinators and judges are final."
+        "Participants must adhere to event rules.",
+        "No external help unless specified.",
+        "Judges’ decision is final."
       ]
     },
     subEvents: [
       {
-        id: "sub-event-4",
+        id: "codelite",
         date: "Jan 23",
-        title: "Blind Coding",
-        cardTitle: "Blind Coding",
+        title: "CODELITE",
+        cardTitle: "CodeLite",
         venue: "BCA Lab",
-        imageUrl: "assets/blindcoding.webp",
-        descriptionTitle: "About Blind Coding",
-        descriptionBody: "Blind Coding is a unique challenge that puts your coding expertise, logic, and focus to the test—without the usual coding aids.\nIt's just you, your code, and the clock!",
-        rulesTitle: "Blind Coding Rules",
+        imageUrl: "assets/codelite.webp",
+        descriptionTitle: "CodeLite",
+        descriptionBody:
+          "CodeLite is a challenge focused on writing efficient solutions with minimal instructions.",
+        rulesTitle: "Rules",
         rules: [
           "Participants: 2",
           "Duration: 1½ hour",
-          "Participants should have the knowledge of C programming language.",
-          "Round 1: One participant of the team has to write the code for the given problem, with the MONITOR TURNED OFF within a specified time.",
-          "Round 2: Task will be revealed on the day of the competition. The team who solves the given problem in the least amount of time will be the winner."
+          "Python programming knowledge required.",
+          "Shortest correct code wins.",
+          "No internet or external resources.",
+          "Libraries allowed only if specified.",
+          "Plagiarism leads to disqualification.",
+          "Completion time considered in case of tie."
         ]
       },
       {
-        id: "sub-event-5",
+        id: "codehunt",
         date: "Jan 23",
-        title: "BugSquasher",
-        cardTitle: "BugSquasher",
-        venue: "BCA Lab",
-        imageUrl: "assets/bugsquahers.png",
-        descriptionTitle: "About BugSquasher",
-        descriptionBody: "Attention coding enthusiasts! It's time to step up and eliminate those sneaky bugs.\nJoin the Bug Squashers and demonstrate your programming expertise in the realm of C!",
-        rulesTitle: "BugSquasher Rules",
-        rules: [
-          "Participants: 2",
-          "Duration: 1½ hour",
-          "Participants should know C programming language.",
-          "Questions will consist of code snippets with a bug in the code.",
-          "Participants need to find the bug and write the correct code on the answer sheet.",
-          "Participants will not be allowed to use any IDE.",
-          "Participants are not allowed to carry any smart devices."
-        ]
-      },
-      {
-        id: "sub-event-6",
-        date: "Jan 23",
-        title: "CodeHunt",
-        cardTitle: "CodeHunt",
+        title: "CODE HUNT",
+        cardTitle: "Code Hunt",
         venue: "BCA Lab",
         imageUrl: "assets/codehunt.png",
-        descriptionTitle: "About CodeHunt",
-        descriptionBody: "Join us for Code Hunt, where participants will showcase their Java skills while embarking on an exciting quest to decode clues that reveal programming questions.",
-        rulesTitle: "CodeHunt Rules",
+        descriptionTitle: "Code Hunt",
+        descriptionBody:
+          "Where cryptography meets C programming — decrypt the message and bring the code to life.",
+        rulesTitle: "Rules",
         rules: [
           "Participants: 2",
-          "Duration: 2 hour",
-          "The participants are not allowed to use their own laptop, or phones, but must use the PC provided by the college.",
-          "Participants will be given clues guiding them to the questions hidden somewhere in the campus.",
-          "Participants have to solve the questions using Java Programming language.",
-          "The solution of the current question serves as input to the next question.",
-          "The participant who solves all the questions in the least amount of time will be the winner."
+          "Duration: 2 hours",
+          "Only college-provided systems allowed.",
+          "Caesar Cipher and C programming required.",
+          "Roles: Decryptor and Coder.",
+          "Roles reversed in Round 2.",
+          "No external resources allowed.",
+          "Fastest correct team wins."
+        ]
+      },
+      {
+        id: "bugsquashers",
+        date: "Jan 23",
+        title: "BUG SQUASHERS",
+        cardTitle: "Bug Squashers",
+        venue: "BCA Lab",
+        imageUrl: "assets/bugsquahers.png",
+        descriptionTitle: "Bug Squashers",
+        descriptionBody:
+          "Ready to squash some bugs? Step into the arena and show your mastery of C.",
+        rulesTitle: "Rules",
+        rules: [
+          "Participants: 2",
+          "Duration: 1½ hour",
+          "C programming knowledge required.",
+          "Find bugs and write corrected code.",
+          "No IDEs allowed.",
+          "No smart devices allowed."
         ]
       }
     ]
   },
+
+  /* ===================== INNOQUEST ===================== */
   {
     mainEvent: {
-      id: "main-event-3",
-      date: "Jan 23-24, 2026",
-      title: "MEDIA CRAFTER",
-      cardTitle: "MEDIA CRAFTER",
-      venue: "BCA Lab",
-      imageUrl: "assets/mediacrafters.png",
-      descriptionTitle: "About Media Crafter",
-      descriptionBody: "Unleash your inner artist. This category is for the visual storytellers, the 3D modelers, and the design gurus. Show us your creative vision and technical skill.",
-      rulesTitle: "General Rules for Media Crafter",
-      rules: [
-        "All participants must be registered students.",
-        "Please check individual sub-events for specific rules and timings.",
-        "Decisions of the event coordinators and judges are final."
-      ]
-    },
-    subEvents: [
-      {
-        id: "sub-event-7",
-        date: "Jan 24",
-        title: "Creativity",
-        cardTitle: "Creativity",
-        venue: "BCA Lab",
-        imageUrl: "assets/creativity.webp",
-        descriptionTitle: "About Creativity",
-        descriptionBody: "For the visionary designer with an eye for impactful visuals. Create an unforgettable poster that captures hearts and minds!",
-        rulesTitle: "Creativity Rules",
-        rules: [
-          "Participants: 2",
-          "Duration: 1½ hour",
-          "Participants are required to create a poster on a given theme using Canva.",
-          "All posters must be created from a blank canvas.",
-          "Participants are not allowed to use any pre-made templates, themes, or design frameworks available on Canva."
-        ]
-      },
-      {
-        id: "sub-event-8",
-        date: "Jan 24",
-        title: "Sync It",
-        cardTitle: "Sync It",
-        venue: "BCA Lab",
-        imageUrl: "assets/sync it.webp",
-        descriptionTitle: "About Sync It",
-        descriptionBody: "Are you ready to compose the perfect movie?\nTap the maestro in you to create the perfect harmony between video clips and audio files.",
-        rulesTitle: "Sync It Rules",
-        rules: [
-          "Participants: 2",
-          "Duration: 1½ hour",
-          "Participants will be provided with muted video clips and audio files.",
-          "The task is to synchronize ANY ONE of the video clips with one or more audio files to create a meaningful movie using -Shortcut video editor / Openshot Video Editor.",
-          "Participants have to carry their own headphones (wired)."
-        ]
-      },
-      {
-        id: "sub-event-9",
-        date: "Jan 24",
-        title: "Blendernate",
-        cardTitle: "Blendernate",
-        venue: "BCA Lab",
-        imageUrl: "assets/blendernate.webp",
-        descriptionTitle: "About Blendernate",
-        descriptionBody: "Join BlenderNATE to dive into the world of 3D modeling and bring your imagination and creativity to life!.",
-        rulesTitle: "Blendernate Rules",
-        rules: [
-          "Participants: 2",
-          "Duration: 2 hour",
-          "Participants must create a 3D model or scene based on the provided theme.",
-          "The theme will be communicated to participants at the beginning of the competition.",
-          "Software to be used : Blender",
-          "The participants are not allowed to use their own laptop, but must use the PC provided by the college."
-        ]
-      }
-    ]
-  },
-  {
-    mainEvent: {
-      id: "main-event-4",
-      date: "Jan 23-24, 2026",
+      id: "main-inno",
+      date: "Jan 24, 2026",
       title: "INNOQUEST",
       cardTitle: "INNOQUEST",
       venue: "BCA Lab",
       imageUrl: "assets/innoquest.png",
       descriptionTitle: "About InnoQuest",
-      descriptionBody: "It's all about ideas and intellect. Challenge your knowledge in our geek-out quiz, pitch a world-changing idea, or defend your technological stances in a fast-paced debate.",
-      rulesTitle: "General Rules for InnoQuest",
+      descriptionBody:
+        "A stage for intellect, ideas, and debate — test your knowledge, pitch innovation, and defend your thoughts.",
+      rulesTitle: "General Rules",
       rules: [
-        "All participants must be registered students.",
-        "Please check individual sub-events for specific rules and timings.",
-        "Decisions of the event coordinators and judges are final."
+        "Participants must follow event-specific rules.",
+        "Decisions of judges are final."
       ]
     },
     subEvents: [
       {
-        id: "sub-event-10",
+        id: "geekopedia",
         date: "Jan 24",
-        title: "Geek-O-Pedia",
+        title: "GEEK-O-PEDIA",
         cardTitle: "Geek-O-Pedia",
         venue: "BCA Lab",
         imageUrl: "assets/geek-o.webp",
-        descriptionTitle: "About Geek-O-Pedia",
-        descriptionBody: "Only the sharpest minds will survive the ultimate test of knowledge—are you ready to outsmart, outlast, and outplay your competition?",
-        rulesTitle: "Geek-O-Pedia Rules",
+        descriptionTitle: "Geek-O-Pedia",
+        descriptionBody:
+          "A thrilling showdown of knowledge — will your mind crack under pressure or lead you to triumph?",
+        rulesTitle: "Rules",
         rules: [
           "Participants: 2",
           "Duration: 1½ hour",
-          "The quiz will be based on the following themes: Technology, General Knowlegde, Logical Reasoning, Sports and Movies.",
-          "Only the top 5 qualifying teams from the elimination rounds (if held) will advance to the on-stage round.",
-          "The rules for each round will be announced at the beginning of the respective round",
-          "The decision of the quiz-master and the organisers will be final and binding."
+          "Quiz topics: Technology, GK, Logic, Sports, Movies.",
+          "Top teams advance to final rounds.",
+          "Quizmaster’s decision is final."
         ]
       },
       {
-        id: "sub-event-11",
+        id: "pitchperfect",
         date: "Jan 24",
-        title: "Pitch Perfect",
+        title: "PITCH PERFECT",
         cardTitle: "Pitch Perfect",
         venue: "BCA Lab",
         imageUrl: "assets/pitch.webp",
-        descriptionTitle: "About Pitch Perfect",
-        descriptionBody: "PitchPerfect is a visionary's stage to present game-changing ideas, from technological innovations to sustainable solutions and turn them into reality.",
-        rulesTitle: "Pitch Perfect Rules",
+        descriptionTitle: "Pitch Perfect",
+        descriptionBody:
+          "Where innovative ideas take center stage and creativity meets opportunity.",
+        rulesTitle: "Rules",
         rules: [
           "Participants: 2",
           "Duration: 1½ hour",
-          "Participants should pitch an innovative tech-based idea or concept for a product or service, showcasing its value, potential impact, and the transformative difference it can make.",
-          "The idea/concept could be presented by the participants with the aid of a model, demo video, or PowerPoint presentation.",
-          "Time duration : 10 minutes per team"
+          "Pitch a tech-based idea or concept.",
+          "Presentation via model, demo video, or PPT.",
+          "10 minutes per team."
         ]
       },
       {
-        id: "sub-event-12",
+        id: "rebuttalrebels",
         date: "Jan 24",
-        title: "Rebuttal Rebels",
+        title: "REBUTTAL REBELS",
         cardTitle: "Rebuttal Rebels",
         venue: "BCA Lab",
         imageUrl: "assets/rebels.webp",
-        descriptionTitle: "About Rebuttal Rebels",
-        descriptionBody: "The Rebuttal Rebels Challenge will push you to the edge of your knowledge and eloquence.Dare to take on an unexpected IT topic, think fast, argue smart and defend your position.",
-        rulesTitle: "Rebuttal Rebels Rules",
+        descriptionTitle: "Rebuttal Rebels",
+        descriptionBody:
+          "Speak with speed, argue with logic, and defend with confidence.",
+        rulesTitle: "Rules",
         rules: [
           "Participants: 2",
-          "Duration: 2 hour",
-          "Rebuttal Rebels is a debate competition centered around the latest technology topics.",
-          "Participants should come prepared with up-to-date knowledge of the trends and developments in the IT world.",
-          "Topics will be given on the spot, and participants must think quickly and present their arguments clearly.",
-          "Participants are expected to follow the debate rules, including time limits for speaking, respectful engagement with others, and staying on-topic."
+          "Duration: 2 hours",
+          "Debate on latest technology topics.",
+          "Topics given on the spot.",
+          "Respectful and structured debate mandatory."
+        ]
+      }
+    ]
+  },
+
+  /* ===================== MEDIA CRAFTERS ===================== */
+  {
+    mainEvent: {
+      id: "main-media",
+      date: "Jan 24, 2026",
+      title: "MEDIA CRAFTERS",
+      cardTitle: "MEDIA CRAFTERS",
+      venue: "BCA Lab",
+      imageUrl: "assets/mediacrafters.png",
+      descriptionTitle: "About Media Crafters",
+      descriptionBody:
+        "For visual storytellers, designers, editors, and 3D artists — bring creativity to life.",
+      rulesTitle: "General Rules",
+      rules: [
+        "Participants must adhere to rules.",
+        "Judges’ decisions are final."
+      ]
+    },
+    subEvents: [
+      {
+        id: "creativity",
+        date: "Jan 24",
+        title: "CREATIVITY",
+        cardTitle: "Creativity",
+        venue: "BCA Lab",
+        imageUrl: "assets/creativity.webp",
+        descriptionTitle: "Creativity",
+        descriptionBody:
+          "Your ideas, your art, your stage — make a poster that speaks volumes.",
+        rulesTitle: "Rules",
+        rules: [
+          "Participants: 2",
+          "Duration: 1½ hour",
+          "Poster must be created in Canva.",
+          "Start from a blank canvas.",
+          "No pre-made templates allowed.",
+          "All text must be original."
+        ]
+      },
+      {
+        id: "syncit",
+        date: "Jan 24",
+        title: "SYNCIT",
+        cardTitle: "SyncIT",
+        venue: "BCA Lab",
+        imageUrl: "assets/sync it.webp",
+        descriptionTitle: "SyncIT",
+        descriptionBody:
+          "From concept to cut — craft a video that resonates and captivates.",
+        rulesTitle: "Rules",
+        rules: [
+          "Participants: 2",
+          "Duration: 1½ hour",
+          "Muted video clips and audio provided.",
+          "Synchronize one video using Shotcut or OpenShot.",
+          "Carry wired headphones."
+        ]
+      },
+      {
+        id: "blendernate",
+        date: "Jan 24",
+        title: "BLENDERNATE",
+        cardTitle: "BlenderNate",
+        venue: "BCA Lab",
+        imageUrl: "assets/blendernate.webp",
+        descriptionTitle: "BlenderNate",
+        descriptionBody:
+          "Bring your ideas off the screen — model, render, and amaze.",
+        rulesTitle: "Rules",
+        rules: [
+          "Participants: 2",
+          "Duration: 2 hours",
+          "Theme given at start.",
+          "Software: Blender only.",
+          "Use college-provided PC.",
+          "No pre-built models or external assets."
         ]
       }
     ]
@@ -325,8 +349,8 @@ const allEventsData = [
       {
         id: "sub-event-13",
         date: "Submission",
-        title: "Squad Showcas",
-        cardTitle: "Squad Showcas",
+        title: "Squad Showcase",
+        cardTitle: "Squad Showcase",
         venue: "BCA Lab",
         imageUrl: "assets/squadshowcase.webp",
         descriptionTitle: "About Squad Showcase",
@@ -397,4 +421,4 @@ const allEventsData = [
       ]
     },
   }
-]
+];
