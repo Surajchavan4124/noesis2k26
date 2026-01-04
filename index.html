@@ -41,9 +41,9 @@
     <!-- All Styles Combined -->
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="index.css">
-      <link rel="stylesheet" href="./css/events.css">
-       <script src="js/events.js"></script>
-     <script src="js/events-render.js"></script>
+    <link rel="stylesheet" href="./css/events.css">
+    <script src="js/events.js"></script>
+    <script src="js/events-render.js"></script>
 </head>
 
 <body>
@@ -61,7 +61,7 @@
 
                 <ul class="nav-menu" id="nav-menu">
                     <li><a href="./index.html" class="nav-link active"><i class="fas fa-home"></i> Home</a></li>
-                    <li><a href="./events.html" class="nav-link"><i class="fas fa-calendar-alt"></i> Events</a>
+                    <li><a href="./index.html#events" class="nav-link"><i class="fas fa-calendar-alt"></i> Events</a>
                     </li>
                     <li><a href="./schedule.html" class="nav-link"><i class="fas fa-clock"></i> Schedule</a></li>
                     <li><a href="./sponsors.html" class="nav-link"><i class="fas fa-handshake"></i> Sponsors</a></li>
@@ -128,30 +128,30 @@
             </div>
         </section>
 
-               <!-- Featured Events -->
- <main class="events-container">
-        <section class="section-header">
-            <h1 class="section-title">Technical Events</h1>
-            <p class="section-subtitle">
-                Explore a spectrum of competitive challenges designed to push your technical skills to the limit.
-                Click on any event to view detailed rules and associated sub-events.
-            </p>
-        </section>
+        <!-- Featured Events -->
+        <div id="events" class="events-container">
+            <section class="section-header">
+                <h1 class="section-title">Technical Events</h1>
+                <p class="section-subtitle">
+                    Explore a spectrum of competitive challenges designed to push your technical skills to the limit.
+                    Click on any event to view detailed rules and associated sub-events.
+                </p>
+            </section>
 
-        <!-- Dynamic Event Grid will be populated here by JavaScript -->
-        <div id="event-list-container" class="event-grid">
-            <!-- Main Event Cards will be injected here -->
-        </div>
-    </main>
-        <div id="event-detail-modal" class="modal">
-        <div class="modal-content">
-            <!-- Close button remains the generic exit point -->
-            <button class="close-btn" onclick="closeModal()"><i class="fas fa-times"></i></button>
-            <div id="modal-body-content" class="modal-body">
-                <!-- Modal details will be populated here -->
+            <!-- Dynamic Event Grid will be populated here by JavaScript -->
+            <div id="event-list-container" class="event-grid">
+                <!-- Main Event Cards will be injected here -->
             </div>
         </div>
-    </div>
+        <div id="event-detail-modal" class="modal">
+            <div class="modal-content">
+                <!-- Close button remains the generic exit point -->
+                <button class="close-btn" onclick="closeModal()"><i class="fas fa-times"></i></button>
+                <div id="modal-body-content" class="modal-body">
+                    <!-- Modal details will be populated here -->
+                </div>
+            </div>
+        </div>
         <!-- About Section with Tech Grid -->
         <section id="about" class="about">
             <div class="container">
@@ -258,7 +258,7 @@
                 <div class="footer-links">
                     <h4>Quick Links</h4>
                     <ul>
-                        <li><a href="events.html"><i class="fas fa-chevron-right"></i> Events</a></li>
+                        <li><a href="./index.html#events"><i class="fas fa-chevron-right"></i> Events</a></li>
                         <li><a href="schedule.html"><i class="fas fa-chevron-right"></i> Schedule</a></li>
                         <li><a href="sponsors.html"><i class="fas fa-chevron-right"></i> Sponsors</a></li>
                         <li><a href="rules.html"><i class="fas fa-chevron-right"></i> Rules</a></li>

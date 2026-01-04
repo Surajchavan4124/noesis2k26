@@ -1,6 +1,4 @@
-// ===============================
-// MODAL UTILITIES
-// ===============================
+
 window.closeModal = function () {
   const modal = document.getElementById("event-detail-modal");
   if (!modal) return;
@@ -9,9 +7,7 @@ window.closeModal = function () {
   document.body.style.overflow = "auto";
 };
 
-// ===============================
-// EVENT LOOKUP
-// ===============================
+
 function getEventById(id) {
   if (!Array.isArray(allEventsData)) return null;
 
@@ -39,17 +35,12 @@ function getEventById(id) {
   return null;
 }
 
-// ===============================
-// BACK TO MAIN EVENT
-// ===============================
+
 window.backToMainEvent = function (mainEventId) {
   const main = getEventById(mainEventId);
   if (main) openModal(main);
 };
 
-// ===============================
-// EVENT CARD (INDEX PAGE)
-// ===============================
 function createEventCard(eventData) {
   const card = document.createElement("div");
   card.className = "event-card";
@@ -83,9 +74,6 @@ function createEventCard(eventData) {
   return card;
 }
 
-// ===============================
-// RENDER MAIN EVENTS
-// ===============================
 function renderMainEventsOnly() {
   const container = document.getElementById("event-list-container");
   if (!container) return;
@@ -96,9 +84,7 @@ function renderMainEventsOnly() {
   });
 }
 
-// ===============================
-// MODAL OPEN HANDLER
-// ===============================
+
 window.openModal = function (lookup) {
   if (!lookup) return;
 

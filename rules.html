@@ -1,509 +1,569 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>NOESIS 2K26 - Rules & Guidelines</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NOESIS 2K26 - Rules & Guidelines</title>
 
-    <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&family=Orbitron:wght@400;500;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <!-- Google Fonts -->
+  <link
+    href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&family=Orbitron:wght@400;500;700&family=Inter:wght@300;400;500;600;700&display=swap"
+    rel="stylesheet">
 
-    <!-- Font Awesome -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
-    <!-- Main CSS -->
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="index.css">
+  <!-- Main CSS -->
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="index.css">
 
-    <!-- Rules Toggle CSS -->
-    <style>
-        .rules-section.hidden {
-            display: none;
-        }
+  <!-- Rules Toggle CSS -->
+  <style>
+    .rules-section.hidden {
+      display: none;
+    }
 
-        .rules-toggle {
-            display: flex;
-            gap: 1rem;
-            justify-content: center;
-            margin: 2.5rem 0;
-            flex-wrap: wrap;
-        }
+    .rules-toggle {
+      display: flex;
+      gap: 1rem;
+      justify-content: center;
+      margin: 2.5rem 0;
+      flex-wrap: wrap;
+    }
 
-        .rules-toggle .btn.active {
-            background: var(--accent);
-            color: #000;
-            box-shadow: 0 0 15px rgba(212, 175, 55, 0.6);
-        }
-    </style>
+    .rules-toggle .btn.active {
+      background: var(--accent);
+      color: #000;
+      box-shadow: 0 0 15px rgba(212, 175, 55, 0.6);
+    }
+  </style>
 </head>
 
 <body>
 
-<!-- Navbar -->
-<nav class="navbar">
+  <!-- Navbar -->
+  <nav class="navbar">
     <div class="container nav-container">
-                <a href="./index.html" class="logo">NOESIS<span class="year">2K25-26</span></a>
+      <a href="./index.html" class="logo">NOESIS<span class="year">2K25-26</span></a>
 
-        <div class="hamburger" id="menu-icon">
-            <span class="bar"></span>
-            <span class="bar"></span>
-            <span class="bar"></span>
+      <div class="hamburger" id="menu-icon">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+      </div>
+
+      <ul class="nav-menu" id="nav-menu">
+        <li><a href="./index.html" class="nav-link"><i class="fas fa-home"></i> Home</a></li>
+        <li><a href="./index.html#events" class="nav-link"><i class="fas fa-calendar-alt"></i> Events</a></li>
+        <li><a href="./schedule.html" class="nav-link"><i class="fas fa-clock"></i> Schedule</a></li>
+        <li><a href="./sponsors.html" class="nav-link"><i class="fas fa-handshake"></i> Sponsors</a></li>
+        <li><a href="./esouvenir.html" class="nav-link"><i class="fas fa-gift"></i> E-Souvenir</a></li>
+        <li><a href="./contact.html" class="nav-link"><i class="fas fa-envelope"></i> Contact</a></li>
+        <li><a href="register.html" class="nav-btn"><i class="fas fa-user-plus"></i>Register Now</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <main id="main-content">
+    <section class="section">
+      <div class="container rules-grid">
+
+        <!-- Sidebar -->
+        <div class="glass-card rules-sidebar">
+          <button class="rules-mobile-toggle" id="rulesMobileToggle">
+            Menu <i class="fas fa-chevron-down"></i>
+          </button>
+          <div class="rules-nav-wrapper" id="rulesNavWrapper">
+            <ul class="rules-nav">
+              <li class="active" data-target="general">
+                <i><img src="./assets/noesis-logo.png" width="30px" alt=""></i> NOESIS 2K25-26
+              </li>
+              <li class="" data-target="general-ins">
+                <i class="fas fa-scale-balanced"></i> General Instruction
+              </li>
+              <li data-target="web">
+                <i class="fas fa-code"></i> Web Wizards
+              </li>
+              <li data-target="code">
+                <i class="fas fa-terminal"></i> Code Crusaders
+              </li>
+              <li data-target="inno">
+                <i class="fas fa-lightbulb"></i> InnoQuest
+              </li>
+              <li data-target="media">
+                <i class="fas fa-photo-video"></i> Media Crafters
+              </li>
+            </ul>
+          </div>
         </div>
 
-        <ul class="nav-menu" id="nav-menu">
-            <li><a href="./index.html" class="nav-link"><i class="fas fa-home"></i> Home</a></li>
-            <li><a href="./events.html" class="nav-link"><i class="fas fa-calendar-alt"></i> Events</a></li>
-            <li><a href="./schedule.html" class="nav-link"><i class="fas fa-clock"></i> Schedule</a></li>
-            <li><a href="./sponsors.html" class="nav-link"><i class="fas fa-handshake"></i> Sponsors</a></li>
-            <li><a href="./esouvenir.html" class="nav-link"><i class="fas fa-gift"></i> E-Souvenir</a></li>
-            <li><a href="./contact.html" class="nav-link"><i class="fas fa-envelope"></i> Contact</a></li>
-            <li><a href="register.html" class="nav-btn"><i class="fas fa-user-plus"></i>Register Now</a></li>
-        </ul>
-    </div>
-</nav>
+        <!-- Content -->
+        <div class="glass-card rules-panel active" id="general">
+          <h3><i class="fas fa-scale-balanced rule-icon"></i> NOESIS 2K25-26</h3>
 
-<main id="main-content">
-    <section class="section">
-        <div class="container rules-grid">
+          <div class="rules-block">
+            <h4>Eligibility</h4>
+            <ul>
+              <li>NOESIS 2K25-26 is open to undergraduate students enrolled in BE, BCA, BSc (Computer Science/IT),
+                B.Voc, and B.Tech programs, both within and outside the state of Goa.</li>
+              <li>Teams from outside Goa must be accompanied by a faculty member from their institution.</li>
+            </ul>
+          </div>
+          <br>
+          <div class="rules-block">
+            <h4>Registration & Fees</h4>
+            <ul>
+              <li>Teams must register online and pay a non-refundable registration fee of ₹2000 via online payment.</li>
+              <li>Payment details:</li>
+              o Account Name: M/s ROSARY COLLEGE EVENTS EXTRA CURRICULAR ACTIVITIES<br>
+              o Account Number: 520101031900379<br>
+              o IFSC Code: UBIN0920835<br>
+              o Bank Name & Branch: Union Bank, Navelim<br>
+              o MICR Code: 403026064<br>
 
-            <!-- Sidebar -->
-            <div class="glass-card rules-sidebar">
-                <ul class="rules-nav">
-                    <li class="active" data-target="general">
-                        <i><img src="./assets/noesis-logo.png" width="30px" alt=""></i> NOESIS 2K25-26
-                    </li>
-                     <li class="active" data-target="general-ins">
-                        <i class="fas fa-scale-balanced"></i> General Instruction
-                    </li>
-                    <li data-target="web">
-                        <i class="fas fa-code"></i> Web Wizards
-                    </li>
-                    <li data-target="code">
-                        <i class="fas fa-terminal"></i> Code Crusaders
-                    </li>
-                    <li data-target="inno">
-                        <i class="fas fa-lightbulb"></i> InnoQuest
-                    </li>
-                    <li data-target="media">
-                        <i class="fas fa-photo-video"></i> Media Crafters
-                    </li>
-                </ul>
-            </div>
+            </ul>
+          </div>
+          <br>
+          <div class="rules-block">
+            <h4>Team Composition</h4>
+            <ul>
+              <li>Only one team per college is allowed.</li>
+              <li>Each team must provide a letter of authorization signed by the Principal of their college.</li>
+              <li>All team members must carry valid college ID cards.</li>
+              <li>A team should consist of 10 students: 8 for main events and 2 for gaming</li>
+            </ul>
+          </div>
+          <br>
+          <div class="rules-block">
+            <h4>Event Participation</h4>
+            <ul>
+              <li>The competition features five categories of events, each requiring two students.</li>
+              <li>Students selecting a category must participate in all sub-events under that category.</li>
+              <li>Once a category is chosen, participants cannot switch to a different category.</li>
+              <li>Events under the “Swing of Fortune” category are compulsory and included for grading.</li>
+            </ul>
+          </div>
+          <br>
 
-            <!-- Content -->
-            <div class="glass-card rules-panel active" id="general">
-    <h3><i class="fas fa-scale-balanced rule-icon"></i> NOESIS 2K25-26</h3>
+        </div>
+        <div class="glass-card rules-panel" id="general-ins">
+          <h3><i class="fas fa-code rule-icon"></i> General Instruction</h3>
 
-    <div class="rules-block">
-        <h4>Eligibility</h4>
-        <ul>
-            <li>NOESIS 2K25-26 is open to undergraduate students enrolled in BE, BCA, BSc (Computer Science/IT), B.Voc, and B.Tech programs, both within and outside the state of Goa.</li>
-            <li>Teams from outside Goa must be accompanied by a faculty member from their institution.</li>
-        </ul>
-    </div>
-    <br>
-    <div class="rules-block">
-        <h4>Registration & Fees</h4>
-        <ul>
-            <li>Teams must register online and pay a non-refundable registration fee of ₹2000 via online payment.</li>
-            <li>Payment details:</li>
-                o Account Name: M/s ROSARY COLLEGE EVENTS EXTRA CURRICULAR ACTIVITIES<br>
-                o	Account Number: 520101031900379<br>
-                o	IFSC Code: UBIN0920835<br>
-                o	Bank Name & Branch: Union Bank, Navelim<br>
-                o	MICR Code: 403026064<br>
-
-        </ul>
-    </div>
-    <br>
-    <div class="rules-block">
-        <h4>Team Composition</h4>
-        <ul>
-            <li>Only one team per college is allowed.</li>
-            <li>Each team must provide a letter of authorization signed by the Principal of their college.</li>
-            <li>All team members must carry valid college ID cards.</li>
-            <li>A team should consist of 10 students: 8 for main events and 2 for gaming</li>
-        </ul>
-    </div>
-<br>
-    <div class="rules-block">
-        <h4>Event Participation</h4>
-        <ul>
-            <li>The competition features five categories of events, each requiring two students.</li>
-            <li>Students selecting a category must participate in all sub-events under that category.</li>
-            <li>Once a category is chosen, participants cannot switch to a different category.</li>
-            <li>Events under the “Swing of Fortune” category are compulsory and included for grading.</li>
-        </ul>
-    </div>
-    <br>
- 
-</div>
-<div class="glass-card rules-panel" id="general-ins">
-    <h3><i class="fas fa-code rule-icon"></i> General Instruction</h3>
-
-   <div class="rules-block">
-        <h4>Code of Conduct</h4>
-        <ul>
-            <li>Participants are expected to maintain professionalism and respectful behavior throughout the event. Misconduct may lead to team disqualification.</li>
-    </div>
-<br>
-  <div class="rules-block">
-        <h4>Punctuality</h4>
-        <ul>
-            <li>Teams must strictly adhere to the event schedule.</li>
-    </div>
-<br>
- <div class="rules-block">
-        <h4>Dress Code</h4>
-        <ul>
-            <li>Participants should wear appropriate formal or casual attire suitable for the event.</li>
-    </div>
-    <br>
-     <div class="rules-block">
-        <h4>Prohibited Items</h4>
-        <ul>
-            <li>Carrying banned substances or any item that poses a safety risk is strictly prohibited.</li>
-    </div>
-    <br>
-     <div class="rules-block">
-        <h4>Responsibility for Personal Belongings</h4>
-        <ul>
-            <li>Participants are responsible for their own belongings. Organizers will not be liable for any loss or damage.</li>
-    </div>
-    <br>
-      <div class="rules-block">
-        <h4>Venue Regulations</h4>
-        <ul>
-            <li>Participants must respect the venue rules, maintain cleanliness, and avoid damage to property.</li>
-            <li>Any damage caused will be the responsibility of the team.</li>
-    </div>
-    <br>
-      <div class="rules-block">
-        <h4>Team Identification</h4>
-        <ul>
-            <li>All participants must wear their team ID badges at all times during the event.</li>
-    </div>
-    <br>
-      <div class="rules-block">
-        <h4>Fair Play</h4>
-        <ul>
-            <li>Any team found cheating, tampering with event processes, or violating rules will face immediate disqualification.</li>
-    </div>
-    <br>
-      <div class="rules-block">
-        <h4>Organizer’s Authority</h4>
-        <ul>
-            <li>The organizers’ decision will be final and binding on all matters related to the event. No disputes will be entertained.</li>
-    </div>
-</div>
+          <div class="rules-block">
+            <h4>Code of Conduct</h4>
+            <ul>
+              <li>Participants are expected to maintain professionalism and respectful behavior throughout the event.
+                Misconduct may lead to team disqualification.</li>
+          </div>
+          <br>
+          <div class="rules-block">
+            <h4>Punctuality</h4>
+            <ul>
+              <li>Teams must strictly adhere to the event schedule.</li>
+          </div>
+          <br>
+          <div class="rules-block">
+            <h4>Dress Code</h4>
+            <ul>
+              <li>Participants should wear appropriate formal or casual attire suitable for the event.</li>
+          </div>
+          <br>
+          <div class="rules-block">
+            <h4>Prohibited Items</h4>
+            <ul>
+              <li>Carrying banned substances or any item that poses a safety risk is strictly prohibited.</li>
+          </div>
+          <br>
+          <div class="rules-block">
+            <h4>Responsibility for Personal Belongings</h4>
+            <ul>
+              <li>Participants are responsible for their own belongings. Organizers will not be liable for any loss or
+                damage.</li>
+          </div>
+          <br>
+          <div class="rules-block">
+            <h4>Venue Regulations</h4>
+            <ul>
+              <li>Participants must respect the venue rules, maintain cleanliness, and avoid damage to property.</li>
+              <li>Any damage caused will be the responsibility of the team.</li>
+          </div>
+          <br>
+          <div class="rules-block">
+            <h4>Team Identification</h4>
+            <ul>
+              <li>All participants must wear their team ID badges at all times during the event.</li>
+          </div>
+          <br>
+          <div class="rules-block">
+            <h4>Fair Play</h4>
+            <ul>
+              <li>Any team found cheating, tampering with event processes, or violating rules will face immediate
+                disqualification.</li>
+          </div>
+          <br>
+          <div class="rules-block">
+            <h4>Organizer’s Authority</h4>
+            <ul>
+              <li>The organizers’ decision will be final and binding on all matters related to the event. No disputes
+                will be entertained.</li>
+          </div>
+        </div>
 
 
 
 
-             <div class="glass-card rules-panel" id="web">
-  <h3><i class="fas fa-code rule-icon"></i> Web Wizards</h3>
+        <div class="glass-card rules-panel" id="web">
+          <h3><i class="fas fa-code rule-icon"></i> Web Wizards</h3>
 
-  <div class="rules-event">
-    <h4><i class="fas fa-laptop-code rule-icon"></i> Web Design</h4>
-    <p class="rules-desc">
-      “Take on the ultimate web design showdown and stand out from the crowd!
-      Craft original, functional, and stunning websites and prove you’ve got what it takes to dominate the web!”
-    </p>
-    <p class="rules-meta">Participants: 2 &nbsp; | &nbsp; Duration: 1½ hour</p>
-    <h5>Rules</h5>
-    <ul>
-      <li>The participants will be given a theme based on which they have to design a dynamic website.</li>
-      <li>Website should be designed using HTML, CSS, and JavaScript.</li>
-      <li>For backend, only PHP and MySQL are allowed.</li>
-      <li>Premade templates are not allowed.</li>
-      <li>Website will be judged based on originality, design, functionality, and usability.</li>
-    </ul>
-  </div>
+          <div class="rules-event">
+            <h4><i class="fas fa-laptop-code rule-icon"></i> Web Design</h4>
+            <p class="rules-desc">
+              “Take on the ultimate web design showdown and stand out from the crowd!
+              Craft original, functional, and stunning websites and prove you’ve got what it takes to dominate the web!”
+            </p>
+            <p class="rules-meta">Participants: 2 &nbsp; | &nbsp; Duration: 1½ hour</p>
+            <h5>Rules</h5>
+            <ul>
+              <li>The participants will be given a theme based on which they have to design a dynamic website.</li>
+              <li>Website should be designed using HTML, CSS, and JavaScript.</li>
+              <li>For backend, only PHP and MySQL are allowed.</li>
+              <li>Premade templates are not allowed.</li>
+              <li>Website will be judged based on originality, design, functionality, and usability.</li>
+            </ul>
+          </div>
 
-  <div class="rules-event">
-    <h4><i class="fab fa-figma rule-icon"></i> FigMatrix</h4>
-    <p class="rules-desc">
-      "Step into the Figma Design Arena: Conceptualise, Craft, and Prototype Stunning Web App Interfaces!"
-    </p>
-    <p class="rules-meta">Participants: 2 &nbsp; | &nbsp; Duration: 1½ hours</p>
-    <h5>Rules</h5>
-    <ul>
-      <li>Participants will be given a theme at the start of the event.</li>
-      <li>The web app interface must be designed entirely in Figma.</li>
-      <li>Teams must create multiple screens and link them into a clickable prototype.</li>
-      <li>Use of pre-made templates is not allowed; all work must be original.</li>
-      <li>Designs must be completed and submitted within the given time limit.</li>
-      <li>Judgment will be based on creativity, usability, consistency, and overall visual appeal.</li>
-    </ul>
-  </div>
+          <div class="rules-event">
+            <h4><i class="fab fa-figma rule-icon"></i> FigMatrix</h4>
+            <p class="rules-desc">
+              "Step into the Figma Design Arena: Conceptualise, Craft, and Prototype Stunning Web App Interfaces!"
+            </p>
+            <p class="rules-meta">Participants: 2 &nbsp; | &nbsp; Duration: 1½ hours</p>
+            <h5>Rules</h5>
+            <ul>
+              <li>Participants will be given a theme at the start of the event.</li>
+              <li>The web app interface must be designed entirely in Figma.</li>
+              <li>Teams must create multiple screens and link them into a clickable prototype.</li>
+              <li>Use of pre-made templates is not allowed; all work must be original.</li>
+              <li>Designs must be completed and submitted within the given time limit.</li>
+              <li>Judgment will be based on creativity, usability, consistency, and overall visual appeal.</li>
+            </ul>
+          </div>
 
-  <div class="rules-event">
-    <h4><i class="fas fa-bug rule-icon"></i> BugIT</h4>
-    <p class="rules-desc">
-      “Not All Bugs Hide Well - Find them, fix them, and optimize like a true web detective.”
-    </p>
-    <p class="rules-meta">Participants: 2 &nbsp; | &nbsp; Duration: 2 hours</p>
-    <h5>Rules</h5>
-    <ul>
-      <li>The participants will be provided with a static website created with HTML, CSS and JavaScript.</li>
-      <li>The website does not have server side programming and database connection.</li>
-      <li>The participants have to identify the errors, document the errors in the template provided, fix the errors and optimize the website for performance.</li>
-    </ul>
-  </div>
-</div>
-
-
-
- <div class="glass-card rules-panel" id="code">
-  <h3><i class="fas fa-terminal rule-icon"></i> Code Crusaders</h3>
-
-  <div class="rules-event">
-    <h4><i class="fas fa-bolt rule-icon"></i> CodeLite</h4>
-    <p class="rules-desc">
-      “CodeLite is a challenge focused on writing efficient solutions with minimal instructions.”
-    </p>
-    <p class="rules-meta">Participants: 2 &nbsp; | &nbsp; Duration: 1½ hour</p>
-    <h5>Rules</h5>
-    <ul>
-      <li>Participants should have the knowledge of Python programming language.</li>
-      <li>The primary winning criterion is the shortest correct code.</li>
-      <li>Teams are not permitted to use external resources or internet access.</li>
-      <li>Libraries may be used only if explicitly stated.</li>
-      <li>All submitted codes must be valid, executable, and free of errors.</li>
-      <li>Plagiarism or copying code from other teams will result in immediate disqualification.</li>
-      <li>Any violation of the rules may result in disqualification.</li>
-      <li>Code completion time will be taken into consideration in case of a clash.</li>
-    </ul>
-  </div>
-
-  <div class="rules-event">
-    <h4><i class="fas fa-unlock-alt rule-icon"></i> Code Hunt</h4>
-    <p class="rules-desc">
-      “Code Hunt is the event where cryptography meets C programming—team up, decrypt the message, and bring the code to life.”
-    </p>
-    <p class="rules-meta">Participants: 2 &nbsp; | &nbsp; Duration: 2 hours</p>
-    <h5>Rules</h5>
-    <ul>
-      <li>Only college-provided systems may be used; personal devices are prohibited.</li>
-      <li>Participants must be familiar with Caesar Cipher techniques and C programming.</li>
-      <li>Teams consist of two members assigned as Decryptor and Coder.</li>
-      <li>Round 1: The Decryptor decodes the message while the Coder implements it in C.</li>
-      <li>Roles cannot be changed during a round.</li>
-      <li>Round 2: Roles are reversed.</li>
-      <li>Communication will be permitted only to share the decoded message.</li>
-      <li>Use of external resources or online assistance is strictly forbidden unless authorized.</li>
-      <li>Any rule violation may result in disqualification.</li>
-      <li>The team completing all tasks correctly in the shortest time will be declared the winner.</li>
-    </ul>
-  </div>
-
-  <div class="rules-event">
-    <h4><i class="fas fa-bug-slash rule-icon"></i> Bug Squashers</h4>
-    <p class="rules-desc">
-      “Ready to squash some bugs? Step into the arena and show your mastery of C!”
-    </p>
-    <p class="rules-meta">Participants: 2 &nbsp; | &nbsp; Duration: 1½ hour</p>
-    <h5>Rules</h5>
-    <ul>
-      <li>Participants should know C programming language.</li>
-      <li>Questions will consist of code snippets with a bug in the code.</li>
-      <li>Participants need to find the bug and write the correct code on the answer sheet.</li>
-      <li>Participants will not be allowed to use any IDE.</li>
-      <li>Participants are not allowed to carry any smart devices.</li>
-    </ul>
-  </div>
-</div>
+          <div class="rules-event">
+            <h4><i class="fas fa-bug rule-icon"></i> BugIT</h4>
+            <p class="rules-desc">
+              “Not All Bugs Hide Well - Find them, fix them, and optimize like a true web detective.”
+            </p>
+            <p class="rules-meta">Participants: 2 &nbsp; | &nbsp; Duration: 2 hours</p>
+            <h5>Rules</h5>
+            <ul>
+              <li>The participants will be provided with a static website created with HTML, CSS and JavaScript.</li>
+              <li>The website does not have server side programming and database connection.</li>
+              <li>The participants have to identify the errors, document the errors in the template provided, fix the
+                errors and optimize the website for performance.</li>
+            </ul>
+          </div>
+        </div>
 
 
-<div class="glass-card rules-panel" id="inno">
-  <h3><i class="fas fa-lightbulb rule-icon"></i> InnoQuest</h3>
 
-  <div class="rules-event">
-    <h4><i class="fas fa-brain rule-icon"></i> Geek-O-Pedia</h4>
-    <p class="rules-desc">
-      “A thrilling showdown of knowledge awaits—will your mind crack under pressure or lead you to triumph?”
-    </p>
-    <p class="rules-meta">Participants: 2 &nbsp; | &nbsp; Duration: 1½ hour</p>
-    <h5>Rules</h5>
-    <ul>
-      <li>The quiz will be based on the following themes: Technology, General Knowledge, Logical Reasoning, Sports and Movies.</li>
-      <li>Only the top 5 qualifying teams from the elimination rounds (if held) will advance to the on-stage round.</li>
-      <li>The rules for each round will be announced at the beginning of the respective round.</li>
-      <li>The decision of the quiz-master and the organisers will be final and binding.</li>
-    </ul>
-  </div>
+        <div class="glass-card rules-panel" id="code">
+          <h3><i class="fas fa-terminal rule-icon"></i> Code Crusaders</h3>
 
-  <div class="rules-event">
-    <h4><i class="fas fa-microphone rule-icon"></i> Pitch Perfect</h4>
-    <p class="rules-desc">
-      “Where innovative ideas take center stage and creativity meets opportunity! Are you ready to pitch your vision?”
-    </p>
-    <p class="rules-meta">Participants: 2 &nbsp; | &nbsp; Duration: 1½ hour</p>
-    <h5>Rules</h5>
-    <ul>
-      <li>Participants should pitch an innovative tech-based idea or concept for a product or service, showcasing its value, potential impact, and the transformative difference it can make.</li>
-      <li>The idea/concept could be presented by the participants with the aid of a model, demo video, or PowerPoint presentation.</li>
-      <li>Time duration : 10 minutes per team</li>
-    </ul>
-  </div>
+          <div class="rules-event">
+            <h4><i class="fas fa-bolt rule-icon"></i> CodeLite</h4>
+            <p class="rules-desc">
+              “CodeLite is a challenge focused on writing efficient solutions with minimal instructions.”
+            </p>
+            <p class="rules-meta">Participants: 2 &nbsp; | &nbsp; Duration: 1½ hour</p>
+            <h5>Rules</h5>
+            <ul>
+              <li>Participants should have the knowledge of Python programming language.</li>
+              <li>The primary winning criterion is the shortest correct code.</li>
+              <li>Teams are not permitted to use external resources or internet access.</li>
+              <li>Libraries may be used only if explicitly stated.</li>
+              <li>All submitted codes must be valid, executable, and free of errors.</li>
+              <li>Plagiarism or copying code from other teams will result in immediate disqualification.</li>
+              <li>Any violation of the rules may result in disqualification.</li>
+              <li>Code completion time will be taken into consideration in case of a clash.</li>
+            </ul>
+          </div>
 
-  <div class="rules-event">
-    <h4><i class="fas fa-comments rule-icon"></i> Rebuttal Rebels</h4>
-    <p class="rules-desc">
-      “Speak with speed, argue with logic, and defend with confidence! Are you ready to argue, defend, and dominate?”
-    </p>
-    <p class="rules-meta">Participants: 2 &nbsp; | &nbsp; Duration: 2 hour</p>
-    <h5>Rules</h5>
-    <ul>
-      <li>Rebuttal Rebels is a debate competition centered around the latest technology topics.</li>
-      <li>Participants should come prepared with up-to-date knowledge of the trends and developments in the IT world.</li>
-      <li>Topics will be given on the spot, and participants must think quickly and present their arguments clearly.</li>
-      <li>Participants are expected to follow the debate rules, including time limits for speaking, respectful engagement with others, and staying on-topic.</li>
-    </ul>
-  </div>
-</div>
-<div class="glass-card rules-panel" id="media">
-  <h3><i class="fas fa-photo-video rule-icon"></i> Media Crafters</h3>
+          <div class="rules-event">
+            <h4><i class="fas fa-unlock-alt rule-icon"></i> Code Hunt</h4>
+            <p class="rules-desc">
+              “Code Hunt is the event where cryptography meets C programming—team up, decrypt the message, and bring the
+                code to life.”
+            </p>
+            <p class="rules-meta">Participants: 2 &nbsp; | &nbsp; Duration: 2 hours</p>
+            <h5>Rules</h5>
+            <ul>
+              <li>Only college-provided systems may be used; personal devices are prohibited.</li>
+              <li>Participants must be familiar with Caesar Cipher techniques and C programming.</li>
+              <li>Teams consist of two members assigned as Decryptor and Coder.</li>
+              <li>Round 1: The Decryptor decodes the message while the Coder implements it in C.</li>
+              <li>Roles cannot be changed during a round.</li>
+              <li>Round 2: Roles are reversed.</li>
+              <li>Communication will be permitted only to share the decoded message.</li>
+              <li>Use of external resources or online assistance is strictly forbidden unless authorized.</li>
+              <li>Any rule violation may result in disqualification.</li>
+              <li>The team completing all tasks correctly in the shortest time will be declared the winner.</li>
+            </ul>
+          </div>
 
-  <div class="rules-event">
-    <h4><i class="fas fa-palette rule-icon"></i> Creativity</h4>
-    <p class="rules-desc">
-      “Your ideas, your art, your stage—make a poster that speaks volumes.”
-    </p>
-    <p class="rules-meta">Participants: 2 &nbsp; | &nbsp; Duration: 1½ hour</p>
-    <h5>Rules</h5>
-    <ul>
-      <li>Participants are required to create a poster on a given theme using Canva.</li>
-      <li>All posters must be created from a blank canvas.</li>
-      <li>Participants are not allowed to use any pre-made templates, themes, or design frameworks available on Canva.</li>
-      <li>Participants may use Canva’s basic elements (shapes, icons, fonts, colors) but must ensure original composition.</li>
-      <li>All textual content must be original and relevant to the theme.</li>
-    </ul>
-  </div>
+          <div class="rules-event">
+            <h4><i class="fas fa-bug-slash rule-icon"></i> Bug Squashers</h4>
+            <p class="rules-desc">
+              “Ready to squash some bugs? Step into the arena and show your mastery of C!”
+            </p>
+            <p class="rules-meta">Participants: 2 &nbsp; | &nbsp; Duration: 1½ hour</p>
+            <h5>Rules</h5>
+            <ul>
+              <li>Participants should know C programming language.</li>
+              <li>Questions will consist of code snippets with a bug in the code.</li>
+              <li>Participants need to find the bug and write the correct code on the answer sheet.</li>
+              <li>Participants will not be allowed to use any IDE.</li>
+              <li>Participants are not allowed to carry any smart devices.</li>
+            </ul>
+          </div>
+        </div>
 
-  <div class="rules-event">
-    <h4><i class="fas fa-film rule-icon"></i> SyncIT</h4>
-    <p class="rules-desc">
-      “From concept to cut, craft a video that resonates and captivates.”
-    </p>
-    <p class="rules-meta">Participants: 2 &nbsp; | &nbsp; Duration: 1½ hour</p>
-    <h5>Rules</h5>
-    <ul>
-      <li>Participants will be provided with muted video clips and audio files.</li>
-      <li>The task is to synchronize ANY ONE of the video clips with one or more audio files to create a meaningful short movie using -Shortcut video editor / Openshot Video Editor.</li>
-      <li>Participants have to carry their own headphones (wired).</li>
-    </ul>
-  </div>
 
-  <div class="rules-event">
-    <h4><i class="fas fa-cube rule-icon"></i> BlenderNate</h4>
-    <p class="rules-desc">
-      “Bring your ideas off the screen—model, render, and amaze.”
-    </p>
-    <p class="rules-meta">Participants: 2 &nbsp; | &nbsp; Duration: 2 hours</p>
-    <h5>Rules</h5>
-    <ul>
-      <li>Participants must create a 3D model or scene based on the provided theme.</li>
-      <li>The theme will be communicated to participants at the beginning of the competition.</li>
-      <li>Software to be used : Blender</li>
-      <li>The participants are not allowed to use their own laptop, but must use the PC provided by the college.</li>
-      <li>Use of pre-built models, add-ons, or external assets is not allowed.</li>
-    </ul>
-  </div>
-</div>
+        <div class="glass-card rules-panel" id="inno">
+          <h3><i class="fas fa-lightbulb rule-icon"></i> InnoQuest</h3>
+
+          <div class="rules-event">
+            <h4><i class="fas fa-brain rule-icon"></i> Geek-O-Pedia</h4>
+            <p class="rules-desc">
+              “A thrilling showdown of knowledge awaits—will your mind crack under pressure or lead you to triumph?”
+            </p>
+            <p class="rules-meta">Participants: 2 &nbsp; | &nbsp; Duration: 1½ hour</p>
+            <h5>Rules</h5>
+            <ul>
+              <li>The quiz will be based on the following themes: Technology, General Knowledge, Logical Reasoning,
+                Sports and Movies.</li>
+              <li>Only the top 5 qualifying teams from the elimination rounds (if held) will advance to the on-stage
+                round.</li>
+              <li>The rules for each round will be announced at the beginning of the respective round.</li>
+              <li>The decision of the quiz-master and the organisers will be final and binding.</li>
+            </ul>
+          </div>
+
+          <div class="rules-event">
+            <h4><i class="fas fa-microphone rule-icon"></i> Pitch Perfect</h4>
+            <p class="rules-desc">
+              “Where innovative ideas take center stage and creativity meets opportunity! Are you ready to pitch your
+                vision?”
+            </p>
+            <p class="rules-meta">Participants: 2 &nbsp; | &nbsp; Duration: 1½ hour</p>
+            <h5>Rules</h5>
+            <ul>
+              <li>Participants should pitch an innovative tech-based idea or concept for a product or service,
+                showcasing its value, potential impact, and the transformative difference it can make.</li>
+              <li>The idea/concept could be presented by the participants with the aid of a model, demo video, or
+                PowerPoint presentation.</li>
+              <li>Time duration : 10 minutes per team</li>
+            </ul>
+          </div>
+
+          <div class="rules-event">
+            <h4><i class="fas fa-comments rule-icon"></i> Rebuttal Rebels</h4>
+            <p class="rules-desc">
+              “Speak with speed, argue with logic, and defend with confidence! Are you ready to argue, defend, and
+                dominate?”
+            </p>
+            <p class="rules-meta">Participants: 2 &nbsp; | &nbsp; Duration: 2 hour</p>
+            <h5>Rules</h5>
+            <ul>
+              <li>Rebuttal Rebels is a debate competition centered around the latest technology topics.</li>
+              <li>Participants should come prepared with up-to-date knowledge of the trends and developments in the IT
+                world.</li>
+              <li>Topics will be given on the spot, and participants must think quickly and present their arguments
+                clearly.</li>
+              <li>Participants are expected to follow the debate rules, including time limits for speaking, respectful
+                engagement with others, and staying on-topic.</li>
+            </ul>
+          </div>
+        </div>
+        <div class="glass-card rules-panel" id="media">
+          <h3><i class="fas fa-photo-video rule-icon"></i> Media Crafters</h3>
+
+          <div class="rules-event">
+            <h4><i class="fas fa-palette rule-icon"></i> Creativity</h4>
+            <p class="rules-desc">
+              “Your ideas, your art, your stage—make a poster that speaks volumes.”
+            </p>
+            <p class="rules-meta">Participants: 2 &nbsp; | &nbsp; Duration: 1½ hour</p>
+            <h5>Rules</h5>
+            <ul>
+              <li>Participants are required to create a poster on a given theme using Canva.</li>
+              <li>All posters must be created from a blank canvas.</li>
+              <li>Participants are not allowed to use any pre-made templates, themes, or design frameworks available on
+                Canva.</li>
+              <li>Participants may use Canva’s basic elements (shapes, icons, fonts, colors) but must ensure original
+                composition.</li>
+              <li>All textual content must be original and relevant to the theme.</li>
+            </ul>
+          </div>
+
+          <div class="rules-event">
+            <h4><i class="fas fa-film rule-icon"></i> SyncIT</h4>
+            <p class="rules-desc">
+              “From concept to cut, craft a video that resonates and captivates.”
+            </p>
+            <p class="rules-meta">Participants: 2 &nbsp; | &nbsp; Duration: 1½ hour</p>
+            <h5>Rules</h5>
+            <ul>
+              <li>Participants will be provided with muted video clips and audio files.</li>
+              <li>The task is to synchronize ANY ONE of the video clips with one or more audio files to create a
+                meaningful short movie using -Shortcut video editor / Openshot Video Editor.</li>
+              <li>Participants have to carry their own headphones (wired).</li>
+            </ul>
+          </div>
+
+          <div class="rules-event">
+            <h4><i class="fas fa-cube rule-icon"></i> BlenderNate</h4>
+            <p class="rules-desc">
+              “Bring your ideas off the screen—model, render, and amaze.”
+            </p>
+            <p class="rules-meta">Participants: 2 &nbsp; | &nbsp; Duration: 2 hours</p>
+            <h5>Rules</h5>
+            <ul>
+              <li>Participants must create a 3D model or scene based on the provided theme.</li>
+              <li>The theme will be communicated to participants at the beginning of the competition.</li>
+              <li>Software to be used : Blender</li>
+              <li>The participants are not allowed to use their own laptop, but must use the PC provided by the college.
+              </li>
+              <li>Use of pre-built models, add-ons, or external assets is not allowed.</li>
+            </ul>
+          </div>
+        </div>
 
     </section>
 
-</main>
+  </main>
 
-    <footer class="tech-footer">
-        <div class="container">
-            <div class="footer-grid">
-                <div class="footer-about">
-                    <a href="#" class="logo">NOESIS<span class="logo-year year">2K25-26</span></a>
-                    <p>Pushing the boundaries of technology and innovation through competition and collaboration.</p>
-                    <div class="footer-social">
-                        <a href="https://www.instagram.com/noesis2k25_26" target="_blank" aria-label="Instagram">
-                            <i class="fab fa-instagram"></i>
-                        </a>
-                        <a href="https://www.rosarycollege.ac.in" target="_blank" class="website-link"
-                            aria-label="Rosary College Website">
-                            <i class="fas fa-globe"></i>
-                            <span>www.rosarycollege.ac.in</span>
-                        </a>
-                    </div>
-                </div>
-
-                <div class="footer-links">
-                    <h4>Quick Links</h4>
-                    <ul>
-                        <li><a href="events.html"><i class="fas fa-chevron-right"></i> Events</a></li>
-                        <li><a href="schedule.html"><i class="fas fa-chevron-right"></i> Schedule</a></li>
-                        <li><a href="sponsors.html"><i class="fas fa-chevron-right"></i> Sponsors</a></li>
-                        <li><a href="rules.html"><i class="fas fa-chevron-right"></i> Rules</a></li>
-                    </ul>
-                </div>
-
-                <div class="footer-contact footer-links">
-                    <h4>Contact Us</h4>
-                    <ul>
-                        <li><i class="fas fa-map-marker-alt"></i> Rosary College of Commerce & Arts, Navelim, Goa -
-                            403707</li>
-                        <li><i class="fas fa-envelope"></i><a href="mailto:rccanoesis@gmail.com">
-                                rccanoesis@gmail.com</a></li>
-                        <li><i class="fas fa-phone"></i><a href="tel:+911234567890"> +91 0832 2701564</a></li>
-                    </ul>
-                </div>
-
-            </div>
-
-            <div class="footer-bottom">
-                <p>&copy; 2026 NOESIS. All rights reserved. | Designed with <i class="fas fa-heart"></i> by NOESIS Team
-                </p>
-                <div class="footer-tech">
-                    <span>#NOESIS2K26</span>
-                    <span>#TechRevolution</span>
-                    <span>#CodeTheFuture</span>
-                </div>
-            </div>
+  <footer class="tech-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-about">
+          <a href="#" class="logo">NOESIS<span class="logo-year year">2K25-26</span></a>
+          <p>Pushing the boundaries of technology and innovation through competition and collaboration.</p>
+          <div class="footer-social">
+            <a href="https://www.instagram.com/noesis2k25_26" target="_blank" aria-label="Instagram">
+              <i class="fab fa-instagram"></i>
+            </a>
+            <a href="https://www.rosarycollege.ac.in" target="_blank" class="website-link"
+              aria-label="Rosary College Website">
+              <i class="fas fa-globe"></i>
+              <span>www.rosarycollege.ac.in</span>
+            </a>
+          </div>
         </div>
-    </footer>
-<script>
-    const navItems = document.querySelectorAll('.rules-nav li');
-    const panels = document.querySelectorAll('.rules-panel');
 
-    navItems.forEach(item => {
-        item.addEventListener('click', () => {
+        <div class="footer-links">
+          <h4>Quick Links</h4>
+          <ul>
+            <li><a href="./index.html#events"><i class="fas fa-chevron-right"></i> Events</a></li>
+            <li><a href="schedule.html"><i class="fas fa-chevron-right"></i> Schedule</a></li>
+            <li><a href="sponsors.html"><i class="fas fa-chevron-right"></i> Sponsors</a></li>
+            <li><a href="rules.html"><i class="fas fa-chevron-right"></i> Rules</a></li>
+          </ul>
+        </div>
 
-            // Remove active states
-            navItems.forEach(i => i.classList.remove('active'));
-            panels.forEach(p => p.classList.remove('active'));
+        <div class="footer-contact footer-links">
+          <h4>Contact Us</h4>
+          <ul>
+            <li><i class="fas fa-map-marker-alt"></i> Rosary College of Commerce & Arts, Navelim, Goa -
+              403707</li>
+            <li><i class="fas fa-envelope"></i><a href="mailto:rccanoesis@gmail.com">
+                rccanoesis@gmail.com</a></li>
+            <li><i class="fas fa-phone"></i><a href="tel:+911234567890"> +91 0832 2701564</a></li>
+          </ul>
+        </div>
 
-            // Activate clicked
-            item.classList.add('active');
-            document.getElementById(item.dataset.target).classList.add('active');
+      </div>
+
+      <div class="footer-bottom">
+        <p>&copy; 2026 NOESIS. All rights reserved. | Designed with <i class="fas fa-heart"></i> by NOESIS Team
+        </p>
+        <div class="footer-tech">
+          <span>#NOESIS2K26</span>
+          <span>#TechRevolution</span>
+          <span>#CodeTheFuture</span>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      const mobileToggle = document.getElementById('rulesMobileToggle');
+      const navWrapper = document.getElementById('rulesNavWrapper');
+      const navItems = document.querySelectorAll('.rules-nav li');
+      
+      // Mobile menu toggle
+      if (mobileToggle && navWrapper) {
+        mobileToggle.addEventListener('click', function() {
+          this.classList.toggle('active');
+          navWrapper.classList.toggle('active');
         });
+      }
+      
+      // Panel switching with scroll to top
+      navItems.forEach(item => {
+        item.addEventListener('click', function() {
+          // Remove active class from all items
+          navItems.forEach(i => i.classList.remove('active'));
+          
+          // Add active class to clicked item
+          this.classList.add('active');
+          
+          // Hide all panels
+          document.querySelectorAll('.rules-panel').forEach(panel => {
+            panel.classList.remove('active');
+          });
+          
+          // Show selected panel
+          const target = this.getAttribute('data-target');
+          const activePanel = document.getElementById(target);
+          if (activePanel) {
+            activePanel.classList.add('active');
+            
+            // Scroll to top of the panel smoothly
+            window.scrollTo({
+              top: activePanel.offsetTop - 120, // Adjust for header height
+              behavior: 'smooth'
+            });
+            
+            // Close mobile menu if open
+            if (window.innerWidth <= 992) {
+              mobileToggle.classList.remove('active');
+              navWrapper.classList.remove('active');
+            }
+          }
+        });
+      });
     });
 
-function showRules(type) {
-    const general = document.getElementById("general-rules");
-    const participation = document.getElementById("participation-guidelines");
-    const buttons = document.querySelectorAll(".rules-toggle .btn");
+    function showRules(type) {
+      const general = document.getElementById("general-rules");
+      const participation = document.getElementById("participation-guidelines");
+      const buttons = document.querySelectorAll(".rules-toggle .btn");
 
-    buttons.forEach(btn => btn.classList.remove("active"));
+      buttons.forEach(btn => btn.classList.remove("active"));
 
-    if (type === "general") {
+      if (type === "general") {
         general.classList.remove("hidden");
         participation.classList.add("hidden");
         buttons[0].classList.add("active");
-    } else {
+      } else {
         participation.classList.remove("hidden");
         general.classList.add("hidden");
         buttons[1].classList.add("active");
+      }
     }
-}
-</script>
+  </script>
 </body>
+
 </html>
-
-
