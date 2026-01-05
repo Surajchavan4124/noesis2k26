@@ -1,4 +1,6 @@
-
+// ===============================
+// MODAL UTILITIES
+// ===============================
 window.closeModal = function () {
   const modal = document.getElementById("event-detail-modal");
   if (!modal) return;
@@ -7,7 +9,9 @@ window.closeModal = function () {
   document.body.style.overflow = "auto";
 };
 
-
+// ===============================
+// EVENT LOOKUP
+// ===============================
 function getEventById(id) {
   if (!Array.isArray(allEventsData)) return null;
 
@@ -20,27 +24,39 @@ function getEventById(id) {
         mainEventId: null
       };
     }
-
-    if (Array.isArray(group.subEvents)) {
-      const sub = group.subEvents.find(se => se.id === id);
-      if (sub) {
-        return {
-          event: sub,
-          isMain: false,
-          mainEventId: group.mainEvent.id
-        };
-      }
-    }
   }
   return null;
 }
 
+// ===============================
+// ACCORDION TOGGLE (SUB EVENTS)
+// ===============================
+window.toggleSubEvent = function (id) {
+  const body = document.getElementById(`sub-${id}`);
+  if (!body) return;
 
-window.backToMainEvent = function (mainEventId) {
-  const main = getEventById(mainEventId);
-  if (main) openModal(main);
+  const allBodies = document.querySelectorAll(".sub-event-body");
+  const allArrows = document.querySelectorAll(".sub-event-header .arrow");
+
+  allBodies.forEach(b => {
+    if (b !== body) b.style.maxHeight = null;
+  });
+
+  allArrows.forEach(a => a.classList.remove("rotate"));
+
+  if (body.style.maxHeight) {
+    body.style.maxHeight = null;
+  } else {
+    body.style.maxHeight = body.scrollHeight + "px";
+    body.previousElementSibling
+      .querySelector(".arrow")
+      .classList.add("rotate");
+  }
 };
 
+// ===============================
+// EVENT CARD (INDEX PAGE)
+// ===============================
 function createEventCard(eventData) {
   const card = document.createElement("div");
   card.className = "event-card";
@@ -52,8 +68,10 @@ function createEventCard(eventData) {
 
   card.innerHTML = `
     <div class="event-image-container">
-      <img src="${eventData.imageUrl}" alt="${title}" class="event-image"
-        onerror="this.onerror=null;this.src='https://placehold.co/600x400/1a0a10/D4AF37?text=${title.replace(/[^a-zA-Z0-9]/g, "+")}';">
+      <img src="${eventData.imageUrl}" 
+           alt="${title}" 
+           class="event-image"
+           onerror="this.onerror=null;this.src='https://placehold.co/600x400/1a0a10/D4AF37?text=${title.replace(/[^a-zA-Z0-9]/g, "+")}';">
       <div class="event-overlay"></div>
     </div>
 
@@ -74,6 +92,9 @@ function createEventCard(eventData) {
   return card;
 }
 
+// ===============================
+// RENDER MAIN EVENTS
+// ===============================
 function renderMainEventsOnly() {
   const container = document.getElementById("event-list-container");
   if (!container) return;
@@ -84,30 +105,18 @@ function renderMainEventsOnly() {
   });
 }
 
-
+// ===============================
+// MODAL OPEN HANDLER
+// ===============================
 window.openModal = function (lookup) {
   if (!lookup) return;
 
   const modal = document.getElementById("event-detail-modal");
   const body = document.getElementById("modal-body-content");
 
-  const { event, isMain, subEvents = [], mainEventId } = lookup;
-
-  const rulesHTML = Array.isArray(event.rules)
-    ? event.rules.map(r => `<li>${r}</li>`).join("")
-    : "<li>Rules will be announced soon.</li>";
-
-  const backBtn = !isMain
-    ? `
-      <a href="#" class="modal-back-link"
-         onclick="backToMainEvent('${mainEventId}');return false;">
-        <i class="fas fa-arrow-left"></i> Back to Main Event
-      </a>`
-    : "";
+  const { event, subEvents = [] } = lookup;
 
   body.innerHTML = `
-    ${backBtn}
-
     <div class="modal-header">
       <h2 class="modal-title">${event.title}</h2>
       <p class="modal-info">
@@ -119,46 +128,53 @@ window.openModal = function (lookup) {
 
     <div class="modal-main-content">
       <div class="modal-image-container">
-        <img src="${event.imageUrl}" alt="${event.title}"
-             class="${isMain ? "modal-main-image" : "modal-sub-image"}">
+        <img src="${event.imageUrl}" 
+             alt="${event.title}" 
+             class="modal-main-image">
       </div>
 
       <div class="modal-details">
         <div class="modal-body">
 
-          ${
-            isMain
-              ? `
-                <h3>${event.descriptionTitle}</h3>
-                <p>${event.descriptionBody}</p>
+          <h3>${event.descriptionTitle || "About the Event"}</h3>
+          <p>${event.descriptionBody || ""}</p>
 
-                <h3 class="mt-4">Sub Events</h3>
-             <div class="sub-event-list prominent">
-  ${subEvents.map(sub => `
-    <div class="sub-event-item clickable"
-         onclick="openModal(getEventById('${sub.id}'))">
+          <h3 class="mt-4">Sub Events</h3>
 
-      <h4 class="sub-event-title">
-        ${sub.cardTitle || sub.title}
-      </h4>
+          <div class="sub-event-list accordion">
+            ${subEvents.map(sub => `
+              <div class="sub-event-accordion">
 
-      <span class="date">
-        <i class="fas fa-calendar-alt"></i> ${sub.date}
-      </span>
+                <button class="sub-event-header"
+                        onclick="toggleSubEvent('${sub.id}')">
+                  <div>
+                    <h4 class="sub-event-title">
+                      ${sub.cardTitle || sub.title}
+                    </h4>
+                    <span class="date">
+                      <i class="fas fa-calendar-alt"></i> ${sub.date}
+                    </span>
+                  </div>
+                  <i class="fas fa-chevron-down arrow"></i>
+                </button>
 
-    </div>
-  `).join("")}
-</div>
+                <div class="sub-event-body" id="sub-${sub.id}">
+                  <img src="${sub.imageUrl}" 
+                       alt="${sub.title}" 
+                       class="sub-event-image">
 
-              `
-              : `
-                <h3>${event.descriptionTitle}</h3>
-                <p>${event.descriptionBody}</p>
+                  <h5>${sub.descriptionTitle || "About"}</h5>
+                  <p>${sub.descriptionBody || ""}</p>
 
-                <h3 class="mt-4">${event.rulesTitle}</h3>
-                <ul>${rulesHTML}</ul>
-              `
-          }
+                  <h5 class="mt-3">${sub.rulesTitle || "Rules"}</h5>
+                  <ul>
+                    ${(sub.rules || []).map(r => `<li>${r}</li>`).join("")}
+                  </ul>
+                </div>
+
+              </div>
+            `).join("")}
+          </div>
 
         </div>
       </div>

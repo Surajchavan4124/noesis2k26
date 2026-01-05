@@ -90,7 +90,7 @@ const allEventsData = [
       title: "CODE CRUSADERS",
       cardTitle: "CODE CRUSADERS",
       venue: "BCA Lab",
-      imageUrl: "assets/codecrusaders.png",
+      imageUrl: "assets/codecrusaders.webp",
       descriptionTitle: "About Code Crusaders",
       descriptionBody:
         "A battleground for coders where efficiency, logic, speed, and debugging skills define victory.",
