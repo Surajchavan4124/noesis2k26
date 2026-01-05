@@ -1,21 +1,21 @@
 const noesisCoordinators = [
     {
         id: "noesis-main-coordinator-1",
-        name: "Piyush",
+        name: "Mr. Piyush Sanjay Naik",
         role: "Noesis 2K26, Main Coordinator",
-        imageUrl: "https://api.dicebear.com/8.x/thumbs/svg?seed=Piyush1",
-        phone_no: "+919848474893",
-        email: "piyush@noesis2k26.com",
-        whatsapp: "https://wa.me/919848474893"
+        imageUrl: "https://image2url.com/r2/bucket1/images/1767634709223-8bde28bb-0683-42d0-a2b6-9ff8f705b8ba.webp",
+        phone_no: "+918208141986",
+        email: "Piyushnaik2323@gmail.com",
+        whatsapp: "https://wa.me/918208141986"
     },
     {
         id: "noesis-main-coordinator-2",
-        name: "Velron",
+        name: "Mr. Velron Carvalho",
         role: "Noesis 2K26, Assistant Coordinator",
-        imageUrl: "https://api.dicebear.com/8.x/thumbs/svg?seed=Velron1",
-        phone_no: "+919848474893",
-        email: "velron@noesis2k26.com",
-        whatsapp: "https://wa.me/919848474893"
+        imageUrl: "https://image2url.com/r2/bucket3/images/1767634656809-f9b9008c-cceb-442d-9e52-a043c5a02506.webp",
+        phone_no: "+919699400335",
+        email: "velroncarvalho9@gmail.com   ",
+        whatsapp: "https://wa.me/919699400335"
     }
 ];
 
@@ -25,19 +25,19 @@ const facultyCoordinators = [
         name: "Asst. Prof Sonia Marshal",
         role: "Noesis 2k26, Event Convenor",
         imageUrl: "https://api.dicebear.com/8.x/thumbs/svg?seed=Sonia1",
-        phone_no: "+919848474893",
+        phone_no: "+917350580852",
         email: "sonia@rosarycollege.ac.in",
-        whatsapp: "https://wa.me/919848474893"
+        whatsapp: "https://wa.me/917350580852"
     },
-    {
-        id: "faculty-coordinator-2",
-        name: "Asst. Prof Sonia Marshal",
-        role: "Noesis 2k26, Event Convenor",
-        imageUrl: "https://api.dicebear.com/8.x/thumbs/svg?seed=Sonia2",
-        phone_no: "+919848474893",
-        email: "sonia@rosarycollege.ac.in",
-        whatsapp: "https://wa.me/919848474893"
-    }
+    // {
+    //     id: "faculty-coordinator-2",
+    //     name: "Asst. Prof Sonia Marshal",
+    //     role: "Noesis 2k26, Event Convenor",
+    //     imageUrl: "https://api.dicebear.com/8.x/thumbs/svg?seed=Sonia2",
+    //     phone_no: "+919848474893",
+    //     email: "sonia@rosarycollege.ac.in",
+    //     whatsapp: "https://wa.me/919848474893"
+    // }
 ];
 
 const studentCoordinators = [
@@ -53,7 +53,7 @@ const studentCoordinators = [
     {
         id: "noesis-coordinator-4",
         name: "Piyush",
-        role: "Media Crafter Coordinator",
+        role: "Media Crafters Coordinator",
         imageUrl: "https://api.dicebear.com/8.x/thumbs/svg?seed=Piyush3",
         phone_no: "+919848474893",
         email: "piyush@gmail.com",
@@ -71,7 +71,7 @@ const studentCoordinators = [
     {
         id: "noesis-coordinator-6",
         name: "Piyush",
-        role: "Code Crusader Coordinator",
+        role: "Code Crusaders Coordinator",
         imageUrl: "https://api.dicebear.com/8.x/thumbs/svg?seed=Piyush5",
         phone_no: "+919848474893",
         email: "piyush@gmail.com",
@@ -89,7 +89,7 @@ const studentCoordinators = [
     {
         id: "noesis-coordinator-8",
         name: "Piyush",
-        role: "Gamera Groove Coordinator",
+        role: "Gamers Groove Coordinator",
         imageUrl: "https://api.dicebear.com/8.x/thumbs/svg?seed=Piyush7",
         phone_no: "+919848474893",
         email: "piyush@gmail.com",

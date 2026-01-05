@@ -37,11 +37,13 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     }
     
-    // Create logo element with transparent version
+    // Create logo element with loading optimization
     const logo = document.createElement('img');
-    logo.src = 'assets/noesis-logo.png';
+    logo.src = 'assets/loader.webp';
     logo.alt = 'Noesis Logo';
     logo.className = 'loader-logo';
+    logo.loading = 'eager';
+    logo.decoding = 'async';
     
     // Create loading text
     const loadingText = document.createElement('div');
@@ -70,15 +72,15 @@ document.addEventListener('DOMContentLoaded', function() {
         const particle = document.createElement('div');
         particle.className = 'particle';
         
-        // Random size between 1px and 3px
-        const size = Math.random() * 2 + 1;
+        // Slightly larger but fewer particles (2-4px)
+        const size = Math.random() * 2 + 2;
         
         // Random position
         const posX = Math.random() * 100;
         const posY = Math.random() * 100;
         
-        // Random animation duration
-        const duration = Math.random() * 10 + 10; // 10-20s
+        // Shorter animation duration (5-10s)
+        const duration = Math.random() * 5 + 5;
         
         // Set styles
         particle.style.width = `${size}px`;
@@ -149,10 +151,10 @@ document.addEventListener('DOMContentLoaded', function() {
         }, 5000);
     }
     
-    // Create particles and binary codes
+    // Create particles and binary codes - reduced for performance
     let lastParticleTime = 0;
     let lastBinaryTime = 0;
-    const particleInterval = 100; // ms between particles
+    const particleInterval = 300; // Increased from 100ms to 300ms to reduce number of particles
     const binaryInterval = 500; // ms between binary codes
     
     function animate(time) {

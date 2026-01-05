@@ -1,4 +1,4 @@
-/* Loader Container */
+/* Loader Container - Optimized for performance */
 .loader-container {
     position: fixed;
     top: 0;
@@ -10,9 +10,12 @@
     justify-content: center;
     align-items: center;
     z-index: 9999;
-    transition: opacity 1s cubic-bezier(0.4, 0, 0.2, 1), visibility 1s;
+    transition: opacity 0.8s ease-out, visibility 0.8s;
     overflow: hidden;
-    perspective: 1000px;
+    will-change: transform, opacity;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    transform: translateZ(0);
 }
 
 .loader-container.hidden {
@@ -21,29 +24,23 @@
     transition: opacity 0.8s ease-out, visibility 0.8s;
 }
 
-/* Grid Background */
+/* Simplified Grid Background */
 .loader-grid {
     position: absolute;
-    width: 200%;
-    height: 200%;
+    width: 100%;
+    height: 100%;
     background-image: 
-        linear-gradient(rgba(168, 28, 74, 0.08) 1px, transparent 1px),
-        linear-gradient(90deg, rgba(168, 28, 74, 0.08) 1px, transparent 1px);
-    background-size: 60px 60px;
-    opacity: 0.4;
-    animation: gridMove 40s linear infinite;
-    transform: rotateX(75deg) translateZ(-100px);
+        linear-gradient(rgba(168, 28, 74, 0.05) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(168, 28, 74, 0.05) 1px, transparent 1px);
+    background-size: 40px 40px;
+    opacity: 0.3;
     will-change: transform;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    transform: translateZ(0);
 }
 
-@keyframes gridMove {
-    0% { 
-        transform: rotateX(75deg) translateZ(-100px) translateY(0);
-    }
-    100% { 
-        transform: rotateX(75deg) translateZ(-100px) translateY(60px);
-    }
-}
+/* Removed gridMove animation for better performance */
 
 /* Logo Container */
 .loader-logo-container {
@@ -76,18 +73,18 @@
     }
 }
 
-/* Logo Animation */
+/* Optimized Logo Animation */
 .loader-logo {
-    width: 160px;
-    height: 160px;
+    width: 140px;
+    height: 140px;
     position: relative;
     z-index: 3;
-    transform-style: preserve-3d;
-    animation: 
-        float 8s ease-in-out infinite,
-        pulse 5s ease-in-out infinite alternate;
     will-change: transform, filter;
-    filter: drop-shadow(0 0 15px rgba(201, 43, 93, 0.7));
+    filter: drop-shadow(0 0 12px rgba(201, 43, 93, 0.6));
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    transform: translateZ(0);
+    animation: pulse 4s ease-in-out infinite alternate;
 }
 
 @keyframes float {
