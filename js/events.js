@@ -2,10 +2,8 @@ const allEventsData = [
   {
     mainEvent: {
       id: "main-web",
-      date: "Jan 23, 2026",
       title: "WEB WIZARDS",
       cardTitle: "WEB WIZARDS",
-      venue: "BCA Lab",
       imageUrl: "assets/webwizard.png",
       descriptionTitle: "About Web Wizards",
       descriptionBody:
@@ -20,10 +18,10 @@ const allEventsData = [
     subEvents: [
       {
         id: "web-design",
-        date: "Jan 23",
+        date: "TBA",
         title: "WEB DESIGN",
         cardTitle: "Web Design",
-        venue: "BCA Lab",
+        venue: "TBA",
         imageUrl: "assets/webdesign.jpg",
         descriptionTitle: "Web Design",
         descriptionBody:
@@ -41,10 +39,10 @@ const allEventsData = [
       },
       {
         id: "figmatrix",
-        date: "Jan 23",
+        date: "TBA",
         title: "FIGMATRIX",
         cardTitle: "FigMatrix",
-        venue: "BCA Lab",
+        venue: "TBA",
         imageUrl: "assets/figmatrix.webp",
         descriptionTitle: "FigMatrix",
         descriptionBody:
@@ -62,10 +60,10 @@ const allEventsData = [
       },
       {
         id: "bugit",
-        date: "Jan 23",
+        date: "TBA",
         title: "BUGIT",
         cardTitle: "BugIT",
-        venue: "BCA Lab",
+        venue: "TBA",
         imageUrl: "assets/bugit.webp",
         descriptionTitle: "BugIT",
         descriptionBody:
@@ -86,10 +84,8 @@ const allEventsData = [
   {
     mainEvent: {
       id: "main-code",
-      date: "Jan 23, 2026",
       title: "CODE CRUSADERS",
       cardTitle: "CODE CRUSADERS",
-      venue: "BCA Lab",
       imageUrl: "assets/codecrusaders.webp",
       descriptionTitle: "About Code Crusaders",
       descriptionBody:
@@ -104,10 +100,10 @@ const allEventsData = [
     subEvents: [
       {
         id: "codelite",
-        date: "Jan 23",
+        date: "TBA",
         title: "CODELITE",
         cardTitle: "CodeLite",
-        venue: "BCA Lab",
+        venue: "TBA",
         imageUrl: "assets/codelite.webp",
         descriptionTitle: "CodeLite",
         descriptionBody:
@@ -126,10 +122,10 @@ const allEventsData = [
       },
       {
         id: "codehunt",
-        date: "Jan 23",
+        date: "TBA",
         title: "CODE HUNT",
         cardTitle: "Code Hunt",
-        venue: "BCA Lab",
+        venue: "TBA",
         imageUrl: "assets/codehunt.png",
         descriptionTitle: "Code Hunt",
         descriptionBody:
@@ -148,10 +144,10 @@ const allEventsData = [
       },
       {
         id: "bugsquashers",
-        date: "Jan 23",
+        date: "TBA",
         title: "BUG SQUASHERS",
         cardTitle: "Bug Squashers",
-        venue: "BCA Lab",
+        venue: "TBA",
         imageUrl: "assets/bugsquahers.png",
         descriptionTitle: "Bug Squashers",
         descriptionBody:
@@ -173,10 +169,8 @@ const allEventsData = [
   {
     mainEvent: {
       id: "main-inno",
-      date: "Jan 24, 2026",
       title: "INNOQUEST",
       cardTitle: "INNOQUEST",
-      venue: "BCA Lab",
       imageUrl: "assets/innoquest.png",
       descriptionTitle: "About InnoQuest",
       descriptionBody:
@@ -190,10 +184,10 @@ const allEventsData = [
     subEvents: [
       {
         id: "geekopedia",
-        date: "Jan 24",
+        date: "TBA",
         title: "GEEK-O-PEDIA",
         cardTitle: "Geek-O-Pedia",
-        venue: "BCA Lab",
+        venue: "TBA",
         imageUrl: "assets/geek-o.webp",
         descriptionTitle: "Geek-O-Pedia",
         descriptionBody:
@@ -209,10 +203,10 @@ const allEventsData = [
       },
       {
         id: "pitchperfect",
-        date: "Jan 24",
+        date: "TBA",
         title: "PITCH PERFECT",
         cardTitle: "Pitch Perfect",
-        venue: "BCA Lab",
+        venue: "TBA",
         imageUrl: "assets/pitch.webp",
         descriptionTitle: "Pitch Perfect",
         descriptionBody:
@@ -228,10 +222,10 @@ const allEventsData = [
       },
       {
         id: "rebuttalrebels",
-        date: "Jan 24",
+        date: "TBA",
         title: "REBUTTAL REBELS",
         cardTitle: "Rebuttal Rebels",
-        venue: "BCA Lab",
+        venue: "TBA",
         imageUrl: "assets/rebels.webp",
         descriptionTitle: "Rebuttal Rebels",
         descriptionBody:
@@ -252,10 +246,8 @@ const allEventsData = [
   {
     mainEvent: {
       id: "main-media",
-      date: "Jan 24, 2026",
       title: "MEDIA CRAFTERS",
       cardTitle: "MEDIA CRAFTERS",
-      venue: "BCA Lab",
       imageUrl: "assets/mediacrafters.png",
       descriptionTitle: "About Media Crafters",
       descriptionBody:
@@ -269,10 +261,10 @@ const allEventsData = [
     subEvents: [
       {
         id: "creativity",
-        date: "Jan 24",
+        date: "TBA",
         title: "CREATIVITY",
         cardTitle: "Creativity",
-        venue: "BCA Lab",
+        venue: "TBA",
         imageUrl: "assets/creativity.webp",
         descriptionTitle: "Creativity",
         descriptionBody:
@@ -289,10 +281,10 @@ const allEventsData = [
       },
       {
         id: "syncit",
-        date: "Jan 24",
+        date: "TBA",
         title: "SYNCIT",
         cardTitle: "SyncIT",
-        venue: "BCA Lab",
+        venue: "TBA",
         imageUrl: "assets/sync it.webp",
         descriptionTitle: "SyncIT",
         descriptionBody:
@@ -308,10 +300,10 @@ const allEventsData = [
       },
       {
         id: "blendernate",
-        date: "Jan 24",
+        date: "TBA",
         title: "BLENDERNATE",
         cardTitle: "BlenderNate",
-        venue: "BCA Lab",
+        venue: "TBA",
         imageUrl: "assets/blendernate.webp",
         descriptionTitle: "BlenderNate",
         descriptionBody:
@@ -331,10 +323,8 @@ const allEventsData = [
   {
     mainEvent: {
       id: "main-event-5",
-      date: "Jan 23-24, 2026",
       title: "SWING OF FORTUNE",
       cardTitle: "SWING OF FORTUNE",
-      venue: "BCA Lab",
       imageUrl: "assets/swing.png",
       descriptionTitle: "About Swing of Fortune",
       descriptionBody: "Show your team's spirit and creativity! These ice-breaker and media-focused events are all about personality, style, and making a memorable impression.",
@@ -348,10 +338,10 @@ const allEventsData = [
     subEvents: [
       {
         id: "sub-event-13",
-        date: "Submission",
+        date: "TBA",
         title: "Squad Showcase",
         cardTitle: "Squad Showcase",
-        venue: "BCA Lab",
+        venue: "TBA",
         imageUrl: "assets/squadshowcase.webp",
         descriptionTitle: "About Squad Showcase",
         descriptionBody: "This ice breaker event is all about showing your team's spirit, creativity, and personality through a short video or reel.",
@@ -364,10 +354,10 @@ const allEventsData = [
       },
       {
         id: "sub-event-14",
-        date: "Jan 23",
+        date: "TBA",
         title: "Reel Rumble",
         cardTitle: "Reel Rumble",
-        venue: "BCA Lab",
+        venue: "TBA",
         imageUrl: "assets/reel rumble.webp",
         descriptionTitle: "About Reel Rumble",
         descriptionBody: "Capture the best moments, the excitement, and the energy of NOESIS within our campus and turn them into a captivating reel.",
@@ -384,10 +374,10 @@ const allEventsData = [
       },
       {
         id: "sub-event-15",
-        date: "Jan 24",
+        date: "TBA",
         title: "MechMania Showcase",
         cardTitle: "MechMania Showcase",
-        venue: "BCA Lab",
+        venue: "TBA",
         imageUrl: "assets/mech mania.webp",
         descriptionTitle: "About MechMania Showcase",
         descriptionBody: "Get ready to showcase your mechanical moves, unleash your inner robot, and dazzle the audience with your robotic expressions, mesmerizing the crowd with every move!.",
@@ -406,10 +396,8 @@ const allEventsData = [
   {
     mainEvent: {
       id: "main-event-6",
-      date: "Jan 23-24, 2026",
       title: "GAMERS GROOVE",
       cardTitle: "GAMERS GROOVE",
-      venue: "BCA Lab",
       imageUrl: "assets/gamersgroove.png",
       descriptionTitle: "About Gamers Groove",
       descriptionBody: "Get your game face on. This is the ultimate test of teamwork, strategy, and reflexes. Only one team will achieve victory in the arena. Are you ready?",

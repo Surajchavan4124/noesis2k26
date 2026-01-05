@@ -12,7 +12,7 @@ const allEventsData = [
     subEvents: [
       {
         id: "sub-event-1",
-        date: "Jan 23",
+        date: "TBA",
         title: "FIGMATRIX",
         venue: "TBA",
         cardTitle: "[Sub Event] FIGMATRIX",
@@ -21,7 +21,7 @@ const allEventsData = [
       },
       {
         id: "sub-event-2",
-        date: "Jan 23",
+        date: "TBA",
         title: "BugIT",
         cardTitle: "[Sub Event] BugIT",
         venue: "TBA",
@@ -30,7 +30,7 @@ const allEventsData = [
       },
       {
         id: "sub-event-3",
-        date: "Jan 23",
+        date: "TBA",
         title: "WEB DESIGN",
         cardTitle: "[Sub Event] WEB DESIGN",
         venue: "TBA",
@@ -45,14 +45,14 @@ const allEventsData = [
       date: "Jan 23-24, 2026",
       title: "CODE CRUSADER",
       cardTitle: "[Main Event] CODE CRUSADER",
-      venue: "BCA Lab",
+      venue: "TBA",
       descriptionTitle: "About Code Crusader",
       descriptionBody: "Dive deep into the fundamentals of programming. These events will test your logic, problem-solving speed, and debugging skills under pressure. Only the sharpest coders will prevail.",
     },
     subEvents: [
       {
         id: "sub-event-4",
-        date: "Jan 23",
+        date: "TBA",
         title: "CODELITE",
         cardTitle: "[Sub Event] CODELITE",
         venue: "TBA",
@@ -61,7 +61,7 @@ const allEventsData = [
       },
       {
         id: "sub-event-5",
-        date: "Jan 23",
+        date: "TBA",
         title: "CODE HUNT",
         cardTitle: "CODE HUNT",
         venue: "TBA",
@@ -70,7 +70,7 @@ const allEventsData = [
       },
       {
         id: "sub-event-6",
-        date: "Jan 23",
+        date: "TBA",
         title: "BUG SQUASHERS",
         cardTitle: "BUG SQUASHERS",
         venue: "TBA",
@@ -92,7 +92,7 @@ const allEventsData = [
     subEvents: [
       {
         id: "sub-event-7",
-        date: "Jan 24",
+        date: "TBA",
         title: "GEEK-O-PEDIA",
         cardTitle: "[Sub Event] GEEK-O-PEDIA",
         venue: "TBA",
@@ -101,7 +101,7 @@ const allEventsData = [
       },
       {
         id: "sub-event-8",
-        date: "Jan 24",
+        date: "TBA",
         title: "PITCH PERFECT",
         cardTitle: "[Sub Event] PITCH PERFECT",
         venue: "TBA",
@@ -110,7 +110,7 @@ const allEventsData = [
       },
       {
         id: "sub-event-9",
-        date: "Jan 24",
+        date: "TBA",
         title: "REBUTTAL REBELS",
         cardTitle: "[Sub Event] REBUTTAL REBELS",
         venue: "TBA",
@@ -132,7 +132,7 @@ const allEventsData = [
     subEvents: [
       {
         id: "sub-event-10",
-        date: "Jan 24",
+        date: "TBA",
         title: "CREATIVITY",
         cardTitle: "CREATIVITY",
         venue: "TBA",
@@ -141,7 +141,7 @@ const allEventsData = [
       },
       {
         id: "sub-event-11",
-        date: "Jan 24",
+        date: "TBA",
         title: "SYNCIT",
         cardTitle: "SYNCIT",
         venue: "TBA",
@@ -150,7 +150,7 @@ const allEventsData = [
       },
       {
         id: "sub-event-12",
-        date: "Jan 24",
+        date: "TBA",
         title: "BLENDERNATE",
         cardTitle: "BLENDERNATE",
         venue: "TBA",
@@ -181,7 +181,7 @@ const allEventsData = [
       },
       {
         id: "sub-event-14",
-        date: "Jan 23",
+        date: "TBA",
         title: "Get ready to showcase your creativity in Reel Rumble!",
         cardTitle: "Get ready to showcase your creativity in Reel Rumble!",
         venue: "BCA Lab",
@@ -190,7 +190,7 @@ const allEventsData = [
       },
       {
         id: "sub-event-15",
-        date: "Jan 24",
+        date: "TBA",
         title: "Walking the Robot Way",
         cardTitle: "Walking the Robot Way",
         venue: "BCA Lab",
@@ -212,7 +212,7 @@ const allEventsData = [
     subEvents: [
       {
         id: "sub-event-16",
-        date: "Jan 24",
+        date: "TBA",
         title: "Assemble Your Squad, Claim Victory!",
         cardTitle: "Assemble Your Squad, Claim Victory!",
         venue: "BCA Lab",

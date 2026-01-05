@@ -103,9 +103,6 @@ function createEventCard(eventData) {
 
     <div class="event-content">
       <h2 class="event-title">${title}</h2>
-      <span class="event-date-venue">
-        <i class="fas fa-calendar-alt"></i> ${eventData.date} | ${eventData.venue}
-      </span>
       <p class="event-description">${snippet}</p>
       <button class="view-details-btn">View Events</button>
     </div>
@@ -165,11 +162,6 @@ window.openModal = function (lookup) {
   body.innerHTML = `
     <div class="modal-header">
       <h2 class="modal-title">${event.title}</h2>
-      <p class="modal-info">
-        <i class="fas fa-calendar-alt"></i> ${event.date}
-        <span>|</span>
-        <i class="fas fa-map-marker-alt"></i> ${event.venue}
-      </p>
     </div>
 
     <div class="modal-main-content">
@@ -198,8 +190,7 @@ window.openModal = function (lookup) {
                       ${sub.cardTitle || sub.title}
                     </h4>
                     <span class="date">
-                      <i class="fas fa-calendar-alt"></i> ${sub.date}
-                    </span>
+                      <i class="fas fa-calendar-alt"></i> ${sub.date} | ${sub.venue}
                   </div>
                   <i class="fas fa-chevron-down arrow"></i>
                 </button>
