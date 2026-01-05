@@ -1,24 +1,13 @@
-// Debugging: Log when script loads
-console.log('Mobile menu script loaded');
-
-// Wait for DOM to be fully loaded
 document.addEventListener('DOMContentLoaded', function() {
-    console.log('DOM fully loaded');
     
     const menuIcon = document.querySelector('.hamburger');
     const navMenu = document.getElementById('nav-menu');
     const navLinks = document.querySelectorAll('.nav-link');
     const navContainer = document.querySelector('.nav-container');
 
-    // Debug elements
-    console.log('Menu Icon:', menuIcon);
-    console.log('Nav Menu:', navMenu);
-    console.log('Nav Links:', navLinks);
-    console.log('Nav Container:', navContainer);
 
     // Toggle mobile menu
     function toggleMenu() {
-        console.log('Menu toggled');
         
         // Toggle active class on menu icon
         menuIcon.classList.toggle('active');
@@ -32,10 +21,6 @@ document.addEventListener('DOMContentLoaded', function() {
         // Force reflow/repaint
         void navMenu.offsetWidth;
         
-        // Debug
-        console.log('Menu active state:', navMenu.classList.contains('active'));
-        console.log('Menu classes:', navMenu.className);
-        console.log('Computed display:', window.getComputedStyle(navMenu).display);
     }
 
     // Close menu
@@ -58,7 +43,6 @@ document.addEventListener('DOMContentLoaded', function() {
             menuIcon.addEventListener('click', function(e) {
                 e.stopPropagation();
                 e.preventDefault();
-                console.log('Menu icon clicked');
                 toggleMenu();
             });
         } else {
