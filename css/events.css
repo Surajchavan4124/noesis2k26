@@ -588,3 +588,228 @@ border-radius: 10px;
     font-size: 1.75rem;
   }
 }
+/* Accordion container */
+.sub-event-accordion {
+  border-radius: 14px;
+  background: rgba(255,255,255,0.04);
+  margin-bottom: 14px;
+  overflow: hidden;
+}
+
+/* Header */
+.sub-event-header {
+  width: 100%;
+  background: transparent;
+  border: none;
+  padding: 14px 16px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+  color: inherit;
+}
+
+.sub-event-header:hover {
+  background: rgba(255,255,255,0.06);
+}
+
+.sub-event-title {
+  font-size: 1.05rem;
+  margin-bottom: 4px;
+}
+
+/* Arrow */
+.sub-event-header .arrow {
+  transition: transform 0.3s ease;
+}
+
+.sub-event-header .arrow.rotate {
+  transform: rotate(180deg);
+}
+
+/* Body */
+.sub-event-body {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.4s ease;
+  padding: 0 16px;
+}
+
+.sub-event-body p,
+.sub-event-body ul {
+  opacity: 0.9;
+}
+
+/* Image fix (NO ZOOM) */
+.sub-event-image {
+  width: 100%;
+  max-height: 220px;
+  object-fit: contain;
+  margin: 12px 0;
+  border-radius: 12px;
+}
+.sub-event-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  text-align: left;
+  gap: 1rem;
+}
+
+.sub-event-text {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.sub-event-title {
+  font-size: 1rem;
+  font-weight: 600;
+  line-height: 1.2;
+  margin: 0;
+}
+
+.sub-event-header .date {
+  font-size: 0.85rem;
+  color: #aaa;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+/* Arrow alignment */
+.sub-event-header .arrow {
+  font-size: 0.9rem;
+  transition: transform 0.3s ease;
+}
+
+.sub-event-header .arrow.rotate {
+  transform: rotate(180deg);
+}
+/* Container */
+.sub-event-item {
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+/* Header button */
+.sub-event-header {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: transparent;
+  border: none;
+  padding: 14px 16px;
+  cursor: pointer;
+}
+
+/* CONTENT – CLOSED STATE */
+.sub-event-content {
+  max-height: 0;
+  overflow: hidden;
+  opacity: 0;
+  padding: 0 16px; /* horizontal padding ONLY */
+  transition:
+    max-height 0.35s ease,
+    opacity 0.25s ease;
+  will-change: max-height, opacity;
+}
+
+/* CONTENT – OPEN STATE */
+.sub-event-item.active .sub-event-content {
+  max-height: 1000px; /* big enough, NOT auto */
+  opacity: 1;
+  padding-bottom: 16px;
+}
+
+/* Arrow animation */
+.sub-event-item .arrow {
+  transition: transform 0.3s ease;
+}
+
+.sub-event-item.active .arrow {
+  transform: rotate(180deg);
+}
+.sub-event-content img {
+  width: 100%;
+  max-height: 220px;
+  object-fit: contain; /* NOT cover */
+  display: block;
+}
+.sub-event-content {
+  transition:
+    max-height 0.35s cubic-bezier(.4,0,.2,1),
+    opacity 0.25s ease;
+}
+/* =====================================================
+   CRITICAL STABILITY FIXES (NON-DESTRUCTIVE)
+   ===================================================== */
+
+/* 1️⃣ Prevent scrollbar width jump */
+html {
+  scrollbar-gutter: stable;
+}
+
+/* 2️⃣ Lock body width when modal opens */
+body.modal-open {
+  overflow: hidden;
+  padding-right: 0 !important;
+}
+
+/* 3️⃣ Prevent modal from resizing parent layout */
+.modal {
+  overflow: hidden; /* only modal-content scrolls */
+}
+
+/* 4️⃣ Smooth accordion WITHOUT reflow jump */
+.sub-event-content {
+  contain: layout paint;
+}
+
+/* 5️⃣ Prevent image-driven resize */
+.sub-event-content img,
+.modal-image-frame img,
+.modal-sub-image {
+  aspect-ratio: 16 / 9;
+}
+
+/* 6️⃣ Lock accordion height animation to GPU */
+.sub-event-content {
+  will-change: max-height, opacity;
+  transform: translateZ(0);
+}
+
+/* 7️⃣ Prevent flexbox width recalculation */
+.modal-main-content > * {
+  min-width: 0;
+}
+
+/* 8️⃣ Date alignment hard fix */
+.sub-event-header .date {
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+
+/* 9️⃣ Stop hover transform from affecting layout */
+.sub-event-item:hover {
+  transform: translateX(6px);
+  will-change: transform;
+}
+/* ===============================
+   FIX MAIN EVENT IMAGE STRETCH
+   =============================== */
+
+/* Main event image should NOT inherit aspect-ratio */
+.modal-main-image {
+  aspect-ratio: auto !important;
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+.modal-image-frame {
+  height: 320px;
+  max-height: 320px;
+  aspect-ratio: 16 / 9;
+}
