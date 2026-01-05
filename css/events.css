@@ -225,33 +225,49 @@ a:hover {
 
 .modal-main-content {
   display: flex;
-  flex-wrap: wrap;
+  flex-wrap: nowrap;
   gap: 2rem;
   margin-bottom: 2rem;
+  position: relative;
+  min-height: 400px; /* Ensure minimum height for the content area */
 }
 
 .modal-image-container {
-  flex: 1;
-  min-width: 300px;
+  flex: 0 0 350px; /* Fixed width for the image container */
+  position: sticky;
+  top: 2rem; /* Align with the top of the viewport */
+  align-self: flex-start; /* Align to the top of the flex container */
+  height: fit-content;
+  max-height: calc(100vh - 4rem); /* Limit height to viewport with some padding */
+  overflow-y: auto;
+  scrollbar-width: thin;
 }
 
 .modal-details {
-  flex: 2;
+  flex: 1;
   min-width: 300px;
+  padding-bottom: 2rem; /* Add some space at the bottom */
 }
 
 .modal-image-frame {
   width: 100%;
-  height: 320px;
-  background: none;
   border-radius: 10px;
   overflow: hidden;
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-bottom: 0;
+  background: rgba(0, 0, 0, 0.2);
+  position: relative;
+  box-sizing: border-box;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+  transition: transform 0.2s ease;
 }
 
+/* Add hover effect for better UX */
+.modal-image-frame:hover {
+  transform: scale(1.01);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.4);
+}
 
 .modal-header {
   margin-bottom: 1.5rem;
@@ -259,6 +275,36 @@ a:hover {
 
 .modal-body {
   margin-top: 1.5rem;
+}
+
+/* Smooth accordion styles */
+.sub-event-body {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+  will-change: max-height, padding;
+  padding: 0 1rem;
+  box-sizing: border-box;
+}
+
+.sub-event-body.active {
+  padding: 1rem;
+  margin: 0.5rem 0;
+  background: rgba(255, 255, 255, 0.03);
+  border-radius: 8px;
+  border-left: 2px solid var(--accent);
+}
+
+.sub-event-content {
+  padding: 1rem 0;
+}
+
+.sub-event-header .arrow {
+  transition: transform 0.3s ease;
+}
+
+.sub-event-header .rotate {
+  transform: rotate(180deg);
 }
 
 .modal-body h3 {
@@ -346,20 +392,23 @@ a:hover {
   height: 320px; /* SAME box for all images */
   border-radius: 10px;
   overflow: hidden;
-
   display: flex;
   align-items: center;
   justify-content: center;
-
 }
 
 /* Image behavior inside frame */
 .modal-image-frame img {
-  width: 100%;
+  max-width: 100%;
   max-height: 100%;
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+  border-radius: 8px;
+  transition: transform 0.3s ease;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  box-sizing: border-box;
   display: block;
-      border: 1px solid rgba(255, 255, 255, 0.08);
-border-radius: 10px;
 }
 
 /* Optional: cinematic look for main events */
@@ -367,32 +416,34 @@ border-radius: 10px;
    MODAL IMAGE FIX
    =============================== */
 
-/* Main event image (keep cinematic look) */
+/* Main event image */
 .modal-main-image {
   width: 100%;
   height: 100%;
-  object-fit: cover;
-  border-radius: 16px;
+  object-fit: contain;
+  border-radius: 8px;
+  border: 2px solid rgba(var(--accent-rgb), 0.5)
 }
 
-/* Sub-event image (NO ZOOM) */
+/* Sub-event image */
 .modal-sub-image {
   width: 100%;
   height: auto;
-  max-height: 320px;
+  max-height: 100%;
   object-fit: contain;
-  border-radius: 14px;
-  background: rgba(255, 255, 255, 0.04);
+  border-radius: 8px;
   padding: 10px;
+  box-sizing: border-box;
 }
 
-/* Image container safety */
+/* Image container */
 .modal-image-container {
   width: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
   overflow: hidden;
+  position: relative;
 }
 
 
@@ -418,6 +469,13 @@ border-radius: 10px;
   margin-left: 1.5rem;
   padding: 0.5rem 0;
   list-style-position: inside;
+}
+
+/* Make sure sub-events have proper spacing */
+.sub-event-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
 }
 
 /* Sub-event list in Main Event Modal */
@@ -796,20 +854,4 @@ body.modal-open {
 .sub-event-item:hover {
   transform: translateX(6px);
   will-change: transform;
-}
-/* ===============================
-   FIX MAIN EVENT IMAGE STRETCH
-   =============================== */
-
-/* Main event image should NOT inherit aspect-ratio */
-.modal-main-image {
-  aspect-ratio: auto !important;
-  height: 100%;
-  width: 100%;
-  object-fit: cover;
-}
-.modal-image-frame {
-  height: 320px;
-  max-height: 320px;
-  aspect-ratio: 16 / 9;
 }

@@ -7,6 +7,14 @@ window.closeModal = function () {
 
   modal.classList.remove("active");
   document.body.style.overflow = "auto";
+  
+  // Update modal state and history
+  if (isModalOpen) {
+    isModalOpen = false;
+    if (history.state && history.state.modalOpen) {
+      history.back();
+    }
+  }
 };
 
 // ===============================
@@ -35,22 +43,40 @@ window.toggleSubEvent = function (id) {
   const body = document.getElementById(`sub-${id}`);
   if (!body) return;
 
+  const header = document.querySelector(`.sub-event-header[data-id="${id}"]`);
+  const arrow = header ? header.querySelector('.arrow') : null;
   const allBodies = document.querySelectorAll(".sub-event-body");
   const allArrows = document.querySelectorAll(".sub-event-header .arrow");
 
+  // Close all other accordion items
   allBodies.forEach(b => {
-    if (b !== body) b.style.maxHeight = null;
+    if (b !== body) {
+      b.style.maxHeight = null;
+    }
   });
 
+  // Reset all arrows
   allArrows.forEach(a => a.classList.remove("rotate"));
 
+  // Toggle current item
   if (body.style.maxHeight) {
     body.style.maxHeight = null;
+    if (arrow) arrow.classList.remove("rotate");
   } else {
+    // Set max-height to scrollHeight for smooth transition
     body.style.maxHeight = body.scrollHeight + "px";
-    body.previousElementSibling
-      .querySelector(".arrow")
-      .classList.add("rotate");
+    if (arrow) arrow.classList.add("rotate");
+    
+    // Force a reflow to ensure smooth animation
+    void body.offsetHeight;
+    
+    // Ensure image is properly loaded and displayed
+    const img = body.querySelector('img');
+    if (img && !img.complete) {
+      img.onload = function() {
+        body.style.maxHeight = body.scrollHeight + "px";
+      };
+    }
   }
 };
 
@@ -108,12 +134,32 @@ function renderMainEventsOnly() {
 // ===============================
 // MODAL OPEN HANDLER
 // ===============================
+// Track modal state
+let isModalOpen = false;
+
+// Handle browser back/forward buttons
+window.addEventListener('popstate', (event) => {
+  if (isModalOpen) {
+    closeModal();
+  }
+});
+
 window.openModal = function (lookup) {
   if (!lookup) return;
 
   const modal = document.getElementById("event-detail-modal");
+  const modalContent = document.querySelector(".modal-content");
   const body = document.getElementById("modal-body-content");
-
+  
+  // Reset scroll position before showing new content
+  if (modalContent) {
+    modalContent.scrollTop = 0;
+  }
+  
+  // Add history entry when opening modal
+  history.pushState({ modalOpen: true }, '');
+  isModalOpen = true;
+  
   const { event, subEvents = [] } = lookup;
 
   body.innerHTML = `
@@ -181,9 +227,22 @@ window.openModal = function (lookup) {
     </div>
   `;
 
-  modal.classList.add("active");
-  document.body.style.overflow = "hidden";
+  // Reset body scroll position
   body.scrollTop = 0;
+  
+  // Show modal after a small delay to ensure DOM is ready
+  setTimeout(() => {
+    modal.classList.add("active");
+    document.body.style.overflow = "hidden";
+    
+    // Ensure smooth scrolling to top
+    if (modalContent) {
+      modalContent.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+      });
+    }
+  }, 10);
 };
 
 // ===============================
