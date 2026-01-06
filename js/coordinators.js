@@ -12,7 +12,7 @@ const noesisCoordinators = [
         id: "noesis-main-coordinator-2",
         name: "Mr. Velron Carvalho",
         role: "Noesis 2K26, Assistant Coordinator",
-        imageUrl: "https://image2url.com/r2/bucket3/images/1767634656809-f9b9008c-cceb-442d-9e52-a043c5a02506.webp",
+        imageUrl: "https://image2url.com/r2/bucket1/images/1767667025711-5afd6c08-26c3-435a-8460-46256b2b4ca0.webp",
         phone_no: "+919699400335",
         email: "velroncarvalho9@gmail.com   ",
         whatsapp: "https://wa.me/919699400335"
