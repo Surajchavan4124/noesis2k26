@@ -468,7 +468,7 @@ const allEventsData = [
         title: "NOESIS EXTREME",
         cardTitle: "NOESIS EXTREME",
         venue: "TBA",
-        imageUrl: "assets/noesis-Extreme.webp",
+        imageUrl: "assets/noesisextreme.webp",
         descriptionTitle: "About NOESIS EXTREME",
         descriptionBody: "It takes more than a strong mindset to win. It takes endurance, power, and intellect. Do you have the physical and mental agility to dominate? If so, prove it at NOESIS EXTREME. -- Expect the Unexpected.",
         rulesTitle: "NOESIS Extreme Rules",
