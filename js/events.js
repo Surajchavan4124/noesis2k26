@@ -6,8 +6,7 @@ const allEventsData = [
       cardTitle: "WEB WIZARDS",
       imageUrl: "assets/webwizard.png",
       descriptionTitle: "About Web Wizards",
-      descriptionBody:
-        "Take on creative and technical web challenges that test your design sense, frontend skills, UI/UX thinking, and debugging ability. Web Wizards is where ideas meet execution.",
+      descriptionBody:"Take on creative and technical web challenges that test your design sense, frontend skills, UI/UX thinking, and debugging ability. Web Wizards is where ideas meet execution.",
       rulesTitle: "General Rules",
       rules: [
         "Participants must follow event-specific rules.",
@@ -339,56 +338,63 @@ const allEventsData = [
       {
         id: "sub-event-13",
         date: "TBA",
-        title: "Squad Showcase",
-        cardTitle: "Squad Showcase",
+        title: "Squad Reveal",
+        cardTitle: "Squad Reveal",
         venue: "TBA",
         imageUrl: "assets/squadshowcase.webp",
-        descriptionTitle: "About Squad Showcase",
-        descriptionBody: "This ice breaker event is all about showing your team's spirit, creativity, and personality through a short video or reel.",
-        rulesTitle: "Squad Showcase Rules",
+        descriptionTitle: "About Squad Reveal",
+        descriptionBody: "Kick-start the excitement by introducing your squad in a fun and creative way! Squad Reveal is a video-based icebreaker where teams express their identity, bond, and vibe through a short and engaging clip.",
+        rulesTitle: "Squad Reveal Rules",
         rules: [
-          "This is strictly a video-only event. Teams are NOT allowed to introduce themselves on stage. The video must be uploaded to the designated Google Drive link provided by the event organizers well before the deadline.",
-          "The video/reel should not exceed 2 minutes.",
-          "Any team failing to participate in this ice breaker event will lose points that count toward their overall score in the competition."
+          "This is a video-only introduction round. Teams are not permitted to introduce themselves live on stage.",
+          "Each team must prepare one icebreaker video.",
+          "One designated member from the team of 10 is responsible for uploading the video.",
+          "The video must be uploaded to the official Google Drive link shared by the organizers within the given deadline.",
+          "The maximum duration of the video should not exceed 5 minutes.",
+          "Participation in this icebreaker round is mandatory. Teams that do not submit a video will lose points that count toward the overall event score."
         ]
       },
       {
         id: "sub-event-14",
         date: "TBA",
-        title: "Reel Rumble",
-        cardTitle: "Reel Rumble",
+        title: "The Reel Run",
+        cardTitle: "The Reel Run",
         venue: "TBA",
         imageUrl: "assets/reel rumble.webp",
-        descriptionTitle: "About Reel Rumble",
-        descriptionBody: "Capture the best moments, the excitement, and the energy of NOESIS within our campus and turn them into a captivating reel.",
-        rulesTitle: "Reel Rumble Rules",
+        descriptionTitle: "About The Reel Run",
+        descriptionBody: "Bring NOESIS to life through your lens! The Reel Run challenges teams to capture the fun, energy, and unforgettable moments of the fest and present them as a creative Instagram reel.",
         rules: [
-          "Participants: 2",
-          "Duration: 1½ hour",
-          "Each team can submit ONLY ONE reel.",
-          "The reel must be based on moments captured during NOESIS and within the campus.",
-          "The reel should be within Instagram's 60-second limit. Post your reel on Instagram using the event hashtag (to be provided) by 11:50 p.m. on 14th January 2024.",
-          "Ensure that your reel is appropriate, respectful, and aligns with the event's values. Content that is inappropriate or violates guidelines will be disqualified.",
-          "Any team failing to participate in this event will lose points that count toward their overall score in the competition."
+          "Participants: 1",
+          "Each team is permitted to submit only one reel.",
+          "The reel must include clips captured during NOESIS event and within the college campus.",
+          "The duration of the reel must not exceed 2 minutes.",
+          "Teams must upload the reel on Instagram using the official event hashtag #NoesisOnCampus and tag the official event handle @noesis2k25_26.",
+          "The reel must be uploaded on or before 11:30 PM, 23rd January 2026.",
+          "The content must be appropriate, respectful, and aligned with the spirit of the fest. Any violation may lead to disqualification.",
+          "Participation is mandatory. Teams that fail to submit a reel will lose points, which will affect their overall standing.",
         ]
       },
       {
         id: "sub-event-15",
         date: "TBA",
-        title: "MechMania Showcase",
-        cardTitle: "MechMania Showcase",
+        title: "Runway Royale",
+        cardTitle: "Runway Royale",
         venue: "TBA",
         imageUrl: "assets/mech mania.webp",
-        descriptionTitle: "About MechMania Showcase",
-        descriptionBody: "Get ready to showcase your mechanical moves, unleash your inner robot, and dazzle the audience with your robotic expressions, mesmerizing the crowd with every move!.",
-        rulesTitle: "MechMania Showcase Rules",
+        descriptionTitle: "About Runway Royale",
+        descriptionBody: "Step into the future. Own the spotlight.Runway Royale is where fashion meets imagination. Bold walks, striking poses, and fearless style transform the runway into a world of digital brilliance and next-gen glamour.",
+        rulesTitle: "Runway Royale Rules",
         rules: [
-          "Participants: 2",
-          "Duration: 2 hour",
-          "ONLY ONE participant from each team.",
-          "Participants must bring their own costumes, accessories, and props to enhance their robot persona.",
-          "Be sure to include appropriate background music that complements the mechanical theme.",
-          "The maximum performance time is 5 minutes per team."
+          "Theme: To be announced later",
+          "Each team can have up to 4 participants",
+          "All costumes, styling, and performance must reflect the theme.",
+          "The maximum time allowed on stage is 5 minutes (including entry and exit).",
+          "Participants must bring their own costumes, props, and accessories.",
+          "Props must be safe; fire, sharp objects, or hazardous materials are strictly prohibited.",
+          "Background music should be pre-submitted to organizers on pendrive.",
+          "Vulgar or offensive content is not allowed.",
+          "The judges’ decision will be final and binding.",
+          "Teams failing to participate will loose points hence affecting the overall standing."
         ]
       }
     ]
@@ -408,5 +414,71 @@ const allEventsData = [
         "Decisions of the event coordinators and judges are final."
       ]
     },
+    subEvents: [
+      {
+        id: "sub-event-16",
+        date: "TBA",
+        title: "FIFA 24",
+        cardTitle: "FIFA 24",
+        venue: "TBA",
+        imageUrl: "assets/fifa24.webp",
+        descriptionTitle: "About FIFA 24",
+        descriptionBody: "Experience the thrill of the game! FIFA 24 is where strategy, teamwork, and quick reflexes come together in an electrifying virtual football showdown.",
+        rulesTitle: "FIFA 24 Rules",
+        rules: [
+          "Platform: PS5 (Controllers only will be provided).",
+          "Only one participant per team is allowed.",
+          "Match Format: 4-minute halves with 1-minute team management per half.",
+          "Default camera settings must be used.",
+          "Teams from the 'Rest of the World' category are prohibited.",
+          "Tournament format will be decided based on the number of teams entered",
+          "Swearing or sledging is not allowed",
+          "Technical issues will be fairly resolved by the coordinator. First a warning will be given, followed by disqualification if repeated",
+          "Extra time is allowed only in case of a draw in Semi-Finals and Finals. If still tied, matches will go directly to penalties.",
+          "Two minutes of pre-game time will be provided for team instructions and changing settings.",
+          "Any damage to the controller must be paid for by the participant responsible."
+        ]
+      },
+      {
+        id: "sub-event-17",
+        date: "TBA",
+        title: "Valorant",
+        cardTitle: "Valorant",
+        venue: "TBA",
+        imageUrl: "assets/valorant.webp",
+        descriptionTitle: "About Valorant",
+        descriptionBody: "Team up, strategize, and outplay your opponents in this high-stakes tactical shooter!",
+        rules: [
+          "No fixed team size: Teams may register with a flexible roster, but only five players can participate in a match at any given time.",
+          "Game Mode: Swiftplay will be used for early rounds to ensure faster matches, while Competitive mode will be used exclusively for the final match.",
+          "Game FPS: The game frame rate will be capped at 60 FPS to ensure equal performance conditions.",
+          "Monitor Refresh Rate: All matches will be played on systems with a 60 Hz refresh rate for fairness.",
+          "Server: Matches will be hosted on the Mumbai server or the nearest mutually agreed server to minimize latency.",
+          "Tactical Pause: Each team is allowed one tactical pause per match lasting up to two minutes.",
+          "Group Stage: Group stage matches will be played in Swiftplay format.",
+          "Early Rounds: Early knockout rounds will follow a single-elimination format using Swiftplay.",
+          "Semi-Finals: Semi-final matches will also be conducted in Swiftplay mode.",
+          "Finals: The final match will be played in Competitive mode with standard rules.",
+          "Overtime: Overtime will be enabled in Competitive matches, requiring a two-round lead to win."
+        ]
+      },
+      {
+        id: "sub-event-15",
+        date: "TBA",
+        title: "NOESIS EXTREME",
+        cardTitle: "NOESIS EXTREME",
+        venue: "TBA",
+        imageUrl: "assets/noesis-Extreme.webp",
+        descriptionTitle: "About NOESIS EXTREME",
+        descriptionBody: "It takes more than a strong mindset to win. It takes endurance, power, and intellect. Do you have the physical and mental agility to dominate? If so, prove it at NOESIS EXTREME. -- Expect the Unexpected.",
+        rulesTitle: "NOESIS Extreme Rules",
+        rules: [
+          "Surprise Penalties: Fall behind, and you will face disadvantages that test your gut and your grit.",
+          "The Reset Trap: Precision is key—fail the balance test, and you go back to the start.",
+          "Hybrid Warfare: A gauntlet that blends explosive power with razor-sharp focus.",
+          "The tasks remain classified. The challenge is waiting. Are you ready?"
+        ]
+      }
+    ]
   }
 ];
