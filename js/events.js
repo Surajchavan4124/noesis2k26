@@ -17,10 +17,10 @@ const allEventsData = [
     subEvents: [
       {
         id: "W3DESIXN",
-        date: "TBA",
+        date: "23 Jan 2026, 11:30 AM - 1:00 PM",
         title: "W3B DESIXN",
         cardTitle: "W3B DESIXN",
-        venue: "TBA",
+        venue: "LAB 2",
         imageUrl: "assets/webdesign.jpg",
         descriptionTitle: "W3B DESIXN",
         descriptionBody:
@@ -38,10 +38,10 @@ const allEventsData = [
       },
       {
         id: "figmatrix",
-        date: "TBA",
+        date: "24 Jan 2026, 09:00 AM - 11:00 AM",
         title: "FIGMATRIX",
         cardTitle: "FigMatrix",
-        venue: "TBA",
+        venue: "LAB 2",
         imageUrl: "assets/figmatrix.webp",
         descriptionTitle: "FigMatrix",
         descriptionBody:
@@ -59,10 +59,10 @@ const allEventsData = [
       },
       {
         id: "bugit",
-        date: "TBA",
+        date: "23 Jan 2026, 02:00 PM - 03:30 PM",
         title: "BUGIT",
         cardTitle: "BugIT",
-        venue: "TBA",
+        venue: "LAB 2",
         imageUrl: "assets/bugit.webp",
         descriptionTitle: "BugIT",
         descriptionBody:
@@ -99,10 +99,10 @@ const allEventsData = [
     subEvents: [
       {
         id: "codelite",
-        date: "TBA",
+        date: "23 Jan 2026, 11:30 AM - 1:00 PM",
         title: "CODELITE",
         cardTitle: "CodeLite",
-        venue: "TBA",
+        venue: "LAB 4",
         imageUrl: "assets/codelite.webp",
         descriptionTitle: "CodeLite",
         descriptionBody:
@@ -121,10 +121,10 @@ const allEventsData = [
       },
       {
         id: "codehunt",
-        date: "TBA",
+        date: "23 Jan 2026, 01:30 PM - 03:30 PM",
         title: "CODE HUNT",
         cardTitle: "Code Hunt",
-        venue: "TBA",
+        venue: "LAB 4",
         imageUrl: "assets/codehunt.png",
         descriptionTitle: "Code Hunt",
         descriptionBody:
@@ -143,10 +143,10 @@ const allEventsData = [
       },
       {
         id: "bugsquashers",
-        date: "TBA",
+        date: "24 Jan 2026, 09:00 AM - 11:00 AM",
         title: "BUG SQUASHERS",
         cardTitle: "Bug Squashers",
-        venue: "TBA",
+        venue: "LAB 4",
         imageUrl: "assets/bugsquahers.png",
         descriptionTitle: "Bug Squashers",
         descriptionBody:
@@ -183,10 +183,10 @@ const allEventsData = [
     subEvents: [
       {
         id: "geekopedia",
-        date: "TBA",
+        date: "23 Jan 2026, 02:00 PM - 03:30 PM",
         title: "GEEK-O-PEDIA",
         cardTitle: "Geek-O-Pedia",
-        venue: "TBA",
+        venue: "Seminar Hall",
         imageUrl: "assets/geek-o.webp",
         descriptionTitle: "Geek-O-Pedia",
         descriptionBody:
@@ -202,10 +202,10 @@ const allEventsData = [
       },
       {
         id: "pitchperfect",
-        date: "TBA",
+        date: "24 Jan 2026, 09:00 AM - 11:00 AM",
         title: "PITCH PERFECT",
         cardTitle: "Pitch Perfect",
-        venue: "TBA",
+        venue: "Seminar Hall",
         imageUrl: "assets/pitch.webp",
         descriptionTitle: "Pitch Perfect",
         descriptionBody:
@@ -221,10 +221,10 @@ const allEventsData = [
       },
       {
         id: "rebuttalrebels",
-        date: "TBA",
+        date: "23 Jan 2026, 11:30 AM - 01:00 PM",
         title: "REBUTTAL REBELS",
         cardTitle: "Rebuttal Rebels",
-        venue: "TBA",
+        venue: "Seminar Hall",
         imageUrl: "assets/rebels.webp",
         descriptionTitle: "Rebuttal Rebels",
         descriptionBody:
@@ -260,10 +260,10 @@ const allEventsData = [
     subEvents: [
       {
         id: "Creatix",
-        date: "TBA",
+        date: "23 Jan 2026, 11:30 AM - 01:00 PM",
         title: "CREATIX",
         cardTitle: "Creatix",
-        venue: "TBA",
+        venue: "LAB 3",
         imageUrl: "assets/creativity.webp",
         descriptionTitle: "Creatix",
         descriptionBody:
@@ -280,10 +280,10 @@ const allEventsData = [
       },
       {
         id: "syncit",
-        date: "TBA",
+        date: "23 Jan 2026, 02:00 PM - 03:30 PM",
         title: "SYNCIT",
         cardTitle: "SyncIT",
-        venue: "TBA",
+        venue: "LAB 3",
         imageUrl: "assets/sync it.webp",
         descriptionTitle: "SyncIT",
         descriptionBody:
@@ -299,10 +299,10 @@ const allEventsData = [
       },
       {
         id: "blendernate",
-        date: "TBA",
+        date: "24 Jan 2026, 09:00 AM - 11:00 AM",
         title: "BLENDERNATE",
         cardTitle: "BlenderNate",
-        venue: "TBA",
+        venue: "LAB 3",
         imageUrl: "assets/blendernate.webp",
         descriptionTitle: "BlenderNate",
         descriptionBody:
@@ -337,10 +337,10 @@ const allEventsData = [
     subEvents: [
       {
         id: "sub-event-13",
-        date: "TBA",
-        title: "Squad Reveal",
+        date: "23 Jan 2026, 11:00 AM - 11:15 AM",
+        title: "Squad Showcase",
         cardTitle: "Squad Reveal",
-        venue: "TBA",
+        venue: "Seminar Hall",
         imageUrl: "assets/squadshowcase.webp",
         descriptionTitle: "About Squad Reveal",
         descriptionBody: "Kick-start the excitement by introducing your squad in a fun and creative way! Squad Reveal is a video-based icebreaker where teams express their identity, bond, and vibe through a short and engaging clip.",
@@ -356,10 +356,10 @@ const allEventsData = [
       },
       {
         id: "sub-event-14",
-        date: "TBA",
+        date: "Jan 23-24, 2026",
         title: "The Reel Run",
         cardTitle: "The Reel Run",
-        venue: "TBA",
+        venue: "Campus",
         imageUrl: "assets/reel rumble.webp",
         descriptionTitle: "About The Reel Run",
         descriptionBody: "Bring NOESIS to life through your lens! The Reel Run challenges teams to capture the fun, energy, and unforgettable moments of the fest and present them as a creative Instagram reel.",
@@ -376,10 +376,10 @@ const allEventsData = [
       },
       {
         id: "sub-event-15",
-        date: "TBA",
+        date: "23 Jan 2026, 03:30 PM - 05:30 PM",
         title: "Runway Royale",
         cardTitle: "Runway Royale",
-        venue: "TBA",
+        venue: "Quadrangle",
         imageUrl: "assets/mech mania.webp",
         descriptionTitle: "About Runway Royale",
         descriptionBody: "Step into the future. Own the spotlight.Runway Royale is where fashion meets imagination. Bold walks, striking poses, and fearless style transform the runway into a world of digital brilliance and next-gen glamour.",
@@ -419,10 +419,10 @@ const allEventsData = [
     subEvents: [
       {
         id: "sub-event-16",
-        date: "TBA",
+        date: "23 Jan 2026, 11:30 AM - 01:00 PM",
         title: "FIFA 24",
         cardTitle: "FIFA 24",
-        venue: "TBA",
+        venue: "TNB 13",
         imageUrl: "assets/fifa24.webp",
         descriptionTitle: "About FIFA 24",
         descriptionBody: "Experience the thrill of the game! FIFA 24 is where strategy, teamwork, and quick reflexes come together in an electrifying virtual football showdown.",
@@ -446,10 +446,10 @@ const allEventsData = [
       },
       {
         id: "sub-event-17",
-        date: "TBA",
+        date: "24 Jan 2026, 09:00 AM - 11:00 AM",
         title: "Valorant",
         cardTitle: "Valorant",
-        venue: "TBA",
+        venue: "TNB 13",
         imageUrl: "assets/valorant.webp",
         descriptionTitle: "About Valorant",
         descriptionBody: "Team up, strategize, and outplay your opponents in this high-stakes tactical shooter!",
@@ -467,10 +467,10 @@ const allEventsData = [
       },
       {
         id: "sub-event-15",
-        date: "TBA",
+        date: "23 Jan 2026, 02:00 PM - 03:30 PM",
         title: "NOESIS EXTREME",
         cardTitle: "NOESIS EXTREME",
-        venue: "TBA",
+        venue: "Quadrangle",
         imageUrl: "assets/noesisextreme.webp",
         descriptionTitle: "About NOESIS EXTREME",
         descriptionBody: "It takes more than a strong mindset to win. It takes endurance, power, and intellect. Do you have the physical and mental agility to dominate? If so, prove it at NOESIS EXTREME. -- Expect the Unexpected.",

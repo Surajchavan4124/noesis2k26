@@ -5,7 +5,7 @@ const allEventsData = [
       date: "23 Jan 2026",
       time: "08:45 AM - 09:15 AM",
       title: "Registration",
-      venue: "TBA",
+      venue: "Seminar Hall",
       cardTitle: "[Main Event] Registration",
       descriptionTitle: "About Registration",
       descriptionBody:
@@ -31,7 +31,7 @@ const allEventsData = [
       date: "Jan 23, 2026",
       title: "SWING OF FORTUNE",
       cardTitle: "[Main Event] SWING OF FORTUNE",
-      venue: "TBA",
+      venue: "Campus",
       descriptionTitle: "About Swing of Fortune",
       descriptionBody:
         "Show your team's spirit and creativity! These ice-breaker and media-focused events are all about personality, style, and making a memorable impression.",
@@ -56,7 +56,7 @@ const allEventsData = [
       time: "11:15 AM - 11:30 AM",
       title: "Refreshment Break",
       cardTitle: "[Main Event] Refreshment Break",
-      venue: "TBA",
+      venue: "Canteen",
       descriptionTitle: "About Refreshment Break",
       descriptionBody: "Take a break and enjoy refreshments during the event.",
     },
@@ -188,7 +188,7 @@ const allEventsData = [
       time: "01:00 PM - 02:00 PM",
       title: "Lunch Break",
       cardTitle: "[Main Event] Lunch Break",
-      venue: "TBA",
+      venue: "Canteen",
       descriptionTitle: "About Lunch Break",
       descriptionBody: "Take a break and enjoy lunch during the event.",
     },
@@ -439,7 +439,7 @@ const allEventsData = [
       date: "Jan 24, 2026",
       title: "SWING OF FORTUNE",
       cardTitle: "[Main Event] SWING OF FORTUNE",
-      venue: "TBA",
+      venue: "Campus",
       descriptionTitle: "About Swing of Fortune",
       descriptionBody:
         "Show your team's spirit and creativity! These ice-breaker and media-focused events are all about personality, style, and making a memorable impression.",
@@ -450,7 +450,7 @@ const allEventsData = [
         date: "23 Jan 2026, 03:30 PM - 05:30 PM",
         title: "Runway Royale",
         cardTitle: "Runway Royale",
-        venue: "TBA",
+        venue: "Quadrangle",
         descriptionTitle: "About Runway Royale",
         descriptionBody:
           "Step into the future. Own the spotlight. Runway Royale is where fashion meets imagination. Bold walks, striking poses, and fearless style transform the runway into a world of digital brilliance and next-gen glamour.",
@@ -475,7 +475,7 @@ const allEventsData = [
       time: "11:00 AM - 12:30 PM",
       title: "Refreshment Break",
       cardTitle: "[Main Event] Refreshment Break",
-      venue: "TBA",
+      venue: "Canteen",
       descriptionTitle: "About Refreshment Break",
       descriptionBody: "Take a break and enjoy refreshments during the event.",
     },
@@ -488,7 +488,7 @@ const allEventsData = [
       title: "Valedictory Programme and Prize distribution Ceremony",
       cardTitle:
         "[Main Event] Valedictory Programme and Prize distribution Ceremony",
-      venue: "TBA",
+      venue: "Seminar Hall",
       descriptionTitle:
         "About Valedictory Programme and Prize distribution Ceremony",
       descriptionBody:
