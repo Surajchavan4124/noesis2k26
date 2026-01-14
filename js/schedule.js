@@ -6,7 +6,22 @@ document.addEventListener("DOMContentLoaded", function () {
   const tableViewBtn = document.getElementById("tableViewBtn");
   const noEventsMessage = document.getElementById("noEvents");
   const scheduleTableBody = document.getElementById("scheduleTableBody");
-  let currentDate = "23"; // Default to January 23th
+  let currentDate = "23"; // Default to January 23rd
+
+  // Function to check if an event occurs on the selected date
+  function isEventOnDate(event, day) {
+    // Check main event date
+    if (event.mainEvent.date.includes(day)) {
+      return true;
+    }
+    
+    // Check sub-events dates
+    if (event.subEvents && event.subEvents.length > 0) {
+      return event.subEvents.some(subEvent => subEvent.date.includes(day));
+    }
+    
+    return false;
+  }
 
   // Function to filter events by date
   function filterEventsByDate(day) {
@@ -20,18 +35,27 @@ document.addEventListener("DOMContentLoaded", function () {
 
     // Filter events for the selected date
     allEventsData.forEach((event) => {
-      const eventHasDate = event.subEvents.some((subEvent) =>
-        subEvent.date.includes(day)
-      );
-      if (eventHasDate) {
-        const eventWithFilteredSubEvents = {
-          ...event,
-          subEvents: event.subEvents.filter((subEvent) =>
+      if (isEventOnDate(event, day)) {
+        const eventCopy = JSON.parse(JSON.stringify(event));
+        
+        // Filter sub-events for the selected date if they exist
+        if (eventCopy.subEvents && eventCopy.subEvents.length > 0) {
+          eventCopy.subEvents = eventCopy.subEvents.filter(subEvent => 
             subEvent.date.includes(day)
-          ),
-        };
-        filteredEvents.push(eventWithFilteredSubEvents);
+          );
+        }
+        
+        filteredEvents.push(eventCopy);
       }
+    });
+
+    // Sort events by time (extract time from date string if available)
+    filteredEvents.sort((a, b) => {
+      const getTime = (event) => {
+        const timeMatch = event.mainEvent.date.match(/\d{1,2}:\d{2}\s*[AP]M/);
+        return timeMatch ? new Date('1970/01/01 ' + timeMatch[0]) : 0;
+      };
+      return getTime(a) - getTime(b);
     });
 
     // Show no events message if no events for the selected date
@@ -65,53 +89,57 @@ document.addEventListener("DOMContentLoaded", function () {
       if (event.subEvents && event.subEvents.length > 0) {
         subEventsHTML = '<div class="sub-events">';
         event.subEvents.forEach((subEvent) => {
-          if (subEvent.date.includes(day)) {
-            subEventsHTML += `
-                                    <div class="sub-event">
-                                        <div class="time">
-                                            <i class="far fa-clock"></i>
-                                            ${subEvent.date}
-                                            <span class="venue" style="margin-left: 10px;">
-                                                <i class="fas fa-map-marker-alt" style="margin-right: 5px;"></i>
-                                                ${
-                                                  subEvent.venue ||
-                                                  (subEvent.rules
-                                                    ? subEvent.rules[0]
-                                                    : "TBD")
-                                                }
-                                            </span>
-                                        </div>
-                                        <h4>${subEvent.title}</h4>
-                                        <p>${
-                                          subEvent.descriptionBody.split(
-                                            "\n"
-                                          )[0]
-                                        }</p>
-                                    </div>
-                                `;
-          }
+          subEventsHTML += `
+            <div class="sub-event">
+              <div class="time">
+                <i class="far fa-clock"></i>
+                ${subEvent.date}
+                <span class="venue" style="margin-left: 10px;">
+                  <i class="fas fa-map-marker-alt" style="margin-right: 5px;"></i>
+                  ${subEvent.venue || (Array.isArray(subEvent.rules) ? subEvent.rules[0] : "TBD")}
+                </span>
+              </div>
+              <h4>${subEvent.title || subEvent.cardTitle || 'Event'}</h4>
+              <p>${subEvent.descriptionBody ? subEvent.descriptionBody.split('\n')[0] : ''}</p>
+            </div>
+          `;
         });
         subEventsHTML += "</div>";
       }
 
+      // Format main event date to show only time for specific events
+      let displayDate = event.mainEvent.date;
+      const specialEvents = ['Registration', 'Inaugral', 'Inaugural', 'Refreshment', 'Lunch', 'Valedictory'];
+      
+      // Check if this is a special event
+      if (specialEvents.some(evt => event.mainEvent.title.includes(evt))) {
+        // First try to get time from time property if it exists
+        if (event.mainEvent.time) {
+          displayDate = event.mainEvent.time;
+        } else {
+          // Fallback to extracting time from date string
+          const timeMatch = event.mainEvent.date.match(/(\d{1,2}:\d{2}\s*[AP]M)/i);
+          if (timeMatch) {
+            displayDate = timeMatch[1];
+          }
+        }
+      }
+
       // Main event HTML
       mainEventItem.innerHTML = `
-                        <div class="timeline-content">
-                            <div class="timeline-date">${event.mainEvent.date}
-                                <span class="venue" style="margin-left: 15px;">
-                                    <i class="fas fa-map-marker-alt" style="margin-right: 5px;"></i>
-                                    ${event.mainEvent.venue || "Main Venue"}
-                                </span>
-                            </div>
-                            <h3 class="timeline-title">${
-                              event.mainEvent.title
-                            }</h3>
-                            <p class="timeline-description">${
-                              event.mainEvent.descriptionBody
-                            }</p>
-                            ${subEventsHTML}
-                        </div>
-                    `;
+        <div class="timeline-content">
+          <div class="timeline-date">
+            ${displayDate}
+            <span class="venue" style="margin-left: 15px;">
+              <i class="fas fa-map-marker-alt" style="margin-right: 5px;"></i>
+              ${event.mainEvent.venue || "TBA"}
+            </span>
+          </div>
+          <h3 class="timeline-title">${event.mainEvent.title}</h3>
+          <p class="timeline-description">${event.mainEvent.descriptionBody || ''}</p>
+          ${subEventsHTML}
+        </div>
+      `;
 
       timeline.appendChild(mainEventItem);
     });
@@ -121,47 +149,69 @@ document.addEventListener("DOMContentLoaded", function () {
   function renderTableView(events, day) {
     scheduleTableBody.innerHTML = ""; // Clear existing rows
 
+    if (events.length === 0) {
+      scheduleTableBody.innerHTML = `
+        <tr>
+          <td colspan="3" style="text-align: center; padding: 2rem;">
+            No events scheduled for this date
+          </td>
+        </tr>`;
+      return;
+    }
+
+    // Helper function to format the date and time display
+    const formatDateTime = (dateStr, eventData = {}) => {
+      const specialEvents = ['Registration', 'Inaugral', 'Inaugural', 'Refreshment', 'Lunch', 'Valedictory'];
+      const isSpecialEvent = specialEvents.some(evt => eventData.title?.includes(evt));
+      
+      // For special events, use time property if it exists
+      if (isSpecialEvent && eventData.time) {
+        return eventData.time;
+      }
+      
+      // Check for time range in the date string (e.g., "09:00 AM - 10:00 AM")
+      const timeRangeMatch = dateStr.match(/(\d{1,2}:\d{2}\s*[AP]M)\s*-\s*(\d{1,2}:\d{2}\s*[AP]M)/i);
+      if (timeRangeMatch) {
+        return `${timeRangeMatch[1]} - ${timeRangeMatch[2]}`;
+      }
+      
+      // Check for single time in the date string (e.g., "09:00 AM")
+      const timeMatch = dateStr.match(/(\d{1,2}:\d{2}\s*[AP]M)/i);
+      if (timeMatch) {
+        return timeMatch[0];
+      }
+      
+      // Default to the original date string if no time patterns matched
+      return dateStr;
+    };
+
     events.forEach((event) => {
-      // Add main event row
-      const mainEventRow = document.createElement("tr");
-      mainEventRow.className = "main-event-row";
-
-      // Get the first sub-event's time for the main event row
-      const firstSubEvent = event.mainEvent;
-      const eventTime = firstSubEvent ? firstSubEvent.date : "TBD";
-
-      mainEventRow.innerHTML = `
-                        <td class="event-time">${eventTime}</td>
-                        <td>
-                            <span class="event-main">${
-                              event.mainEvent.title
-                            }</span>
-                        </td>
-                        <td class="event-venue">${
-                          event.mainEvent.venue || "Main Venue"
-                        }</td>
-                    `;
-
-      scheduleTableBody.appendChild(mainEventRow);
-
-      // Add sub-events
-      event.subEvents.forEach((subEvent) => {
-        const subEventRow = document.createElement("tr");
-        subEventRow.className = "sub-event-row";
-
-        subEventRow.innerHTML = `
-                            <td class="event-time">${subEvent.date}</td>
-                            <td>
-                                <span class="event-sub">${subEvent.title}</span>
-                            </td>
-                            <td class="event-venue">${
-                              subEvent.venue ||
-                              (subEvent.rules ? subEvent.rules[0] : "TBD")
-                            }</td>
-                        `;
-
-        scheduleTableBody.appendChild(subEventRow);
-      });
+      // Check if the event has sub-events
+      const hasSubEvents = event.subEvents && event.subEvents.length > 0;
+      
+      // Only show main event if it has no sub-events
+      if (!hasSubEvents) {
+        const mainEventRow = document.createElement("tr");
+        mainEventRow.className = "main-event-row";
+        mainEventRow.innerHTML = `
+          <td class="event-time">${formatDateTime(event.mainEvent.date, event.mainEvent)}</td>
+          <td><span class="event-main">${event.mainEvent.title}</span></td>
+          <td class="event-venue">${event.mainEvent.venue || "TBA"}</td>
+        `;
+        scheduleTableBody.appendChild(mainEventRow);
+      } else {
+        // Only show sub-events for events that have them
+        event.subEvents.forEach((subEvent) => {
+          const subEventRow = document.createElement("tr");
+          subEventRow.className = "sub-event-row";
+          subEventRow.innerHTML = `
+            <td class="event-time">${formatDateTime(subEvent.date, subEvent)}</td>
+            <td><span class="event-sub">${subEvent.title || subEvent.cardTitle || 'Event'}</span></td>
+            <td class="event-venue">${subEvent.venue || (Array.isArray(subEvent.rules) ? subEvent.rules[0] : "TBA")}</td>
+          `;
+          scheduleTableBody.appendChild(subEventRow);
+        });
+      }
     });
   }
 

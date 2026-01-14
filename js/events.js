@@ -385,8 +385,10 @@ const allEventsData = [
         descriptionBody: "Step into the future. Own the spotlight.Runway Royale is where fashion meets imagination. Bold walks, striking poses, and fearless style transform the runway into a world of digital brilliance and next-gen glamour.",
         rulesTitle: "Runway Royale Rules",
         rules: [
-          "Theme: To be announced later",
-          "Each team can have up to 4 participants",
+          "Theme: Global Fashion",
+          "Each team can have a maximum of 4 participants ",
+          "Each team will represent ONE country through its traditional or cultural attire.",
+          "Country selection will be on a first-come, first-serve basis. Teams that register earlier will get priority in choosing their country.",
           "All costumes, styling, and performance must reflect the theme.",
           "The maximum time allowed on stage is 5 minutes (including entry and exit).",
           "Participants must bring their own costumes, props, and accessories.",
@@ -426,16 +428,19 @@ const allEventsData = [
         descriptionBody: "Experience the thrill of the game! FIFA 24 is where strategy, teamwork, and quick reflexes come together in an electrifying virtual football showdown.",
         rulesTitle: "FIFA 24 Rules",
         rules: [
+          "Participants: 1",
+          "Duration: 1½ hours",
           "Platform: PS5 (Controllers only will be provided).",
           "Only one participant per team is allowed.",
           "Match Format: 4-minute halves with 1-minute team management per half.",
           "Default camera settings must be used.",
           "Teams from the 'Rest of the World' category are prohibited.",
           "Tournament format will be decided based on the number of teams entered",
-          "Swearing or sledging is not allowed",
+          "Swearing or sledging is not allowed.First a warning will be given, followed by disqualification if repeated.",
           "Technical issues will be fairly resolved by the coordinator. First a warning will be given, followed by disqualification if repeated",
           "Extra time is allowed only in case of a draw in Semi-Finals and Finals. If still tied, matches will go directly to penalties.",
           "Two minutes of pre-game time will be provided for team instructions and changing settings.",
+          "The decision of the organizers will be final and binding.",
           "Any damage to the controller must be paid for by the participant responsible."
         ]
       },
@@ -449,17 +454,15 @@ const allEventsData = [
         descriptionTitle: "About Valorant",
         descriptionBody: "Team up, strategize, and outplay your opponents in this high-stakes tactical shooter!",
         rules: [
-          "No fixed team size: Teams may register with a flexible roster, but only five players can participate in a match at any given time.",
-          "Game Mode: Swiftplay will be used for early rounds to ensure faster matches, while Competitive mode will be used exclusively for the final match.",
-          "Game FPS: The game frame rate will be capped at 60 FPS to ensure equal performance conditions.",
-          "Monitor Refresh Rate: All matches will be played on systems with a 60 Hz refresh rate for fairness.",
-          "Server: Matches will be hosted on the Mumbai server or the nearest mutually agreed server to minimize latency.",
-          "Tactical Pause: Each team is allowed one tactical pause per match lasting up to two minutes.",
-          "Group Stage: Group stage matches will be played in Swiftplay format.",
-          "Early Rounds: Early knockout rounds will follow a single-elimination format using Swiftplay.",
-          "Semi-Finals: Semi-final matches will also be conducted in Swiftplay mode.",
-          "Finals: The final match will be played in Competitive mode with standard rules.",
-          "Overtime: Overtime will be enabled in Competitive matches, requiring a two-round lead to win."
+          "Participants: 2",
+          "Duration: 1½ hours",
+          "Participants are required to bring and use their own laptops for the gaming event.",
+          "Valorant will be played in team format. Teams will be formed by the organizers based on the participation.",
+          "Game Mode for early rounds will be informed during the event.",
+          "The game frame rate will be capped at 60 FPS to ensure equal performance conditions.",
+          "All matches will be played on systems with a 60 Hz refresh rate for fairness.",
+          "Matches will be hosted on the Mumbai server or the nearest mutually agreed server to minimize latency.",
+          "Each team is allowed one tactical pause per match lasting up to two minutes.",
         ]
       },
       {
@@ -473,6 +476,7 @@ const allEventsData = [
         descriptionBody: "It takes more than a strong mindset to win. It takes endurance, power, and intellect. Do you have the physical and mental agility to dominate? If so, prove it at NOESIS EXTREME. -- Expect the Unexpected.",
         rulesTitle: "NOESIS Extreme Rules",
         rules: [
+
           "Surprise Penalties: Fall behind, and you will face disadvantages that test your gut and your grit.",
           "The Reset Trap: Precision is key—fail the balance test, and you go back to the start.",
           "Hybrid Warfare: A gauntlet that blends explosive power with razor-sharp focus.",
