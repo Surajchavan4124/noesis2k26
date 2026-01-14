@@ -16,13 +16,13 @@ const allEventsData = [
     },
     subEvents: [
       {
-        id: "web-design",
+        id: "W3DESIXN",
         date: "TBA",
-        title: "WEB DESIGN",
-        cardTitle: "Web Design",
+        title: "W3B DESIXN",
+        cardTitle: "W3B DESIXN",
         venue: "TBA",
         imageUrl: "assets/webdesign.jpg",
-        descriptionTitle: "Web Design",
+        descriptionTitle: "W3B DESIXN",
         descriptionBody:
           "Take on the ultimate web design showdown and stand out from the crowd! Craft original, functional, and stunning websites and prove you’ve got what it takes to dominate the web!",
         rulesTitle: "Rules",
@@ -259,13 +259,13 @@ const allEventsData = [
     },
     subEvents: [
       {
-        id: "creativity",
+        id: "Creatix",
         date: "TBA",
-        title: "CREATIVITY",
-        cardTitle: "Creativity",
+        title: "CREATIX",
+        cardTitle: "Creatix",
         venue: "TBA",
         imageUrl: "assets/creativity.webp",
-        descriptionTitle: "Creativity",
+        descriptionTitle: "Creatix",
         descriptionBody:
           "Your ideas, your art, your stage — make a poster that speaks volumes.",
         rulesTitle: "Rules",

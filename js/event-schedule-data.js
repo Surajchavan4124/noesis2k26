@@ -76,10 +76,10 @@ const allEventsData = [
       {
         id: "sub-event-1",
         date: "23 Jan 2026, 11:30 AM - 01:00 PM",
-        title: "WEB DESIGN",
-        cardTitle: "[Sub Event] WEB DESIGN",
+        title: "W3B DESIXN",
+        cardTitle: "[Sub Event] W3B DESIXN",
         venue: "LAB 2",
-        descriptionTitle: "About WEB DESIGN",
+        descriptionTitle: "About W3B DESIXN",
         descriptionBody:
           "Take on the ultimate web design showdown and stand out from the crowd! Craft original, functional, and stunning websites and prove you’ve got what it takes to dominate the web!",
       },
