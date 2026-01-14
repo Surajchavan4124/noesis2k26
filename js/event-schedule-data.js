@@ -163,7 +163,7 @@ const allEventsData = [
       date: "Jan 23, 2026",
       title: "GAMERS GROOVE",
       cardTitle: "[Main Event] GAMERS GROOVE",
-      venue: "TNB-13/Quadrangle",
+      venue: "TNB-13",
       descriptionTitle: "About Gamers Groove",
       descriptionBody:
         "Get your game face on. This is the ultimate test of teamwork, strategy, and reflexes. Only one team will achieve victory in the arena. Are you ready?",
@@ -280,8 +280,8 @@ const allEventsData = [
       {
         id: "sub-event-10",
         date: "23 Jan 2026, 02:00 PM - 03:30 PM",
-        title: "Step up, unlock the geek within you!",
-        cardTitle: "Step up, unlock the geek within you!",
+        title: "Geek-O-Pedia",
+        cardTitle: "Geek-O-Pedia",
         venue: "Seminar Hall",
         descriptionTitle: "About Geek-O-Pedia",
         descriptionBody:
@@ -292,10 +292,10 @@ const allEventsData = [
   {
     mainEvent: {
       id: "main-event-6",
-      date: "Jan 24, 2026",
+      date: "Jan 23, 2026",
       title: "GAMERS GROOVE",
       cardTitle: "[Main Event] GAMERS GROOVE",
-      venue: "TNB-13/Quadrangle",
+      venue: "Quadrangle",
       descriptionTitle: "About Gamers Groove",
       descriptionBody:
         "Get your game face on. This is the ultimate test of teamwork, strategy, and reflexes. Only one team will achieve victory in the arena. Are you ready?",
@@ -415,7 +415,7 @@ const allEventsData = [
       date: "Jan 24, 2026",
       title: "GAMERS GROOVE",
       cardTitle: "[Main Event] GAMERS GROOVE",
-      venue: "TNB-13/Quadrangle",
+      venue: "TNB-13",
       descriptionTitle: "About Gamers Groove",
       descriptionBody:
         "Get your game face on. This is the ultimate test of teamwork, strategy, and reflexes. Only one team will achieve victory in the arena. Are you ready?",
@@ -436,10 +436,10 @@ const allEventsData = [
   {
     mainEvent: {
       id: "main-event-5",
-      date: "Jan 24, 2026",
+      date: "Jan 23-24, 2026",
       title: "SWING OF FORTUNE",
-      cardTitle: "[Main Event] SWING OF FORTUNE",
-      venue: "Campus",
+      carTitle: "[Main Event] SWING OF FORTUNE",
+      venued: "Campus",
       descriptionTitle: "About Swing of Fortune",
       descriptionBody:
         "Show your team's spirit and creativity! These ice-breaker and media-focused events are all about personality, style, and making a memorable impression.",
