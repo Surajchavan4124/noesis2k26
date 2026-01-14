@@ -65,9 +65,9 @@ const allEventsData = [
     mainEvent: {
       id: "main-event-2",
       date: "Jan 23, 2026",
-      title: "WEBWIZARD",
+      title: "WEBWIZARDS",
       venue: "LAB 2",
-      cardTitle: "[Main Event] WEBWIZARD",
+      cardTitle: "[Main Event] WEBWIZARDS",
       descriptionTitle: "About WEBWIZARDS",
       descriptionBody:
         "A series of challenges designed to test your mastery of web technologies. From front-end design to back-end logic and bug hunting, prove you're the ultimate web wizard.",
@@ -89,10 +89,10 @@ const allEventsData = [
     mainEvent: {
       id: "main-event-2",
       date: "Jan 23, 2026",
-      title: "CODE CRUSADER",
-      cardTitle: "[Main Event] CODE CRUSADER",
+      title: "CODE CRUSADERS",
+      cardTitle: "[Main Event] CODE CRUSADERS",
       venue: "LAB 4",
-      descriptionTitle: "About Code Crusader",
+      descriptionTitle: "About Code Crusaders",
       descriptionBody:
         "Dive deep into the fundamentals of programming. These events will test your logic, problem-solving speed, and debugging skills under pressure. Only the sharpest coders will prevail.",
     },
@@ -174,7 +174,7 @@ const allEventsData = [
         date: "23 Jan 2026, 11:30 AM - 01:00 PM",
         title: "FIFA 24",
         cardTitle: "FIFA 24",
-        venue: "TBA",
+        venue: "TNB-13",
         descriptionTitle: "About FIFA 24",
         descriptionBody:
           "Show off your football skills and lead your team to glory in the virtual stadium!",
@@ -195,11 +195,131 @@ const allEventsData = [
   },
   {
     mainEvent: {
-      id: "main-event-2",
-      date: "Jan 24, 2026",
+      id: "main-event-1",
+      date: "Jan 23, 2026",
       title: "WEBWIZARD",
       venue: "LAB 2",
-      cardTitle: "[Main Event] WEBWIZARD",
+      cardTitle: "[Main Event] WEBWIZARDS",
+      descriptionTitle: "About WebWizards",
+      descriptionBody:
+        "A series of challenges designed to test your mastery of web technologies. From front-end design to back-end logic and bug hunting, prove you're the ultimate web wizard.",
+    },
+    subEvents: [
+      {
+        id: "sub-event-3",
+        date: "23 Jan 2026, 02:00 PM - 03:30 PM",
+        title: "BugIT",
+        cardTitle: "BugIT",
+        venue: "LAB 2",
+        descriptionTitle: "About BugIT",
+        descriptionBody:
+          "Join the BugIT Competition: Put Your Web Investigation Skills to Work on Static Sites—Identify, Fix, and Optimize!",
+      },
+    ],
+  },
+  {
+    mainEvent: {
+      id: "main-event-2",
+      date: "Jan 23, 2026",
+      title: "CODE CRUSADERS",
+      cardTitle: "[Main Event] CODE CRUSADERS",
+      venue: "LAB 4",
+      descriptionTitle: "About Code Crusaders",
+      descriptionBody:
+        "Dive deep into the fundamentals of programming. These events will test your logic, problem-solving speed, and debugging skills under pressure. Only the sharpest coders will prevail.",
+    },
+    subEvents: [
+      {
+        id: "sub-event-6",
+        date: "23 Jan 2026, 02:00 PM - 03:30 PM",
+        title: "Code Hunt",
+        cardTitle: "Code Hunt",
+        venue: "LAB 4",
+        descriptionTitle: "About Code Hunt",
+        descriptionBody:
+          "Join us for Code Hunt, where participants will showcase their Java skills while embarking on an exciting quest to decode clues that reveal programming questions.",
+      },
+    ],
+  },
+  {
+    mainEvent: {
+      id: "main-event-3",
+      date: "Jan 23, 2026",
+      title: "MEDIA CRAFTER",
+      cardTitle: "[Main Event] MEDIA CRAFTER",
+      venue: "LAB 3",
+      descriptionTitle: "About Media Crafter",
+      descriptionBody:
+        "Unleash your inner artist. This category is for the visual storytellers, the 3D modelers, and the design gurus. Show us your creative vision and technical skill.",
+    },
+    subEvents: [
+      {
+        id: "sub-event-7",
+        date: "23 Jan 2026, 02:00 PM - 03:30 PM",
+        title: "SYNCIT",
+        cardTitle: "SYNCIT",
+        venue: "LAB 3",
+        descriptionTitle: "About Sync It",
+        descriptionBody:
+          "Are you ready to compose the perfect movie?\nTap the maestro in you to create the perfect harmony between video clips and audio files.",
+      },
+    ],
+  },
+  {
+    mainEvent: {
+      id: "main-event-4",
+      date: "Jan 23, 2026",
+      title: "INNOQUEST",
+      cardTitle: "[Main Event] INNOQUEST",
+      venue: "Seminar Hall",
+      descriptionTitle: "About InnoQuest",
+      descriptionBody:
+        "It's all about ideas and intellect. Challenge your knowledge in our geek-out quiz, pitch a world-changing idea, or defend your technological stances in a fast-paced debate.",
+    },
+    subEvents: [
+      {
+        id: "sub-event-10",
+        date: "23 Jan 2026, 02:00 PM - 03:30 PM",
+        title: "Step up, unlock the geek within you!",
+        cardTitle: "Step up, unlock the geek within you!",
+        venue: "Seminar Hall",
+        descriptionTitle: "About Geek-O-Pedia",
+        descriptionBody:
+          "Only the sharpest minds will survive the ultimate test of knowledge—are you ready to outsmart, outlast, and outplay your competition?",
+      },
+    ],
+  },
+  {
+    mainEvent: {
+      id: "main-event-6",
+      date: "Jan 24, 2026",
+      title: "GAMERS GROOVE",
+      cardTitle: "[Main Event] GAMERS GROOVE",
+      venue: "TNB-13/Quadrangle",
+      descriptionTitle: "About Gamers Groove",
+      descriptionBody:
+        "Get your game face on. This is the ultimate test of teamwork, strategy, and reflexes. Only one team will achieve victory in the arena. Are you ready?",
+    },
+    subEvents: [
+      {
+        id: "sub-event-18",
+        date: "23 Jan 2026, 02:00 PM - 03:30 PM",
+        title: "NOESIS EXTREME",
+        cardTitle: "NOESIS EXTREME",
+        venue: "Quadrangle",
+        descriptionTitle: "About NOESIS EXTREME",
+        descriptionBody:
+          "It takes more than a strong mindset to win. It takes endurance, power, and intellect. Do you have the physical and mental agility to dominate? If so, prove it at NOESIS EXTREME.",
+      },
+    ],
+  },
+  {
+    mainEvent: {
+      id: "main-event-2",
+      date: "Jan 24, 2026",
+      title: "WEBWIZARDS",
+      venue: "LAB 2",
+      cardTitle: "[Main Event] WEBWIZARDS",
       descriptionTitle: "About WEBWIZARDS",
       descriptionBody:
         "A series of challenges designed to test your mastery of web technologies. From front-end design to back-end logic and bug hunting, prove you're the ultimate web wizard.",
@@ -221,10 +341,10 @@ const allEventsData = [
     mainEvent: {
       id: "main-event-2",
       date: "Jan 24, 2026",
-      title: "CODE CRUSADER",
-      cardTitle: "[Main Event] CODE CRUSADER",
+      title: "CODE CRUSADERS",
+      cardTitle: "[Main Event] CODE CRUSADERS",
       venue: "LAB 4",
-      descriptionTitle: "About Code Crusader",
+      descriptionTitle: "About Code Crusaders",
       descriptionBody:
         "Dive deep into the fundamentals of programming. These events will test your logic, problem-solving speed, and debugging skills under pressure. Only the sharpest coders will prevail.",
     },
