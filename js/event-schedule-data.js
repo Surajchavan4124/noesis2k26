@@ -237,7 +237,7 @@ const allEventsData = [
         venue: "LAB 4",
         descriptionTitle: "About Code Hunt",
         descriptionBody:
-          "Join us for Code Hunt, where participants will showcase their Java skills while embarking on an exciting quest to decode clues that reveal programming questions.",
+          "Join us for Code Hunt, where participants will showcase their C programming skills while embarking on an exciting quest to decode clues that reveal programming questions.",
       },
     ],
   },
