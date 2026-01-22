@@ -457,6 +457,7 @@ const allEventsData = [
           "Participants: 2",
           "Duration: 1½ hours",
           "Participants are required to bring and use their own laptops for the gaming event.",
+          "Participants can use their own internet or internet will be provided by us",
           "Valorant will be played in team format. Teams will be formed by the organizers based on the participation.",
           "Game Mode for early rounds will be informed during the event.",
           "The game frame rate will be capped at 60 FPS to ensure equal performance conditions.",
