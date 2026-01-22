@@ -430,7 +430,7 @@ const allEventsData = [
         rules: [
           "Participants: 1",
           "Duration: 1½ hours",
-          "Platform: PS5 (Controllers only will be provided).",
+          "Platform: PS5 (Controllers will be provided).",
           "Only one participant per team is allowed.",
           "Match Format: 4-minute halves with 1-minute team management per half.",
           "Default camera settings must be used.",

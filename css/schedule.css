@@ -443,13 +443,30 @@
 .schedule-table-container {
   background: var(--bg-card);
   border-radius: 10px;
-  overflow: hidden;
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
-  margin: 20px 0;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
   border: 1px solid rgba(212, 175, 55, 0.1);
+  margin: 0 -1rem;
+  padding: 0 1rem;
+}
+
+.schedule-table-container::-webkit-scrollbar {
+  height: 8px;
+}
+
+.schedule-table-container::-webkit-scrollbar-thumb {
+  background: var(--accent);
+  border-radius: 4px;
+}
+
+.schedule-table-container::-webkit-scrollbar-track {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 4px;
 }
 
 .schedule-table {
+  min-width: 600px;
   width: 100%;
   border-collapse: collapse;
   font-family: "Roboto", sans-serif;
